@@ -9,6 +9,8 @@ gem 'sqlite3'
 
 gem 'mysql2'
 
+gem 'therubyracer'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -34,7 +36,10 @@ gem 'jquery-rails'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
+gem 'rvm-capistrano'
+gem 'capistrano-ext'
+
 
 # To use debugger
 # gem 'debugger'

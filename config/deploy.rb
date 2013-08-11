@@ -1,13 +1,12 @@
 # Warning to my picky self: order of requires matters because they define new tasks and
 # affect order of task operation.
 #$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+
 require "rvm/capistrano"
 set :rvm_ruby_string, "ruby-1.9.3-p362@dwarfmongoose"
 #set :rvm_type, :user
 set :use_sudo, false
 
-#set :stages, %w(testing staging production)
-#set :stages, %w(testing staging production)
 set :stages, %w(production)
 set :default_stage, 'production'
 require 'capistrano/ext/multistage'
@@ -38,6 +37,8 @@ role :app, "107.21.110.17"                          # This may be the same as yo
 role :db,  "107.21.110.17", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 
+before 'deploy', 'rvm:install_ruby'
+
 after "deploy:update_code", "deploy:update_shared_symlinks"
 require "bundler/capistrano"
 after "bundle:install", "deploy:make_symlinks", "deploy:migrate", "deploy:assets"
@@ -45,7 +46,7 @@ namespace :deploy do
   task :start do ; end
   task :stop  do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
-    run "rm -rf #{current_path}/public/country/*"
+    #run "rm -rf #{current_path}/public/country/*"
     run "touch #{File.join(current_path, "tmp/restart.txt")}"
   end
   task :update_shared_symlinks do
@@ -55,9 +56,9 @@ namespace :deploy do
     end
   end
   task :make_symlinks do
-      invoke_command "ln -sf #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
-      invoke_command "ln -sf #{deploy_to}/shared/config/facebook.yml #{release_path}/config/facebook.yml"
-       invoke_command "ln -sf #{deploy_to}/shared/config/twitter.yml #{release_path}/config/twitter.yml"
+      #invoke_command "ln -sf #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
+      #invoke_command "ln -sf #{deploy_to}/shared/config/facebook.yml #{release_path}/config/facebook.yml"
+      # invoke_command "ln -sf #{deploy_to}/shared/config/twitter.yml #{release_path}/config/twitter.yml"
   end
 end
 namespace :deploy do
