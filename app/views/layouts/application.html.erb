@@ -29,20 +29,21 @@
 		margin:0;
 		padding:0;
 		border:0;			/* This removes the border around the viewport in old versions of IE */
-		width:100%;
+		width:1200px;
 		background:#fff;
 		min-width:600px;		/* Minimum width of layout - remove line if not required */
 						/* The min-width property does not work in old versions of Internet Explorer */
 		font-size:90%;
-		font-family:'Roboto-Black';
+		font-family:'Roboto';
 		color: white;
 	}
 	a {
-		color:#369;
+		color:#fff;
+		text-decoration:none;
 	}
 	a:hover {
-		color:#fff;
-		background:#369;
+		color:#d3d3d3;
+		background:none;
 		text-decoration:none;
 	}
 	h1, h2, h3 {
@@ -61,9 +62,9 @@
 		clear:both;
 		float:left;
 		width:100%;
-		margin-left:130px;
 		height:65px;
 		padding-top:20px;
+		width:1200px;
 	}
 	#header {
 		/*border-bottom:1px solid #000;*/
@@ -154,7 +155,7 @@
 		background:#fff;		/* page background colour */
 	}
 	.fullpage .col1 {
-		width:96%;			/* page width minus left and right padding */
+		width:1200px;			/* page width minus left and right padding */
 		left:0%;			/* page left padding */
 	}
 
@@ -183,15 +184,36 @@
 		padding:10px;
 		margin:0;
 	}
+
+	#logo{	
+	  float:left;	
+	  padding-left:130px;
+	}
+
+	#header-links{
+		float:right;
+		color:#5b9337;
+		padding-right:130px;
+	}
+
+	#header-links a{
+		color:#5b9337;
+	}
 	/* --> */
 	</style>
 
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
 
 <div id="header">
-   <%=image_tag "logo.png"%>
+   <div id="logo">
+     <%=image_tag "logo.png"%>
+   </div>
+   <div id="header-links">
+   	<%=link_to "HOME",""%> <%=link_to "OUR EXPERTS",""%> <%=link_to "HOW IT WORKS",""%> <%=link_to "CONTACT",""%>
+   </div>
 </div>
 
 <div class="colmask fullpage">
