@@ -16,6 +16,15 @@
 	<style media="screen" type="text/css">
 	/* <!-- */
 	/* General styles */
+
+    @font-face {
+      font-family: 'Roboto-Black';
+      src: url('/assets/Roboto-Black.ttf');
+      src: local('☺'), url('/assets/vegur-r_0.602-webfont.woff') format('woff'), url('/assets/Roboto-Black.ttf') format('truetype'), url('/assets/vegur-r_0.602-webfont.svg#webfontlYuAwLPv') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
 	body {
 		margin:0;
 		padding:0;
@@ -25,6 +34,8 @@
 		min-width:600px;		/* Minimum width of layout - remove line if not required */
 						/* The min-width property does not work in old versions of Internet Explorer */
 		font-size:90%;
+		font-family:'Roboto-Black';
+		color: white;
 	}
 	a {
 		color:#369;
@@ -50,9 +61,12 @@
 		clear:both;
 		float:left;
 		width:100%;
+		margin-left:130px;
+		height:65px;
+		padding-top:20px;
 	}
 	#header {
-		border-bottom:1px solid #000;
+		/*border-bottom:1px solid #000;*/
 	}
 	#header p,
 	#header h1,
@@ -86,6 +100,7 @@
 		position:relative;
 		left:15px;
 		line-height:1.3em;
+
 	}
 	#header ul li a:hover {
 		background:#369;
@@ -132,6 +147,7 @@
 		position:relative;
 		padding:0 0 1em 0;
 		overflow:hidden;
+		
 	}
 	/* Full page settings */
 	.fullpage {
@@ -139,13 +155,28 @@
 	}
 	.fullpage .col1 {
 		width:96%;			/* page width minus left and right padding */
-		left:2%;			/* page left padding */
+		left:0%;			/* page left padding */
 	}
+
+	#copyright {
+      margin-left:130px;
+      margin-top:50px;
+      float:left;
+	}
+
+	#footerlinks {
+		margin-top:50px;
+		margin-right:130px;
+		float:right;
+	}
+
 	/* Footer styles */
 	#footer {
 		clear:both;
 		float:left;
 		width:100%;
+		background-color:#5b9337;
+		height:120px;
 		/*border-top:1px solid #000;*/
 	}
 	#footer p {
@@ -160,7 +191,7 @@
 <body>
 
 <div id="header">
-   header
+   <%=image_tag "logo.png"%>
 </div>
 
 <div class="colmask fullpage">
@@ -170,7 +201,14 @@
 </div>
 
 <div id="footer">
-	footer
+	<div id="copyright">
+		© 2013 INPUTFARM
+	</div>
+
+    <div id="footerlinks"> 
+    	<%=link_to "Terms & Conditions",""%> / <%=link_to "Feedback",""%> / <%=link_to "Contact",""%> / <%=link_to "Clients",""%> / <%=link_to "Experts",""%> 
+    </div>
+
 </div>
 
 </body>
