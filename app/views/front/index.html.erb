@@ -1,4 +1,29 @@
 <%=image_tag "let-our-experts.png"%>
 
+<div id="sun">
+  <p>Often the different between a good and greate design is a matter of refining a few elements - Sun Tzu</p>
+</div>
+
+<div id="ourexperts">
+</div>
+
+<div id="howitworks">
+  <center><%=image_tag "how-it-works.png" %></center>
+</div>
+
+<div id="whyandhow">
+</div>
+
+<div id="contact">
+  <h2>CONTACT</h2>
+
+  <%= form_tag("", method: "get") do %>
+    <p><%= text_field_tag(:name) %></p>
+    <p><%= text_field_tag(:email) %></p>
+    <p><%= text_field_tag(:message) %></p>
+    <p><%= submit_tag("Submit") %></p>
+  <% end %>
+
+</div>
 
 
