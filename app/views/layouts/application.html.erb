@@ -29,7 +29,7 @@
 		margin:0;
 		padding:0;
 		border:0;			/* This removes the border around the viewport in old versions of IE */
-		width:1200px;
+		width:100%;
 		background:#fff;
 		min-width:600px;		/* Minimum width of layout - remove line if not required */
 						/* The min-width property does not work in old versions of Internet Explorer */
@@ -62,9 +62,10 @@
 		clear:both;
 		float:left;
 		width:100%;
-		height:65px;
+		height:45px;
 		padding-top:20px;
 		width:1200px;
+		margin-right:125px;
 	}
 	#header {
 		/*border-bottom:1px solid #000;*/
@@ -195,13 +196,13 @@
 
 	#header-links{
 		float:right;
-		color:#5b9337;
+		/*color:#5b9337;*/
 		padding-right:130px;
-		padding-top:20px;
+		padding-top:11px;
 	}
 
 	#header-links a{
-		color:#5b9337;
+		/*color:#5b9337;*/
 	}
 
 	#contact {
@@ -228,6 +229,21 @@
 		background-color: #fafafa;
 		height:675px;
 	}
+
+
+	#leftexpert{
+		float:left;
+		color:#a7a7a7;
+	    width:600px;
+	}
+
+
+	#rightexpert{
+	    float:right;
+	    color:#a7a7a7;	
+	    width:600px;
+	}
+
 
     #whyandhow{
        padding-top:50px;	
@@ -256,6 +272,20 @@
 		color:#a7a7a7;
 	}
 
+	.link_home {
+		color:#5b9337;	
+		font-weight:bolder;	
+		padding-right:15px;
+	}
+
+	.link {
+		color:#7a7a7a;
+		font-weight:bolder;
+		padding-right:15px;
+	}
+
+
+
 
 	/* --> */
 	</style>
@@ -269,10 +299,15 @@
    <div id="logo">
      <%=image_tag "logo.png"%>
    </div>
+
    <div id="header-links">
-   	<%=link_to "HOME",""%> <%=link_to "OUR EXPERTS",""%> <%=link_to "HOW IT WORKS",""%> <%=link_to "CONTACT",""%>
+   	<%=link_to "HOME","", :class=>"link_home"%> 
+   	<%=link_to "OUR EXPERTS","", :class=>"link"%> 
+   	<%=link_to "HOW IT WORKS","",:class=>"link"%>
+   	<%=link_to "CONTACT","",:class=>"link"%>
    </div>
 </div>
+
 
 <div class="colmask fullpage">
   <div class="col1">
