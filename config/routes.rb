@@ -1,4 +1,7 @@
 Dwarfmongoose::Application.routes.draw do
+
+   match 'front/contact' => 'front#contact'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

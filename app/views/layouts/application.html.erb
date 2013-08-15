@@ -97,7 +97,7 @@
 		padding:3px 10px;
 		text-align:center;
 		background:#eee;
-		color:#000;
+		color:#FFFFFF;
 		text-decoration:none;
 		position:relative;
 		left:15px;
@@ -378,8 +378,10 @@
    	<%=link_to "HOME","", :class=>"link_home"%> 
    	<%=link_to "OUR EXPERTS","#ourexperts", :class=>"link"%> 
    	<%=link_to "HOW IT WORKS","#howitworks",:class=>"link"%>
-   	<%=link_to "CONTACT","",:class=>"link"%>
+   	<%=link_to "CONTACT","#contact",:class=>"link"%>
    </div>
+
+   <%=flash[:notice]%>
 </div>
 
 

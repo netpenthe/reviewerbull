@@ -1,11 +1,11 @@
 
 <div style="position:relative;top:0;left:0">
-<%=image_tag "let-our-experts.png", :class=>"expertbg"%>
-<%=image_tag "use-button.png", :class=>"usebutton"%>
+  <%=image_tag "let-our-experts.png", :class=>"expertbg"%>
+  <%=image_tag "use-button.png", :class=>"usebutton"%>
 </div>
 
 <div id="sun" class="title">
-  <p>Often the different between a good and greate design is a matter of refining a few elements - Sun Tzu</p>
+  <p>Often the difference between a good and great design is a matter of refining a few elements - Sun Tzu</p>
 </div>
 
 
@@ -55,7 +55,7 @@
     </div>
 
     <div style="float:right;width:475px;">
-      <%=image_tag "signup-as-expert.png"%>
+      <%=link_to image_tag("signup-as-expert.png"), "#contact"%>
     </div>
 
    </div>
@@ -100,7 +100,7 @@
   <br>
   <br>
 
-  <%= form_tag("", method: "get") do %>
+  <%= form_tag("/front/contact", method: "post") do %>
     <p><%= text_field_tag :name, "Name",{:class=>"field"} %></p>
     <p><%= text_field_tag :email, "Email",{:class=>"field"} %></p>
     <p><%= text_area_tag :message, "Message",{:class=>"field area"} %></p>
