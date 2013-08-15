@@ -169,7 +169,7 @@
 
 	#footerlinks {
 		margin-top:50px;
-		margin-right:130px;
+		margin-right:125px;
 		float:right;
 	}
 
@@ -180,6 +180,7 @@
 		width:100%;
 		background-color:#5b9337;
 		height:120px;
+		width:1200px;
 		padding-top:0px;
 		margin-top:0px;
 		/*border-top:1px solid #000;*/
@@ -209,7 +210,7 @@
 		width:100%;
 		height:450px;
 		background-color:#e6e6e6;
-		padding-bottom:0px;
+		padding-bottom:50px;
 		margin-bottom:0px;
 		padding-top:35px;
 		color:#616161;
@@ -346,6 +347,19 @@
     	padding-top:20px;
     }
 
+    .field{
+    	border-style: none; 
+        color: #7a7a7a;  
+        padding-left: 10px;
+        font-size:14px;
+        height:40px;
+        width:400px;
+    }
+
+    .area{
+    	height:150px;
+    }
+
 
 	/* --> */
 	</style>
@@ -357,13 +371,13 @@
 
 <div id="header">
    <div id="logo">
-     <%=image_tag "logo.png"%>
+     <%=link_to image_tag("logo.png"),"/", :style=>"border:false"%>
    </div>
 
    <div id="header-links">
    	<%=link_to "HOME","", :class=>"link_home"%> 
-   	<%=link_to "OUR EXPERTS","", :class=>"link"%> 
-   	<%=link_to "HOW IT WORKS","",:class=>"link"%>
+   	<%=link_to "OUR EXPERTS","#ourexperts", :class=>"link"%> 
+   	<%=link_to "HOW IT WORKS","#howitworks",:class=>"link"%>
    	<%=link_to "CONTACT","",:class=>"link"%>
    </div>
 </div>
@@ -381,7 +395,7 @@
 	</div>
 
     <div id="footerlinks"> 
-    	<%=link_to "Terms & Conditions",""%> / <%=link_to "Feedback",""%> / <%=link_to "Contact",""%> / <%=link_to "Clients",""%> / <%=link_to "Experts",""%> 
+    	<%=link_to "Terms & Conditions",""%> / <%=link_to "Feedback",""%> / <%=link_to "Contact",""%> / <%=link_to "Clients",""%> / <%=link_to "Experts","#experts"%> 
     </div>
 
 </div>
