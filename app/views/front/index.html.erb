@@ -106,8 +106,9 @@
     <p>
       <%=radio_button_tag 'classification', "helpee", true%> I need some help
       &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper"%> I want to help   
-      &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> General inquiry
+      &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> General enquiry
     </p>
+    <br>
     <p><%= text_field_tag :name, "Name",{:class=>"field"} %></p>
     <p><%= text_field_tag :email, "Email",{:class=>"field"} %></p>
     <p><%= text_area_tag :message, "Message",{:class=>"field area"} %></p>
