@@ -19,6 +19,8 @@
   	<%=image_tag "expert.png"%>
   </div>
 
+
+
   <div id="rightexpert">
 
     <div id="profile">
@@ -41,22 +43,22 @@
 
     <div style="clear:both"></div>
 
-    <div id="moreexperts">
-      MORE EXPERTS
-    </div>
-
   </div>
 
-   <div style="clear:both;"></div>
+    <div id="moreexperts" style='position:absolute;top:1340px;left:730px'>
+      <span id='expertleft'><-</span>  MORE EXPERTS   <span id='expertright'>-></span>
+    </div>
+
+    <div style="clear:both;"></div>
 
    <div id="signup">
 
-    <div style="float:left;width:475px;">
+    <div style="float:left;width:470px;">
       <p>Think you've got what it takes to be an expert ? <br>
       Hit the link & we'll sign you up. </p> 
     </div>
 
-    <div style="float:right;width:475px;">
+    <div style="float:right;width:470px;margin-left:0px;">
       <%=link_to image_tag("signup-as-expert.png"), "#contact"%>
     </div>
 
@@ -116,5 +118,74 @@
   <% end %>
 
 </div>
+
+<script>
+
+  $('#expertleft').click(function() {
+    
+    left = "<div id='profile'> \
+      <h2>MATTHEW B</h2> \
+      It has been placed here solely to demonstrate the look and feel of finished, typeset text. \
+      Only for show. He who searches for meaning here will be sorely disappointed.  \
+    </div> \
+    \
+    <div id='clients'> \
+      <h3 class='title'>CLIENTS</h3> \
+      news.com.au<br> \
+      digg.com \
+    </div>\
+    \
+    <div id='specialties'>\
+      <h3 class='title'>SPECIALTIES</h3>\
+      UX design\
+      Colours<br>\
+      Computers<br>\
+    </div>\
+    \
+    <div style='clear:both'></div>\
+    ";
+
+    $('#rightexpert').html(left);
+
+    return false;
+  });
+
+
+  $('#expertright').click(function() {
+
+    right = "<div id='profile'> \
+      <h2>Boomer</h2> \
+      This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. \
+      Only for show. He who searches for meaning here will be sorely disappointed.  \
+    </div> \
+    \
+    <div id='clients'> \
+      <h3 class='title'>CLIENTS</h3> \
+      theage.com.au<br> \
+      ebay.com \
+    </div>\
+    \
+    <div id='specialties'>\
+      <h3 class='title'>SPECIALTIES</h3>\
+      UX design\
+      Colours<br>\
+      Computers<br>\
+    </div>\
+    \
+    <div style='clear:both'></div>";
+
+    $('#rightexpert').html(right);
+
+    return false;
+  }); 
+
+
+</script>
+
+
+
+
+
+
 
 
