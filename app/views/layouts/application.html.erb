@@ -6,7 +6,6 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
-     <title></title>
 	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -16,6 +15,9 @@
 	<style media="screen" type="text/css">
 	/* <!-- */
 	/* General styles */
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 
     @font-face {
       font-family: 'Roboto-Black';
@@ -368,6 +370,19 @@
 
 </head>
 <body>
+
+ <script>
+      $(function(){
+          $(':input').focus(function(){
+        	if (!this.clicked) {
+              $(this).attr('value', '');
+              $(this).val('');    
+              this.clicked = true;
+            }
+          });	
+       });
+ </script>
+
 
 <div id="header">
    <div id="logo">
