@@ -6,17 +6,9 @@
 
 development:
   adapter: mysql2 
-  database: inputfarm_dev
-  username: inputuser
-  password: inputpassword
-  encoding: utf8
-  collation: utf8_general_ci
-
-development:
-  adapter: mysql2 
-  database: inputfarm_test
-  username: inputuser
-  password: inputpassword
+  database: inputfarm 
+  username: fif 
+  password: fif123 
   encoding: utf8
   collation: utf8_general_ci
 
