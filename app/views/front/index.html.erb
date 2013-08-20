@@ -132,7 +132,7 @@
   <br>
   <br>
 
-  <%= form_tag("/front/contact", method: "post") do %>
+  <%= form_tag("/front/contact", method: "post", :multipart => true) do %>
     <p>
       <%=radio_button_tag 'classification', "helpee", true%> Get my site reviewed by an expert
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper"%> I’m an expert, sign me up!   
@@ -143,6 +143,11 @@
        <p><%= text_field_tag :name, "Name",{:class=>"field"} %></p>
       <p><%= text_field_tag :email, "Email",{:class=>"field"} %></p>
       <p><%= text_field_tag :url, "Site URL",{:class=>"field"} %></p>
+                  OR 
+      <p><div style="padding-top:10px;align-text:center;margin-left:auto;margin-right:auto;background-color:white;width:410px;height:30px;">
+            Design Files: &nbsp; &nbsp;<%= file_field_tag :upload, multiple: true,name: "upload[]" %>
+          </div>
+        </p>
       <p><%= text_area_tag :fivethings, "Five main things to focus on",{:class=>"field area area-margin"} %></p>
       <p><%= text_area_tag :message, "Other things we need to know",{:class=>"field area area-mragin"} %></p>
       <p><%= submit_tag "",:type=>"image", :src=>"assets/submit.png", :style=>"padding-left:280px" %></p>
@@ -174,11 +179,12 @@
   });
 
   $('#classification_helpee').click(function(){
-    $('#contact').css('height','680px');
+    $('#contact').css('height','740px');
      fields = " \
      <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
       <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
       <p><input class='field' id='url' name='url' type='text' value='Site URL'></p> \
+      <p><input id='upload' multiple='multiple' name='upload[]' type='file'></p> \
       <p><textarea class='field area' id='fivethings' name='fivethings'>Five main things to focus on</textarea></p> \
       <p><textarea class='field area' id='message' name='message'>Other things we need to know</textarea></p> \
       <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
