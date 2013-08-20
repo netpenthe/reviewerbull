@@ -107,8 +107,8 @@
   <%= form_tag("/front/contact", method: "post") do %>
     <p>
       <%=radio_button_tag 'classification', "helpee", true%> Get my site reviewed by an expert
-      &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper"%> I’m an expert, sign me up!   
-      &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> General enquiry
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper"%> I’m an expert, sign me up!   
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> General enquiry
     </p>
     <br>
     <div id="fieldss">
@@ -134,6 +134,15 @@
       <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
 
      $('#fieldss').html(fields);
+     $(function(){
+        $(':input').focus(function(){
+          if (!this.clicked) {
+            $(this).attr('value', '');
+            $(this).val('');    
+            this.clicked = true;
+          }
+        }); 
+      });
   });
 
   $('#classification_helpee').click(function(){
@@ -145,8 +154,18 @@
       <p><textarea class='field area' id='fivethings' name='fivethings'>Five main things to focus on</textarea></p> \
       <p><textarea class='field area' id='message' name='message'>Other things we need to know</textarea></p> \
       <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
-
+      
      $('#fieldss').html(fields);
+
+     $(function(){
+        $(':input').focus(function(){
+          if (!this.clicked) {
+            $(this).attr('value', '');
+            $(this).val('');    
+            this.clicked = true;
+          }
+        }); 
+      });
   });
 
   $('#classification_helper').click(function(){
@@ -160,6 +179,16 @@
       <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
 
      $('#fieldss').html(fields);
+
+     $(function(){
+        $(':input').focus(function(){
+          if (!this.clicked) {
+            $(this).attr('value', '');
+            $(this).val('');    
+            this.clicked = true;
+          }
+        }); 
+      });
   });
 
 </script>
