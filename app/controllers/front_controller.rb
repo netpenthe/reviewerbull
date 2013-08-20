@@ -8,6 +8,14 @@ class FrontController < ApplicationController
   							:classification=>params[:classification], :url=>params[:url], :fivethings=>params[:fivethings]
 
   	contact.save
+
+    	attachment = Attachment.new
+    	attachment.upload = params[:upload]
+    	attachment.save
+    	contact.attachments << attachment
+    	contact.save
+   
+
   	redirect_to root_url, notice: "Thanks for contacting us. We will get back to you ASAP."
   end
 

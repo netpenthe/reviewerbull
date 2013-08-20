@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130820084302) do
+ActiveRecord::Schema.define(:version => 20130820105322) do
+
+  create_table "attachments", :force => true do |t|
+    t.string   "uploadable_type"
+    t.integer  "uploadable_id"
+    t.string   "upload_file_name"
+    t.integer  "upload_file_size"
+    t.string   "upload_file_content_type"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
 
   create_table "contacts", :force => true do |t|
     t.string   "email"
