@@ -33,7 +33,7 @@
 
       <div id="header">
         <div id="logo">
-          <%=link_to image_tag("logo.png"),"/", :style=>"border:false"%>
+          <%=link_to image_tag("logo.png",:size=>"225x31"),"/", :style=>"border:false"%>
         </div>
 
         <div id="header-links">
@@ -55,11 +55,15 @@
 
       <div id="footer">
         <div id="copyright">
-          © 2013 INPUTFARM
+          &copy; 2013 INPUTFARM
         </div>
 
         <div id="footerlinks"> 
-          <%=link_to "HOME","/" %> / <%=link_to "OUR EXPERTS","#ourexperts", :class=>""%> / <%=link_to "HOW IT WORKS","#howitworks"%> / <%=link_to "CONTACT","#contact"%> / <%=link_to "TERMS & CONDITIONS",""%> 
+          <%=link_to "Home","/" %>&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;&nbsp; 
+          <%=link_to "Our Experts","#ourexperts", :class=>""%> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp; 
+          <%=link_to "How It Works","#howitworks"%>&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;&nbsp; 
+          <%=link_to "Contact","#contact"%>&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;&nbsp; 
+          <%=link_to "Terms & Conditions",""%> 
         </div>
 
       </div>

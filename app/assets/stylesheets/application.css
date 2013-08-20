@@ -174,14 +174,22 @@ img {
   margin-left:130px;
   margin-top:50px;
   float:left;
+  font-size:16px;
+  font-family: 'Roboto' !important;
+  font-style: normal;
+  font-weight: 500;
 }
 
 #footerlinks {
   margin-top:50px;
   margin-right:125px;
   float:right;
+  color: #ccc;
 }
-
+#footerlinks a{
+  font-size: 12px;
+  color: #ccc;
+}
 /* Footer styles */
 #footer {
   clear:both;
@@ -213,6 +221,10 @@ img {
 
 #header-links a{
   /*color:#5b9337;*/
+  font-size:16px;
+  font-family: 'Roboto' !important;
+  font-style: normal;
+  font-weight: 500;
 }
 
 #contact {
@@ -279,8 +291,8 @@ img {
   padding-bottom:25px;
 }
 
-#rightwhy h3 { padding-bottom:40px; color:#7a7a7a;}
-#leftwhy h3 { padding-bottom:40px; color:#7a7a7a;}
+#rightwhy h3 { padding-bottom:15px; color:#7a7a7a;}
+#leftwhy h3 { padding-bottom:15px; color:#7a7a7a;}
 
 #whytext{
   color:#a7a7a7;
