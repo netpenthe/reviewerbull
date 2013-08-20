@@ -10,6 +10,7 @@
 </div>
 
 
+<!--
 <div id="ourexperts" style="overflow:hidden">
 
   <h1 class='title center'>OUR EXPERTS</h1>
@@ -65,7 +66,7 @@
 
   <div style="clear:both;"></div>
 
-</div>
+</div>  -->
 
 
 <div id="howitworks">
@@ -99,14 +100,14 @@
 </div>
 
 <div id="contact">
-  <h2>CONTACT</h2>
+  <h2>LET'S GET STARTED</h2>
   <br>
   <br>
 
   <%= form_tag("/front/contact", method: "post") do %>
     <p>
-      <%=radio_button_tag 'classification', "helpee", true%> I need some help
-      &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper"%> I want to help   
+      <%=radio_button_tag 'classification', "helpee", true%> Get my site reviewed by an expert
+      &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper"%> I’m an expert, sign me up!   
       &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> General enquiry
     </p>
     <br>
