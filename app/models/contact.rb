@@ -1,3 +1,3 @@
 class Contact < ActiveRecord::Base
-  attr_accessible :email, :message, :name, :classification
+  attr_accessible :email, :message, :name, :classification, :url, :fivethings
 end

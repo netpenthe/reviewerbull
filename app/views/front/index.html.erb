@@ -114,8 +114,9 @@
     <div id="fieldss">
        <p><%= text_field_tag :name, "Name",{:class=>"field"} %></p>
       <p><%= text_field_tag :email, "Email",{:class=>"field"} %></p>
-      <p><%= text_field_tag :url, "URL",{:class=>"field"} %></p>
-      <p><%= text_area_tag :message, "Message",{:class=>"field area"} %></p>
+      <p><%= text_field_tag :url, "Site URL",{:class=>"field"} %></p>
+      <p><%= text_area_tag :fivethings, "Five main things to focus on",{:class=>"field area"} %></p>
+      <p><%= text_area_tag :message, "Other things we need to know",{:class=>"field area"} %></p>
       <p><%= submit_tag "",:type=>"image", :src=>"assets/submit.png", :style=>"padding-left:280px" %></p>
     </div>
   <% end %>
@@ -136,13 +137,13 @@
   });
 
   $('#classification_helpee').click(function(){
-    $('#contact').css('height','660px');
+    $('#contact').css('height','680px');
      fields = " \
      <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
       <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
-      <input class='field' id='url' name='url' type='text' value='URL'> \
-      <p><textarea class='field area' id='focus' name='message'>Five main things to focus on</textarea></p> \
-      <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
+      <p><input class='field' id='url' name='url' type='text' value='URL'></p> \
+      <p><textarea class='field area' id='fivethings' name='fivethings'>Five main things to focus on</textarea></p> \
+      <p><textarea class='field area' id='message' name='message'>Other things we need to know</textarea></p> \
       <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
 
      $('#fieldss').html(fields);
