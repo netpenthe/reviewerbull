@@ -111,13 +111,59 @@
       &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> General enquiry
     </p>
     <br>
-    <p><%= text_field_tag :name, "Name",{:class=>"field"} %></p>
-    <p><%= text_field_tag :email, "Email",{:class=>"field"} %></p>
-    <p><%= text_area_tag :message, "Message",{:class=>"field area"} %></p>
-    <p><%= submit_tag "",:type=>"image", :src=>"assets/submit.png", :style=>"padding-left:280px" %></p>
+    <div id="fieldss">
+       <p><%= text_field_tag :name, "Name",{:class=>"field"} %></p>
+      <p><%= text_field_tag :email, "Email",{:class=>"field"} %></p>
+      <p><%= text_field_tag :url, "URL",{:class=>"field"} %></p>
+      <p><%= text_area_tag :message, "Message",{:class=>"field area"} %></p>
+      <p><%= submit_tag "",:type=>"image", :src=>"assets/submit.png", :style=>"padding-left:280px" %></p>
+    </div>
   <% end %>
 
 </div>
+
+
+<script>
+  $('#classification_general').click(function(){
+    $('#contact').css('height','440px');
+     fields = " \
+     <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
+      <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
+      <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
+      <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
+
+     $('#fieldss').html(fields);
+  });
+
+  $('#classification_helpee').click(function(){
+    $('#contact').css('height','660px');
+     fields = " \
+     <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
+      <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
+      <input class='field' id='url' name='url' type='text' value='URL'> \
+      <p><textarea class='field area' id='focus' name='message'>Five main things to focus on</textarea></p> \
+      <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
+      <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
+
+     $('#fieldss').html(fields);
+  });
+
+  $('#classification_helper').click(function(){
+     $('#contact').css('height','520px');
+
+     fields = " \
+     <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
+      <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
+      <input class='field' id='url' name='url' type='text' value='URL'> \
+      <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
+      <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
+
+     $('#fieldss').html(fields);
+  });
+
+</script>
+
+
 
 <script>
 
