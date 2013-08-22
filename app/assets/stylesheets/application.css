@@ -21,7 +21,7 @@ body{
    text-align:center; /*For IE6 Shenanigans*/
 }
 
-#wrapper{
+#xwrapper{
    width:1170px;
    margin:0 auto;
    text-align:left;
@@ -34,7 +34,7 @@ body{
   font-style: normal;
   }
 
-  body {
+body {
     margin:0;
     padding:0;
     border:0;			/* This removes the border around the viewport in old versions of IE */
@@ -73,7 +73,7 @@ img {
   width:100%;
   height:70px;
   padding-top:20px;
-  width:1200px;
+  width:100%;
   margin-right:125px;
 }
 #header {
@@ -197,7 +197,7 @@ img {
   width:100%;
   background-color:#5b9337;
   height:120px;
-  width:1200px;
+  width:100%;
   padding-top:0px;
   margin-top:0px;
   /*border-top:1px solid #000;*/
@@ -311,11 +311,6 @@ img {
 }
 
 
-.usebutton{
-  position:absolute;
-  left:125px;
-  top:450px;
-  }
 
   .expertbg{
     position:relative;
@@ -354,9 +349,7 @@ img {
 
   #sun{
     text-align: center;    	
-    height:200px;
-    width:1200px;
-    padding-top:60px;
+    padding-top:20px;
     font-size:18px;
   }
 
@@ -386,6 +379,25 @@ img {
     padding-top:10px;
   }
 
+div#bigimagediv {
+  background-image: url(/assets/let-our-experts_stretch.png);
+  background-position: 60% top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position:relative;
+  top:0;
+  left:0;
+  height:545px;
+}
+div#bigimagediv_inner {
+}
+.row-fluid {
+  margin: 0 auto;
+  max-width:1200px;
+}
 
-
-
+.usebutton{
+  position:relative;
+  top:320px;
+  left: -200px;
+  }

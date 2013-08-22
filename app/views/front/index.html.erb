@@ -1,12 +1,18 @@
 
-<div style="position:relative;top:0;left:0">
-  <%=image_tag "let-our-experts.png", :class=>"expertbg"%>
+<div style="clear:both"></div>
+<!--<div style="position:relative;top:0;left:0">-->
+<div id='bigimagediv' >
+  <div class="row-fluid">
+  <%#=image_tag "let-our-experts.png", :class=>"expertbg"%>
   <%=link_to image_tag("use-button.png", :class=>"usebutton"), "#contact"%>
+  </div>
 </div>
 
-
+<div style="clear:both"></div>
 <div id="sun" class="title">
+  <div class="row-fluid">
   <p>Often the difference between a good and great design is a matter of refining a few elements - Sun Tzu</p>
+  </div>
 </div>
 
 
@@ -70,13 +76,15 @@
 
 
 <div id="howitworks">
-  <center><h1 class='title'>HOW IT WORKS</h1></center>
-  <center><%=image_tag "how-it-works.png" %></center>
+  <div class="row-fluid">
+    <center><h1 class='title'>HOW IT WORKS</h1></center>
+    <center><%=image_tag "how-it-works.png" %></center>
+  </div>
 </div>
 
 
 <div id="whyandhow">
-
+  <div class="row-fluid">
   <div id="leftwhy">
   	 <h3 class="title">Why should I do this ?</h3>
      <p>
@@ -124,7 +132,7 @@
   </div>
 
   <div style="clear:both;"></div>
-
+  </div>
 </div>
 
 <div id="contact">
@@ -289,9 +297,23 @@
     return false;
   }); 
 
+  function resize_bg() {
+       var height = $(window).height() - 70;
+        height = height > 830 ? 830 : height;
+       $('#bigimagediv').css('height', height+"px");
+        //:$('#bigimagediv').css('height','830px')
+      console.log("heihgt is: "+height);
+  }
+
+  $(window).resize(function() {
+    setTimeout(resize_bg,200);
+  }); 
+  $(function() {
+      alert('?');
+    setTimeout(resize_bg,200);
+  });
 
 </script>
-
 
 
 
