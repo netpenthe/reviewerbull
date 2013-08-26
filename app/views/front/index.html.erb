@@ -1,91 +1,78 @@
 
 <div style="clear:both"></div>
-<!--<div style="position:relative;top:0;left:0">-->
-<div id='bigimagediv' >
-  <div class="row-fluid">
+<div id='big_image_div' >
+  <div class="row_fluid">
   <%#=image_tag "let-our-experts.png", :class=>"expertbg"%>
-  <%=link_to image_tag("use-button.png", :class=>"usebutton"), "#contact"%>
+    <div id='top_text_and_button'>
+      <div id='top_text'>
+        Our web experts will give<br />
+        you an honest appraisal of your website<br />
+        along with the quickest and easiest ways to improve it. 
+      </div>
+      <%=link_to image_tag("use-button.png", :id=>"use_button"), "#contact"%>
+    </div>
   </div>
 </div>
 
 <div style="clear:both"></div>
 <div id="sun" class="title">
-  <div class="row-fluid">
+  <div class="row_fluid">
   <p>Often the difference between a good and great design is a matter of refining a few elements - Sun Tzu</p>
   </div>
 </div>
 
 
 <!--
-<div id="ourexperts" style="overflow:hidden">
-
+<div id="our_experts" style="overflow:hidden">
   <h1 class='title center'>OUR EXPERTS</h1>
-
-  <div id="leftexpert">
+  <div id="left_expert">
   	<%=image_tag "expert.png"%>
   </div>
-
-
-
-  <div id="rightexpert">
-
+  <div id="right_expert">
     <div id="profile">
       <h2>ROBIN MATHER</h2>
       This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.  
     </div>
-
     <div id="clients">
       <h3 class="title">CLIENTS</h3>
       carsales.com.au<br>
       digg.com 
     </div>
-
     <div id="specialties">
       <h3 class="title">SPECIALTIES</h3>
       UX design
       Colours<br>
       Computers<br>
     </div>
-
     <div style="clear:both"></div>
-
   </div>
-
-    <div id="moreexperts" style='position:absolute;top:1340px;left:730px'>
-      <span id='expertleft'><-</span>  MORE EXPERTS   <span id='expertright'>-></span>
+    <div id="more_experts" style='position:absolute;top:1340px;left:730px'>
+      <span id='expert_left'><-</span>  MORE EXPERTS   <span id='expert_right'>-></span>
     </div>
-
     <div style="clear:both;"></div>
-
    <div id="signup">
-
     <div style="float:left;width:470px;">
       <p>Think you've got what it takes to be an expert ? <br>
       Hit the link & we'll sign you up. </p> 
     </div>
-
     <div style="float:right;width:470px;margin-left:0px;">
       <%=link_to image_tag("signup-as-expert.png"), "#contact"%>
     </div>
-
    </div>
-
   <div style="clear:both;"></div>
-
 </div>  -->
 
-
-<div id="howitworks">
-  <div class="row-fluid">
+<div id="how_it_works">
+  <div class="row_fluid">
     <center><h1 class='title'>HOW IT WORKS</h1></center>
     <center><%=image_tag "how-it-works.png" %></center>
   </div>
 </div>
 
 
-<div id="whyandhow">
-  <div class="row-fluid">
-  <div id="leftwhy">
+<div id="why_and_how">
+  <div class="row_fluid">
+  <div id="left_why">
   	 <h3 class="title">Why should I do this ?</h3>
      <p>
         As designers we've seen website owners get 'tired' of their perfectly good websites much too often, 
@@ -106,7 +93,7 @@
         
   </div>
 
-  <div id="rightwhy">
+  <div id="right_why">
   	 <h3>How much does it cost?</h3>
         $60
         <br />
@@ -163,161 +150,5 @@
   <% end %>
 
 </div>
-
-
-<script>
-  $('#classification_general').click(function(){
-    $('#contact').css('height','440px');
-     fields = " \
-     <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
-      <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
-      <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
-      <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
-
-     $('#fieldss').html(fields);
-     $(function(){
-        $(':input').focus(function(){
-          if (!this.clicked) {
-            $(this).attr('value', '');
-            $(this).val('');    
-            this.clicked = true;
-          }
-        }); 
-      });
-  });
-
-  $('#classification_helpee').click(function(){
-    $('#contact').css('height','740px');
-     fields = " \
-     <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
-      <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
-      <p><input class='field' id='url' name='url' type='text' value='Site URL'></p> \
-      <p><input id='upload' multiple='multiple' name='upload[]' type='file'></p> \
-      <p><textarea class='field area' id='fivethings' name='fivethings'>Five main things to focus on</textarea></p> \
-      <p><textarea class='field area' id='message' name='message'>Other things we need to know</textarea></p> \
-      <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
-      
-     $('#fieldss').html(fields);
-
-     $(function(){
-        $(':input').focus(function(){
-          if (!this.clicked) {
-            $(this).attr('value', '');
-            $(this).val('');    
-            this.clicked = true;
-          }
-        }); 
-      });
-  });
-
-  $('#classification_helper').click(function(){
-     $('#contact').css('height','520px');
-
-     fields = " \
-     <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
-      <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
-      <p><input class='field' id='url' name='url' type='text' value='Portfolio URL'></p> \
-      <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
-      <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
-
-     $('#fieldss').html(fields);
-
-     $(function(){
-        $(':input').focus(function(){
-          if (!this.clicked) {
-            $(this).attr('value', '');
-            $(this).val('');    
-            this.clicked = true;
-          }
-        }); 
-      });
-  });
-
-</script>
-
-
-
-<script>
-
-  $('#expertleft').click(function() {
-    
-    left = "<div id='profile'> \
-      <h2>MATTHEW B</h2> \
-      It has been placed here solely to demonstrate the look and feel of finished, typeset text. \
-      Only for show. He who searches for meaning here will be sorely disappointed.  \
-    </div> \
-    \
-    <div id='clients'> \
-      <h3 class='title'>CLIENTS</h3> \
-      news.com.au<br> \
-      digg.com \
-    </div>\
-    \
-    <div id='specialties'>\
-      <h3 class='title'>SPECIALTIES</h3>\
-      UX design\
-      Colours<br>\
-      Computers<br>\
-    </div>\
-    \
-    <div style='clear:both'></div>\
-    ";
-
-    $('#rightexpert').html(left);
-
-    return false;
-  });
-
-
-  $('#expertright').click(function() {
-
-    right = "<div id='profile'> \
-      <h2>Boomer</h2> \
-      This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. \
-      Only for show. He who searches for meaning here will be sorely disappointed.  \
-    </div> \
-    \
-    <div id='clients'> \
-      <h3 class='title'>CLIENTS</h3> \
-      theage.com.au<br> \
-      ebay.com \
-    </div>\
-    \
-    <div id='specialties'>\
-      <h3 class='title'>SPECIALTIES</h3>\
-      UX design\
-      Colours<br>\
-      Computers<br>\
-    </div>\
-    \
-    <div style='clear:both'></div>";
-
-    $('#rightexpert').html(right);
-
-    return false;
-  }); 
-
-  function resize_bg() {
-       var height = $(window).height() - 70;
-        height = height > 830 ? 830 : height;
-       $('#bigimagediv').css('height', height+"px");
-        //:$('#bigimagediv').css('height','830px')
-      console.log("heihgt is: "+height);
-  }
-
-  $(window).resize(function() {
-    setTimeout(resize_bg,200);
-  }); 
-  $(function() {
-      alert('?');
-    setTimeout(resize_bg,200);
-  });
-
-</script>
-
-
-
-
-
 
 
