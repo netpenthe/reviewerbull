@@ -4,7 +4,7 @@ $('#classification_general').click(function(){
     <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
     <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
     <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
-    <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
+    <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /><br /></p>";
 
     $('#fieldss').html(fields);
     $(function(){
@@ -27,7 +27,7 @@ $('#classification_helpee').click(function(){
     <p><input id='upload' multiple='multiple' name='upload[]' type='file'></p> \
     <p><textarea class='field area' id='fivethings' name='fivethings'>Five main things to focus on</textarea></p> \
     <p><textarea class='field area' id='message' name='message'>Other things we need to know</textarea></p> \
-    <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
+    <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /><br /></p>";
 
     $('#fieldss').html(fields);
 
@@ -50,7 +50,7 @@ $('#classification_helper').click(function(){
     <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
     <p><input class='field' id='url' name='url' type='text' value='Portfolio URL'></p> \
     <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
-    <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /></p>";
+    <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /><br /></p>";
 
     $('#fieldss').html(fields);
 
