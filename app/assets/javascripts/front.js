@@ -131,7 +131,7 @@ function resize_bg() {
   //:$('#bigimagediv').css('height','830px')
   var width = $('#big_image_div').width();
   width = width > 1200 ? 1200 : width;    
- // $('.usebutton').css('left', -1*width*0.75*0.5); 
+  // $('.usebutton').css('left', -1*width*0.75*0.5); 
   //$('.usebutton').css('top', height*0.75); 
   //$('.usebutton').css('left', 515/1200 * 1200 * -1 + 260)
   var top = $('#big_image_div').height();
@@ -147,10 +147,10 @@ $(window).resize(function() {
 $(function() {
     setTimeout(resize_bg,20);
     $('#fileupload').fileupload({
-      dataType: 'json',
-      done: function (e, data) {
-      $.each(data.result.files, function (index, file) {
-      $('<p/>').text(file.name).appendTo(document.body);
+dataType: 'json',
+done: function (e, data) {
+$.each(data.result.files, function (index, file) {
+  $('<p/>').text(file.name).appendTo(document.body);
   });
 }
 });
