@@ -11,14 +11,14 @@
  *= require_self
  *= require_tree .
  */
-	/* General styles */
+/* General styles */
 *{
-   margin:0;
-   padding:0;
+  margin:0;
+  padding:0;
 }
 
 body{
-   text-align:center; /*For IE6 Shenanigans*/
+  text-align:center; /*For IE6 Shenanigans*/
 }
 
 @font-face {
@@ -27,19 +27,19 @@ body{
   src: local('☺'), url('/assets/vegur-r_0.602-webfont.woff') format('woff'), url('/assets/Roboto-Black.ttf') format('truetype'), url('/assets/vegur-r_0.602-webfont.svg#webfontlYuAwLPv') format('svg');
   font-weight: normal;
   font-style: normal;
-  }
+}
 
 body {
-    margin:0;
-    padding:0;
-    border:0;			/* This removes the border around the viewport in old versions of IE */
-    width:100%;
-    background:#fff;
-    min-width:600px;		/* Minimum width of layout - remove line if not required */
-    /* The min-width property does not work in old versions of Internet Explorer */
-    font-size:90%;
-    font-family:'Roboto';
-    color: white;
+  margin:0;
+  padding:0;
+  border:0;			/* This removes the border around the viewport in old versions of IE */
+  width:100%;
+  background:#fff;
+  min-width:600px;		/* Minimum width of layout - remove line if not required */
+  /* The min-width property does not work in old versions of Internet Explorer */
+  font-size:90%;
+  font-family:'Roboto';
+  color: white;
 }
 a {
   color:#fff;
@@ -224,7 +224,6 @@ img {
 
 #contact {
   width:100%;
-  height:750px;
   background-color:#e6e6e6;
   padding-bottom:50px;
   margin-bottom:0px;
@@ -269,12 +268,13 @@ img {
 
 
 
-  #left_why {
-    float:left;
-    color:#616161;
-    margin-left:160px;
-    width:400px;
-    padding-bottom:25px;
+#left_why {
+  float:left;
+  color:#616161;
+  margin-left:160px;
+  width:400px;
+  padding-bottom:25px;
+  text-align: left;
 }
 
 #right_why{
@@ -283,6 +283,7 @@ img {
   margin-right:160px;
   width:400px;
   padding-bottom:25px;
+  text-align: left;
 }
 
 #right_why h3 { padding-bottom:15px; color:#7a7a7a;}
@@ -306,72 +307,72 @@ img {
 
 
 
-  .expertbg{
-    position:relative;
-    top:0;
-    left:0;
-  }
+.expertbg{
+  position:relative;
+  top:0;
+  left:0;
+}
 
-  .title {
-    color:#4c4c4c;
+.title {
+  color:#4c4c4c;
 
-  }
+}
 
-  .center {
-    text-align: center;
-    padding-bottom:20px;
-    padding-top:20px;
-  }
+.center {
+  text-align: center;
+  padding-bottom:20px;
+  padding-top:20px;
+}
 
-  #our_experts h2 {
-    color:#4c4c4c;
-  }
+#our_experts h2 {
+  color:#4c4c4c;
+}
 
-  #specialties {
-    float:right;
-    width:237px;
-  }
+#specialties {
+  float:right;
+  width:237px;
+}
 
-  #clients{
-    float:left;
-    width:237px;
-  }
+#clients{
+  float:left;
+  width:237px;
+}
 
-  #profile{
-    padding-bottom:10px;
-  }
+#profile{
+  padding-bottom:10px;
+}
 
-  #sun{
-    text-align: center;    	
-    padding-top:20px;
-    font-size:18px;
-  }
+#sun{
+  text-align: center;    	
+  padding-top:20px;
+  font-size:18px;
+}
 
-  #more_experts{
-    padding-top:10px;
-  }
+#more_experts{
+  padding-top:10px;
+}
 
-  #signup{
-    height:200px;
-    width:950px;
-    margin-right:125px;
-    margin-left:125px;
-    padding-top:20px;
-  }
+#signup{
+  height:200px;
+  width:950px;
+  margin-right:125px;
+  margin-left:125px;
+  padding-top:20px;
+}
 
-  .field{
-    border-style: none; 
-    color: #7a7a7a;  
-    padding-left: 10px;
-    font-size:14px;
-    height:40px;
-    width:400px;
-  }
+.field{
+  border-style: none; 
+  color: #7a7a7a;  
+  padding-left: 10px;
+  font-size:14px;
+  height:40px;
+  width:400px;
+}
 
-  .area{
-    height:150px;
-    padding-top:10px;
-  }
+.area{
+  height:150px;
+  padding-top:10px;
+}
 
 div#big_image_div {
   /*background-image: url(/assets/let-our-experts_stretch.png);*/
@@ -405,4 +406,50 @@ div#big_image_div {
 
 #top_text_and_button {
   top:120px;
+}
+
+#steps_wrapper {
+  background-color:#ededed;
+  height:200px;
+  padding:20px;
+  color:#555;
+  text-align:center;
+}
+
+.steps {
+  float:left;
+  width:33%;
+ }
+ .steps p {
+   font-size:1.1em;
+   margin:5px;
+   color:#888;
+ }
+ .steps p ul li {
+   margin-left: -25px;
+}
+
+.steps h2 {
+}
+
+#submit_button {
+  background-color: #78B153;
+  padding: 20px;
+  color: #fff;
+  margin-top:10px;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: 18px/100% 'Roboto-Black', sans-serif;
+  letter-spacing: 4px;
+  padding: .5em 2em .55em;
+  border: 0px solid;
+  -webkit-border-radius: .5em; 
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }

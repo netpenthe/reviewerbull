@@ -2,14 +2,14 @@
 <div style="clear:both"></div>
 <div id='big_image_div' >
   <div class="row_fluid">
-  <%#=image_tag "let-our-experts.png", :class=>"expertbg"%>
+    <%#=image_tag "let-our-experts.png", :class=>"expertbg"%>
     <div id='top_text_and_button'>
       <div id='top_text'>
         Our web experts will give<br />
         you an honest appraisal of your website<br />
         along with the quickest and easiest ways to improve it. 
       </div>
-      <%=link_to image_tag("use-button.png", :id=>"use_button"), "#contact"%>
+      <%=link_to image_tag("use-button.png", :id=>"use_button"), "#contact", :class=>'smoothScroll'%>
     </div>
   </div>
 </div>
@@ -17,7 +17,7 @@
 <div style="clear:both"></div>
 <div id="sun" class="title">
   <div class="row_fluid">
-  <p>Often the difference between a good and great design is a matter of refining a few elements - Sun Tzu</p>
+    <p>Often the difference between a good and great design is a matter of refining a few elements - Sun Tzu</p>
   </div>
 </div>
 
@@ -26,7 +26,7 @@
 <div id="our_experts" style="overflow:hidden">
   <h1 class='title center'>OUR EXPERTS</h1>
   <div id="left_expert">
-  	<%=image_tag "expert.png"%>
+    <%=image_tag "expert.png"%>
   </div>
   <div id="right_expert">
     <div id="profile">
@@ -46,11 +46,11 @@
     </div>
     <div style="clear:both"></div>
   </div>
-    <div id="more_experts" style='position:absolute;top:1340px;left:730px'>
-      <span id='expert_left'><-</span>  MORE EXPERTS   <span id='expert_right'>-></span>
-    </div>
-    <div style="clear:both;"></div>
-   <div id="signup">
+  <div id="more_experts" style='position:absolute;top:1340px;left:730px'>
+    <span id='expert_left'><-</span>  MORE EXPERTS   <span id='expert_right'>-></span>
+  </div>
+  <div style="clear:both;"></div>
+  <div id="signup">
     <div style="float:left;width:470px;">
       <p>Think you've got what it takes to be an expert ? <br>
       Hit the link & we'll sign you up. </p> 
@@ -58,68 +58,90 @@
     <div style="float:right;width:470px;margin-left:0px;">
       <%=link_to image_tag("signup-as-expert.png"), "#contact"%>
     </div>
-   </div>
+  </div>
   <div style="clear:both;"></div>
 </div>  -->
 
 <div id="how_it_works" class="smoothScroll">
   <a name='howitworks'></a>
   <div class="row_fluid">
-    <center><h1 class='title'>HOW IT WORKS</h1></center>
-    <center><%=image_tag "how-it-works.png" %></center>
+    <h1 class='title'>HOW IT WORKS</h1>
+    <div id='steps_wrapper'>
+      <div class='steps'>
+        <h2>Step 1</h2>
+        <p>
+        Submit the URL or an image of your site design
+        </p>
+      </div>
+      <div class='steps'> 
+        <h2>Step 2</h2>
+        <p>
+        An expert will review your site for 20-30 minutes <br /> <br />
+        They will look for practical things to improve your site 
+        </p>
+      </div>
+      <div class='steps'> 
+        <h2>Step 3</h2>
+        <p>
+        You will receive a report including: <br />
+        a marked up screenshot
+        suggestions to improve your site 
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 
 
 <div id="why_and_how">
   <div class="row_fluid">
-  <div id="left_why">
-  	 <h3 class="title">Why should I do this ?</h3>
-     <p>
-        As designers we've seen website owners get 'tired' of their perfectly good websites much too often, 
-        deciding to do a full re-design that is both costly and time consuming. Get an objective opinion
-        about whether your site really needs a full re-design, or whether a few tweaks will get the job done.
-     </p>
-        <br />
-  	 <h3 class="title">Why not use a web design company?</h3>
-     <p> 
-        Asking a web design company if you need a new website is like asking a hairdresser if you need a 
-        haircut - the answer is always yes! 
-        <br /><br />
-        InputFarm's experts are not looking to sell you a site re-design (in fact they'll never try to sell
-        you further paid services). Instead they'll look for the 'low hanging fruit' - how to make your site
-        better with the least amount of effort. Once you receive the review you can either make the changes
-        yourself or get your designer to do it for you.
-     </p>
-        
-  </div>
-
-  <div id="right_why">
-  	 <h3>How much does it cost?</h3>
-        $60
-        <br />
-        InputFarm removes all the extraneous work that a designer would ordinarily have to do - quotes,
-        client meetings, client communications and reports.
-        <br /><br />
-        By removing all this extra work they can provide this service at a very reasonable rate.
-     <br />
-     <br />
-  	 <h3>What do I get for my money ?</h3>
+    <div id="left_why">
+      <h3 class="title">Why should I do this ?</h3>
       <p>
-        Your site gets reviewed by an expert for 30 minutes and they give you a report
-        containing:
-        <ul style='padding-left:20px'>
-          <li>Annotated markup of your site</li>
-          <li>What they think is good about your site</li>
-          <li>What could be improved and how</li>
-          <li>The first 3 things they would do if they were working on it</li>
-        </ul>
-        <br />
-        See a sample report now!
+      As designers we've seen website owners get 'tired' of their perfectly good websites much too often, 
+      deciding to do a full re-design that is both costly and time consuming. Get an objective opinion
+      about whether your site really needs a full re-design, or whether a few tweaks will get the job done.
       </p>
-  </div>
+      <br />
+      <h3 class="title">Why not use a web design company?</h3>
+      <p> 
+      Asking a web design company if you need a new website is like asking a hairdresser if you need a 
+      haircut - the answer is always yes! 
+      <br /><br />
+      InputFarm's experts are not looking to sell you a site re-design (in fact they'll never try to sell
+      you further paid services). Instead they'll look for the 'low hanging fruit' - how to make your site
+      better with the least amount of effort. Once you receive the review you can either make the changes
+      yourself or get your designer to do it for you.
+      </p>
 
-  <div style="clear:both;"></div>
+    </div>
+
+    <div id="right_why">
+      <h3>How much does it cost?</h3>
+      <strong>$60</strong><br />
+      <br />
+      InputFarm removes all the extraneous work that a designer would ordinarily have to do - quotes,
+      client meetings, client communications and reports.
+      <br /><br />
+      By removing all this extra work they can provide this service at a very reasonable rate.
+      <br />
+      <br />
+      <h3>What do I get for my money ?</h3>
+      <p>
+      Your site gets reviewed by an expert for 30 minutes and they give you a report
+      containing:
+      <ul style='padding-left:20px'>
+        <li>Annotated markup of your site</li>
+        <li>What they think is good about your site</li>
+        <li>What could be improved and how</li>
+        <li>The first 3 things they would do if they were working on it</li>
+      </ul>
+      <br />
+      See a sample report now!
+      </p>
+    </div>
+
+    <div style="clear:both;"></div>
   </div>
 </div>
 
@@ -130,26 +152,38 @@
 
   <%= form_tag("/front/contact", method: "post", :multipart => true) do %>
     <p>
-      <%=radio_button_tag 'classification', "helpee", true%> Get my site reviewed by an expert
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper"%> I’m an expert, sign me up!   
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> General enquiry
+    <%=radio_button_tag 'classification', "helpee", true%> Get my site reviewed by an expert
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper"%> I'm an expert, sign me up!   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> General enquiry
     </p>
     <br>
     <div id="fieldss">
-       <p><%= text_field_tag :name, "Name",{:class=>"field"} %></p>
-      <p><%= text_field_tag :email, "Email",{:class=>"field"} %></p>
-      <p><%= text_field_tag :url, "Site URL",{:class=>"field"} %></p>
-                  OR 
-      <p><div style="padding-top:10px;align-text:center;margin-left:auto;margin-right:auto;background-color:white;width:410px;height:30px;">
-            Design Files: &nbsp; &nbsp;<%= file_field_tag :upload, multiple: true,name: "upload[]" %>
+      <div class="row_fluid">
+        <p><%= text_field_tag :name, "Name",{:class=>"field "} %></p>
+        <p><%= text_field_tag :email, "Email",{:class=>"field "} %></p>
+        <div class='classification_helpee_field contact_form_field'>
+        <p><%= text_field_tag :url, "Site URL",{:class=>"field"} %></p>
+        OR 
+        <div style="padding-top:10px;align-text:center;margin-left:auto;margin-right:auto;background-color:white;width:410px;height:30px;">
+          Design Files: &nbsp; &nbsp;<%= file_field_tag :upload, multiple: true,name: "upload[]" %>
+        </div>
+        </div>
+      </div>
+      <div class="row_fluid">
+        <div style='margin: 0 auto;padding-top:10px'>
+          <div style='display:inline-block'>
+            <%= text_area_tag :fivethings, "Five main things to focus on",{:class=>"field area area-margin classification_helpee_field contact_form_field"} %>
           </div>
-        </p>
-      <p><%= text_area_tag :fivethings, "Five main things to focus on",{:class=>"field area area-margin"} %></p>
-      <p><%= text_area_tag :message, "Other things we need to know",{:class=>"field area area-mragin"} %></p>
-      <p><%= submit_tag "",:type=>"image", :src=>"assets/submit.png", :style=>"padding-left:280px" %></p>
+          <div style='display:inline-block;padding:15px'>
+            <%= text_area_tag :message, "A link to your portfolio and anything else\nwe need to know",{:class=>"field area area-mragin classification_helper_field contact_form_field",:style=>'display:none'} %>
+            <%= text_area_tag :message, "Other things we need to know",{:class=>"field area area-mragin classification_helpee_field contact_form_field"} %>
+            <%= text_area_tag :message, "Message",{:class=>"field area area-mragin classification_general_field classification_general_field contact_form_field",:style=>'display:none'} %>
+          </div>
+          <p><%= submit_tag "Get Reviewed", :id=>"submit_button"%></p>
+        </div>
+      </div>
     </div>
   <% end %>
-
 </div>
 
 
