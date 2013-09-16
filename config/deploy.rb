@@ -15,7 +15,7 @@ default_run_options[:pty]   = true # must be set for the password prompt from gi
 
 set :keep_releases, 5
 
-set :application, "dwarfmongoose"
+set :application, "reviewerbull"
 set :repository,  "git@github.com:netpenthe/reviewerbull.git"
 
 set :user, "deployguy"
