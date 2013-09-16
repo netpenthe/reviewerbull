@@ -224,9 +224,9 @@ img {
 
 #contact {
   width:100%;
-background: -webkit-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
-background: -o-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
-background: -ms-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
+  background: -webkit-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
+  background: -o-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
+  background: -ms-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
   background-color:#e6e6e6;
   padding-bottom:50px;
   margin-bottom:0px;
@@ -396,7 +396,20 @@ div#big_image_div {
 
 #use_button{
   float: left;
-  padding-left: 20px;
+  border:none;
+  background-image:url('/assets/use-button.png') ;
+  background-repeat:no-repeat;
+  width:380px;
+  height:70px;
+  text-align: left;
+  padding: 23px 22px;
+  font-size: 14px;
+  font-family: 'Roboto';
+  letter-spacing: 2px;
+  margin-left: 18px;
+  font-weight: bold;
+ text-shadow: 0 0 1px rgba(0,0,0,0.3);
+  -webkit-font-smoothing: antialiased;
 }
 
 #top_text {
@@ -466,23 +479,21 @@ div#big_image_div {
   line-height: 54px;
   font-weight: bold;
   text-transform: uppercase;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+ /* text-shadow: 0 1px 2px rgba(0,0,0,0.4);*/
 }
 .arrow_box {
   padding:20px;
   height: 150px;
   position: relative;
   background: #78B153;
-  color: #efefef;
+  color: #fff;
   font-size:14px;
   border: 1px solid #B2D899;
   border-radius: 6px;
-  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-  -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.3));
-  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.3));
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.1));
   font-size: 14px;
-  font-weight: bold;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
 }
 .arrow_box:after, .arrow_box:before {
   left: 100%;
@@ -512,4 +523,14 @@ div#big_image_div {
 h1.logo {
   margin: 0;
   padding: 0 0 10px 0;
+}
+
+input, textarea {
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+border-radius: 2px;
+font-family: 'Roboto', Arial, sans-serif;  
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  font-family: 'Roboto', Arial, sans-serif;  
 }
