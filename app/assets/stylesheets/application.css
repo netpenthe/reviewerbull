@@ -378,10 +378,10 @@ img {
 }
 
 div#big_image_div {
-  /*background-image: url(/assets/let-our-experts_stretch.png);*/
+  background-image: url(/assets/main_bg/12331.jpg);
   background-color:#ededed;
   border-bottom: 1px solid #cdcdcd;
-  background-position: 60% top;
+  background-position: 90% top;
   background-size: 100% auto;
   background-repeat: no-repeat;
   position:relative;

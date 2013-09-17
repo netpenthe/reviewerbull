@@ -18,6 +18,15 @@
 </div>
 
 <div style="clear:both"></div>
+<script>
+  var images = "12331.jpg  49297.jpg  50893.jpg  57606.jpg  70360.jpg  72451.jpg  75773.jpg  78663.jpg  79145.jpg".split('  ');
+  var idx = 0;
+  function nextImage() {
+    idx = (idx == (images.length -1)) ? 0 : idx + 1; 
+    $('#big_image_div').css('background-image',"url(/assets/main_bg/"+images[idx]+")");
+  }
+</script>
+<div><a href='#' onclick='nextImage()' style='color:blue'>NEXT</div>
 <div id="sun" class="title">
   <div class="row_fluid">
     <p>Often the difference between a good and great design is a matter of refining a few elements - Sun Tzu.</p>
