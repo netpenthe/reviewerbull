@@ -8,89 +8,89 @@
 //= require jquery.fileupload/jquery.fileupload-ui
 
 /*
-$('#classification_general').click(function(){
-    $('#contact').css('height','440px');
-    fields = " \
-    <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
-    <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
-    <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
-    <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /><br /></p>";
+   $('#classification_general').click(function(){
+   $('#contact').css('height','440px');
+   fields = " \
+   <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
+   <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
+   <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
+   <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /><br /></p>";
 
-    $('#fieldss').html(fields);
-    $(function(){
-      $(':input').focus(function(){
-        if (!this.clicked) {
-        $(this).attr('value', '');
-        $(this).val('');    
-        this.clicked = true;
-        }
-        }); 
-      });
-    });
+   $('#fieldss').html(fields);
+   $(function(){
+   $(':input').focus(function(){
+   if (!this.clicked) {
+   $(this).attr('value', '');
+   $(this).val('');    
+   this.clicked = true;
+   }
+   }); 
+   });
+   });
 
-$('#classification_helpee').click(function(){
-    $('#contact').css('height','740px');
-    fields = " \
-    <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
-    <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
-    <p><input class='field' id='url' name='url' type='text' value='Site URL'></p> \
-    <p><input id='upload' multiple='multiple' name='upload[]' type='file'></p> \
-    <p><textarea class='field area' id='fivethings' name='fivethings'>Five main things to focus on</textarea></p> \
-    <p><textarea class='field area' id='message' name='message'>Other things we need to know</textarea></p> \
-    <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /><br /></p>";
+   $('#classification_helpee').click(function(){
+   $('#contact').css('height','740px');
+   fields = " \
+   <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
+   <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
+   <p><input class='field' id='url' name='url' type='text' value='Site URL'></p> \
+   <p><input id='upload' multiple='multiple' name='upload[]' type='file'></p> \
+   <p><textarea class='field area' id='fivethings' name='fivethings'>Five main things to focus on</textarea></p> \
+   <p><textarea class='field area' id='message' name='message'>Other things we need to know</textarea></p> \
+   <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /><br /></p>";
 
-    $('#fieldss').html(fields);
+   $('#fieldss').html(fields);
 
-    $(function(){
-      $(':input').focus(function(){
-        if (!this.clicked) {
-        $(this).attr('value', '');
-        $(this).val('');    
-        this.clicked = true;
-        }
-        }); 
-      });
-});
+   $(function(){
+   $(':input').focus(function(){
+   if (!this.clicked) {
+   $(this).attr('value', '');
+   $(this).val('');    
+   this.clicked = true;
+   }
+   }); 
+   });
+   });
 
-$('#classification_helper').click(function(){
-    $('#contact').css('height','520px');
+   $('#classification_helper').click(function(){
+   $('#contact').css('height','520px');
 
-    fields = " \
-    <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
-    <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
-    <p><input class='field' id='url' name='url' type='text' value='Portfolio URL'></p> \
-    <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
-    <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /><br /></p>";
+   fields = " \
+   <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
+   <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
+   <p><input class='field' id='url' name='url' type='text' value='Portfolio URL'></p> \
+   <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
+   <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /><br /></p>";
 
-    $('#fieldss').html(fields);
+   $('#fieldss').html(fields);
 
-    $(function(){
-      $(':input').focus(function(){
-        if (!this.clicked) {
-        $(this).attr('value', '');
-        $(this).val('');    
-        this.clicked = true;
-        }
-        }); 
-      });
-});
-*/
+   $(function(){
+   $(':input').focus(function(){
+   if (!this.clicked) {
+   $(this).attr('value', '');
+   $(this).val('');    
+   this.clicked = true;
+   }
+   }); 
+   });
+   });
+   */
 $('#classification_general, #classification_helpee, #classification_helper').click(function() {
-  $('.contact_form_field').hide();
-  $('.'+$(this).attr("id")+'_field').show().fadeOut().fadeIn();
-  switch ($(this).attr("id")) 
-  {
+    $('.contact_form_field').hide();
+    $('.'+$(this).attr("id")+'_field').show().fadeOut().fadeIn();
+    switch ($(this).attr("id")) 
+    {
     case "classification_general":
-      $('#submit_button').val("Send Message");
-      break; 
+    $('#submit_button').val("Send Message");
+    break; 
     case "classification_helpee":
-      $('#submit_button').val("Get Reviewed");
-      break; 
+    $('#submit_button').val("Get Reviewed");
+    break; 
     case "classification_helper":
-      $('#submit_button').val("Apply to be Expert");
-      break; 
-  }
-});
+    $('#submit_button').val("Apply to be Expert");
+    break; 
+    }
+    });
 
 $('#expert_left').click(function() {
 
@@ -172,17 +172,6 @@ $(window).resize(function() {
     setTimeout(resize_bg,20);
     }); 
 
-$(function() {
-    setTimeout(resize_bg,20);
-    $('#fileupload').fileupload({
-dataType: 'json',
-done: function (e, data) {
-$.each(data.result.files, function (index, file) {
-  $('<p/>').text(file.name).appendTo(document.body);
-  });
-}
-});
-    });
 $(':input').focus(function(){
     if (!this.clicked) {
     $(this).attr('value', '');
@@ -193,11 +182,28 @@ $(':input').focus(function(){
 
 /* control the image rotation..*/
 var images = "blue_shirt_f.jpg  brunette_f.jpg  green_chairs_f.jpg  overhead_f.jpg".split('  ');
+function preload(sources)
+{
+  jQuery.each(sources, function(i,source) { jQuery.get("/assets/main_bg/"+source); });
+}
 var idx = 0;
 function nextImage() {
   idx = (idx == (images.length -1)) ? 0 : idx + 1; 
   $('#big_image_div').fadeOut(50).css('background-image',"url(/assets/main_bg/"+images[idx]+")").fadeIn();
   setTimeout('nextImage()', 5000);
 }
-setTimeout('nextImage()', 5000);
+
+$(function() {
+    setTimeout(resize_bg,20);
+    $('#fileupload').fileupload({
+dataType: 'json',
+done: function (e, data) {
+$.each(data.result.files, function (index, file) {
+  $('<p/>').text(file.name).appendTo(document.body);
+  });
+}
+});
+    preload(images);
+    setTimeout('nextImage()', 5000);
+    });
 
