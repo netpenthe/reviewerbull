@@ -20,14 +20,6 @@
 </div>
 
 <div style="clear:both"></div>
-<script>
-  var images = "blue_shirt_f.jpg  blue_shirt.jpg  brunette_f.jpg  brunette.jpg  green_chairs_f.jpg  green_chairs.jpg  overhead_f.jpg  overhead.jpg".split('  ');
-  var idx = 0;
-  function nextImage() {
-    idx = (idx == (images.length -1)) ? 0 : idx + 1; 
-    $('#big_image_div').css('background-image',"url(/assets/main_bg/"+images[idx]+")");
-  }
-</script>
 <div><a href='#' onclick='nextImage()' style='color:blue'>NEXT</div>
 <div id="sun" class="title">
   <div class="row_fluid">

@@ -191,3 +191,13 @@ $(':input').focus(function(){
     }
     });	
 
+/* control the image rotation..*/
+var images = "blue_shirt_f.jpg  brunette_f.jpg  green_chairs_f.jpg  overhead_f.jpg".split('  ');
+var idx = 0;
+function nextImage() {
+  idx = (idx == (images.length -1)) ? 0 : idx + 1; 
+  $('#big_image_div').fadeOut(50).css('background-image',"url(/assets/main_bg/"+images[idx]+")").fadeIn();
+  setTimeout('nextImage()', 5000);
+}
+setTimeout('nextImage()', 5000);
+
