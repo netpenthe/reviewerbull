@@ -193,16 +193,17 @@ $(':input').focus(function(){
     });	
 
 /* control the image rotation..*/
-var images = "blue_shirt_f.jpg  brunette_f.jpg  green_chairs_f.jpg  overhead_f.jpg".split('  ');
+var images = [{'img':'blue_shirt_f.jpg','txt':'#fff'}, {'img':'brunette_f.jpg','txt':'#222'}, {'img':'overhead_f.jpg','txt':'#efefef'}, {'img':'green_chairs_f.jpg','txt':'#333'} ];
 function preload(sources)
 {
-  jQuery.each(sources, function(i,source) { jQuery.get("/assets/main_bg/"+source); });
+  jQuery.each(sources, function(i,source) { jQuery.get("/assets/main_bg/"+source['img']); });
 }
 var idx = 0;
 function nextImage() {
   idx = (idx == (images.length -1)) ? 0 : idx + 1; 
   $('#big_image_div').fadeOut(10);
-  $('#big_image_div').css('background-image',"url(/assets/main_bg/"+images[idx]+")").fadeIn();
+  $('#big_image_div').css('background-image',"url(/assets/main_bg/"+images[idx]['img']+")").fadeIn();
+  $('#top_text').css('color', images[idx]['txt']);
   setTimeout('nextImage()', 5000);
 }
 

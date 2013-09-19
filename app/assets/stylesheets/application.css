@@ -404,6 +404,7 @@ div#big_image_div {
   text-align: left;
   padding: 23px 22px;
   margin-top: 20px;
+  margin-left: 20px;
   font-size: 14px;
   font-family: 'Roboto';
   letter-spacing: 2px;
@@ -413,16 +414,16 @@ div#big_image_div {
 }
 
 #top_text {
-  color: #efefef;
+  color: #fff;
   text-align:left;
   font-size:32px;
   font-family:'Roboto';
   padding: 20px;
-  background-color:rgba(25,25,25,0.4);
+/*background-color:rgba(25,25,25,0.4);*/
   width:800px;
--moz-border-radius: 2px;
--webkit-border-radius: 2px;
-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
 
 #top_text_and_button {
