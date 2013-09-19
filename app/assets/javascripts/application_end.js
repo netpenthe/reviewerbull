@@ -158,13 +158,25 @@ function resize_bg() {
   $('#big_image_div').css('height', height+"px");
   //:$('#bigimagediv').css('height','830px')
   var width = $('#big_image_div').width();
-  width = width > 1200 ? 1200 : width;    
+  if (width <= 1663) {
+    $('#big_image_div').css('background-size', "1663px 481px");
+  } else {
+    $('#big_image_div').css('background-size', '100% auto');
+  }
+    
   // $('.usebutton').css('left', -1*width*0.75*0.5); 
   //$('.usebutton').css('top', height*0.75); 
   //$('.usebutton').css('left', 515/1200 * 1200 * -1 + 260)
-  var top = $('#big_image_div').height();
-  top = ( top - 412 ) / 2;
-  $('#top_text_and_button').css('padding-top',top);
+
+  // the text + button is about 300px
+  var topTxtPadding = $('#big_image_div').height();
+  if (topTxtPadding < 600) {
+    topTxtPadding =  topTxtPadding - 300; // on small screens text is 20px above bottom of image
+  } else {
+    topTxtPadding =  topTxtPadding / 2; // on big screens text is half way down image
+  }
+  $('#top_text_and_button').css('padding-top',topTxtPadding);
+ 
   console.log("height is: "+height+", width is: "+width);
 }
 
@@ -189,7 +201,8 @@ function preload(sources)
 var idx = 0;
 function nextImage() {
   idx = (idx == (images.length -1)) ? 0 : idx + 1; 
-  $('#big_image_div').fadeOut(50).css('background-image',"url(/assets/main_bg/"+images[idx]+")").fadeIn();
+  $('#big_image_div').fadeOut(10);
+  $('#big_image_div').css('background-image',"url(/assets/main_bg/"+images[idx]+")").fadeIn();
   setTimeout('nextImage()', 5000);
 }
 

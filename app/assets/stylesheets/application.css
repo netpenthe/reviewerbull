@@ -397,27 +397,32 @@ div#big_image_div {
 #use_button{
   float: left;
   border:none;
-  background-image:url('/assets/use-button.png') ;
+  background-image:url('/assets/use-button.gif') ;
   background-repeat:no-repeat;
   width:380px;
   height:70px;
   text-align: left;
   padding: 23px 22px;
+  margin-top: 20px;
   font-size: 14px;
   font-family: 'Roboto';
   letter-spacing: 2px;
-  margin-left: 18px;
   font-weight: bold;
  text-shadow: 0 0 1px rgba(0,0,0,0.3);
   -webkit-font-smoothing: antialiased;
 }
 
 #top_text {
-  color: #454545;
+  color: #efefef;
   text-align:left;
   font-size:32px;
   font-family:'Roboto';
   padding: 20px;
+  background-color:rgba(25,25,25,0.4);
+  width:800px;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+border-radius: 2px;
 }
 
 #top_text_and_button {
