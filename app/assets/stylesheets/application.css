@@ -397,7 +397,7 @@ div#big_image_div {
 #use_button{
   float: left;
   border:none;
-  background-image:url('/assets/use-button.gif') ;
+  background-image:url('/assets/use-button.png') ;
   background-repeat:no-repeat;
   width:380px;
   height:70px;
