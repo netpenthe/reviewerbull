@@ -289,8 +289,8 @@ img {
   text-align: left;
 }
 
-#right_why h3 { padding-bottom:15px; color:#7a7a7a;}
-#left_why h3 { padding-bottom:15px; color:#7a7a7a;}
+#right_why h3 { padding-bottom:0px; color:#7a7a7a;}
+#left_why h3 { padding-bottom:0px; color:#7a7a7a;}
 
 #why_text{
   color:#a7a7a7;
@@ -412,6 +412,8 @@ div#big_image_div {
  text-shadow: 0 0 1px rgba(0,0,0,0.3);
   -webkit-font-smoothing: antialiased;
 }
+
+#use_button_wrapper { color: #fff}
 
 #top_text {
   color: #fff;
@@ -539,4 +541,27 @@ font-family: 'Roboto', Arial, sans-serif;
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
   font-family: 'Roboto', Arial, sans-serif;  
+}
+
+.step_description {
+  font-style: italic;
+  text-align: left;
+  font-size: 0.9em;
+  bottom: 0;
+  position: absolute;
+  padding: 20px;
+}
+.step_header {
+  width: 25%;
+  float: left;
+  color: #5B9337; 
+  font-size: 1.4em;
+}
+.step {
+position:relative;
+width: 25%; 
+float: left; 
+color: #666;
+  font-size: 1.1em;
+height:420px;
 }
