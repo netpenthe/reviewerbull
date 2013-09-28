@@ -193,7 +193,7 @@ $(':input').focus(function(){
     });	
 
 /* control the image rotation..*/
-var images = [{'img':'blue_shirt_f.jpg','txt':'#fff'}, {'img':'brunette_f.jpg','txt':'#222'}, {'img':'overhead_f.jpg','txt':'#efefef'}, {'img':'green_chairs_f.jpg','txt':'#333'} ];
+var images = [{'img':'blue_shirt.jpg','txt':'#fff'}, {'img':'brunette.jpg','txt':'#222'}, {'img':'overhead.jpg','txt':'#efefef'}, {'img':'green_chairs.jpg','txt':'#333'} ];
 function preload(sources)
 {
   jQuery.each(sources, function(i,source) { jQuery.get("/assets/main_bg/"+source['img']); });
