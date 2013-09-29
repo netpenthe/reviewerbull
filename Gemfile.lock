@@ -78,6 +78,11 @@ GEM
       cocaine (~> 0.4.0)
       mime-types
     polyglot (0.3.3)
+    prettyphoto-rails (0.2.1)
+      jquery-rails
+      rails (>= 3.1)
+      sass-rails
+      uglifier
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -138,6 +143,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   paperclip
+  prettyphoto-rails
   rails (= 3.2.13)
   rvm-capistrano
   sass-rails (~> 3.2.3)

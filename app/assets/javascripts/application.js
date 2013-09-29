@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+// require prettyphoto-rails-dev /* use this for uncompressed javascript code */
 // require_tree .
 //= require front
 //= require smoothscroll
