@@ -40,7 +40,7 @@ body {
   min-width:600px;		/* Minimum width of layout - remove line if not required */
   /* The min-width property does not work in old versions of Internet Explorer */
   font-family:'Roboto';
-  color: white;
+  color: #666;
 }
 a {
   color:#fff;
@@ -408,7 +408,7 @@ hr.light_grey {
   padding-left: 10px;
   font-size:14px;
   height:40px;
-  width:400px;
+  width:250px;
 }
 
 .area{
@@ -484,13 +484,26 @@ div#big_image_div {
   margin-right:33px;
   width: 340px;
  }
+.site_design { 
+  text-align:center; 
+  background-color:white;
+  width:280px;
+  height:45px;
+  margin: 0 auto;
+  color: #fff;
+}
  .steps p {
    font-size:1.1em;
    margin:5px;
-   color:#888;
+   color:#fff;
  }
  .steps p ul li {
    margin-left: -25px;
+}
+
+.hand {
+  cursor:pointer;
+  cursor:hand;
 }
 
 .steps h2 {
@@ -522,15 +535,29 @@ div#big_image_div {
 .logo {
   color: #ddf8c6;
   text-align: center;
-  font-size: 34px;
+  font-size: 23px;
   line-height: 54px;
   font-weight: bold;
   text-transform: uppercase;
  /* text-shadow: 0 1px 2px rgba(0,0,0,0.4);*/
 }
+.arrow_box_noarrow {
+  padding:20px;
+  height: 160px;
+  position: relative;
+  background: #78B153;
+  color: #fff;
+  font-size:14px;
+  border: 1px solid #B2D899;
+  border-radius: 6px;
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.1));
+  font-size: 14px;
+}
 .arrow_box {
   padding:20px;
-  height: 150px;
+  height: 160px;
   position: relative;
   background: #78B153;
   color: #fff;

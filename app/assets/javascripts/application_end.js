@@ -220,7 +220,6 @@ $.each(data.result.files, function (index, file) {
     preload(images);
     setTimeout('nextImage()', 5000);
      $("a[rel^='prettyPhoto']").prettyPhoto({
-      width: "600px",
       social_tools: false,
       deeplinking: false
      });

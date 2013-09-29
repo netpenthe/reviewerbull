@@ -8,9 +8,10 @@
         <!--Our web experts will give<br />
         you an honest appraisal of your website<br />
         along with the quickest and easiest ways to improve it. -->
-        Have some of the <br />
+        <!--Have some of the <br />
         best designers on the web<br />
-        tell you how you can improve your site 
+        tell you how you can improve your site -->
+        Make your website better, faster
       </div>
       <a href='#contact' id='use_button_wrapper' class='smoothScroll'>
         <span id="use_button">
@@ -79,53 +80,69 @@
     <p>Input Farm gives you access to expert designers who review your site for 30 minutes looking for ways you can make it better </p>
     <p>For $75, you will receive practical suggestions to improve your site within 48 hours. No up-sell, no meetings, no quotes. </p>
     <p>Try it now, if you're unhappy with the review, your money back! </p> 
-  </div>
-</div>
-<div id="how_it_works" class="smoothScroll" style='background-color: #fff'>
-  <div class="row_fluid">
-    <h1 class='title'>HOW IT WORKS</h1>
-    <hr class='light_grey'/>
+    <br /><br />
   </div>
 </div>
 <div style='clear:both'></div>
-<!--
-<div id="how_it_works" class="smoothScroll">
+<div id="how_it_works" class="smoothScroll" style='width:100%;background-color:#ededed;padding:1px 0 20px 0'>
   <a name='howitworks'></a>
   <div class="row_fluid">
     <h1 class='title'>HOW IT WORKS</h1>
+    <hr class='light_grey'/>
     <div id='steps_wrapper'>
       <div class='steps'>
         <div class='preview' >
           <div class='arrow_box'>
-            <h1 class='logo'>Step 1</h1>
-            Submit the URL or an image of your site design
+            <h1 class='logo'>Where is your site?</h1>
+              <br />
+              <br />
+              <div id='site_url' class="site_design">
+                <%= text_field_tag :url, "Site URL",{:class=>"field"} %>
+                 <br />
+                  <p class='hand' style='font-size:0.8em' onclick="$('#site_url').hide();$('#site_upload_image').fadeIn()">[or upload jpg/png file instead]</p>
+              </div>
+
+              <div id='site_upload_image' class='site_design' style="display:none">
+                <%= file_field_tag :upload, multiple: true,name: "upload[]", class: "field", style: "padding-top:10px;height:30px" %>
+                <br />
+                  <p class='hand' style='font-size:0.8em' onclick="$('#site_upload_image').hide();$('#site_url').fadeIn()">[or enter a URL instead]</p>
+              </div>
+ 
           </div>
         </div>
       </div>
       <div class='steps' style='margin-left:10px'> 
         <div class='preview'>
-          <div class='arrow_box'>
-            <h1 class='logo'>Step 2</h1>
-            An expert will review your site for 20-30 minutes <br /> 
-            They will look for practical things to improve your site 
+          <div class='arrow_box' style='text-align:left'>
+            <h1 class='logo'>Choose options</h1>
+            <div style='float:left;width:50%'>
+            Pick expert<br />
+             <%=image_tag "small_expert1.jpg", :size=>'35x35'%>
+             <%=image_tag "small_expert2.jpg", :size=>'35x35'%>
+             <%=image_tag "small_expert3.jpg", :size=>'35x35'%>
+            </div> 
+            <div style='float:left'>
+            Pick feedback format <br />
+             <%=image_tag "microphone.png", :size=>'35x35'%>
+             <%=image_tag "clipboard.png", :size=>'35x35'%>
+             <%=image_tag "camera.png", :size=>'35x35'%>
+            </div> 
           </div>
         </div>
       </div>
       <div class='steps' style='margin-left:10px'> 
         <div class='preview'>
-          <div class='arrow_box'>
-            <h1 class='logo'>Step 3</h1>
-            You will receive a report including
-            a marked up screenshot and
-            suggestions to improve your site 
+          <div class='arrow_box_noarrow'>
+            <h1 class='logo'>Make it so</h1>
+              Submit 
+              <br /><br />
+              Receive your feedback within 48 hours!               
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
--->
 
 <div id="why_and_how">
   <div class="row_fluid">
