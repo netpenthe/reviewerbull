@@ -64,9 +64,11 @@ p {
 ul {
   font-size: 1.1em;
 }
+/*
 img {
   margin:10px 0 5px;
 }
+*/
 
     
 /* fade edges */
@@ -273,6 +275,7 @@ hr.light_grey {
   padding-top:35px;
   color:#616161;
   text-align: center;
+  border-top: 1px solid #cdcdcd;
 }	
 
 #why_and_how {
@@ -283,6 +286,7 @@ hr.light_grey {
 #how_it_works {
   width:1190px;
   margin:auto;
+  border-bottom: 1px solid #cdcdcd;
 }
 
 #our_experts {
@@ -405,7 +409,7 @@ hr.light_grey {
 .field{
   border-style: none; 
   color: #7a7a7a;  
-  padding-left: 10px;
+  padding: 5px 15px 0px 15px;
   font-size:14px;
   height:40px;
   width:250px;
@@ -536,7 +540,7 @@ div#big_image_div {
   color: #ddf8c6;
   text-align: center;
   font-size: 23px;
-  line-height: 54px;
+  line-height: 40px;
   font-weight: bold;
   text-transform: uppercase;
  /* text-shadow: 0 1px 2px rgba(0,0,0,0.4);*/
@@ -557,7 +561,7 @@ div#big_image_div {
 }
 .arrow_box {
   padding:20px;
-  height: 160px;
+  height: 200px;
   position: relative;
   background: #78B153;
   color: #fff;
@@ -630,4 +634,10 @@ float: left;
 color: #666;
   font-size: 1.1em;
 height:420px;
+}
+
+.experts, .format {
+  float:left;
+  padding-left:10px;
+  font-size:0.8em;
 }

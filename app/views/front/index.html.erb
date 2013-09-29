@@ -73,7 +73,7 @@
 
 <div id="what_is_this" class="smoothScroll" style='background-color: #fff'>
   <div class="row_fluid" style="text-align:center;color:#767676">
-    <h1 class='title'>WHAT IS THIS?</h1>
+    <h1 class='title'>GET FEEDBACK, FAST</h1>
     <hr class='light_grey'/>
     <p>Websites that are constantly updated look fresher </p>
     <p>Creating a fantastic website is about constant improvement </p>
@@ -93,21 +93,24 @@
       <div class='steps'>
         <div class='preview' >
           <div class='arrow_box'>
-            <h1 class='logo'>Where is your site?</h1>
-              <br />
-              <br />
-              <div id='site_url' class="site_design">
-                <%= text_field_tag :url, "Site URL",{:class=>"field"} %>
-                 <br />
-                  <p class='hand' style='font-size:0.8em' onclick="$('#site_url').hide();$('#site_upload_image').fadeIn()">[or upload jpg/png file instead]</p>
-              </div>
+            <h1 class='logo'>your site?</h1>
+            <div class="site_design">
+              <%= text_field_tag :email, "Email",{:class=>"field "} %>
+            </div>
+            <br />
 
-              <div id='site_upload_image' class='site_design' style="display:none">
-                <%= file_field_tag :upload, multiple: true,name: "upload[]", class: "field", style: "padding-top:10px;height:30px" %>
-                <br />
-                  <p class='hand' style='font-size:0.8em' onclick="$('#site_upload_image').hide();$('#site_url').fadeIn()">[or enter a URL instead]</p>
-              </div>
- 
+            <div id='site_url' class="site_design">
+              <%= text_field_tag :url, "Site URL",{:class=>"field"} %>
+              <br />
+              <p class='hand' style='font-size:0.8em' onclick="$('#site_url').hide();$('#site_upload_image').fadeIn()">[or upload jpg/png file instead]</p>
+            </div>
+
+            <div id='site_upload_image' class='site_design' style="display:none">
+              <%= file_field_tag :upload, multiple: true,name: "upload[]", class: "field", style: "padding-top:10px;height:30px" %>
+              <br />
+              <p class='hand' style='font-size:0.8em' onclick="$('#site_upload_image').hide();$('#site_url').fadeIn()">[or enter a URL instead]</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -115,33 +118,61 @@
         <div class='preview'>
           <div class='arrow_box' style='text-align:left'>
             <h1 class='logo'>Choose options</h1>
-            <div style='float:left;width:50%'>
-            Pick expert<br />
-             <%=image_tag "small_expert1.jpg", :size=>'35x35'%>
-             <%=image_tag "small_expert2.jpg", :size=>'35x35'%>
-             <%=image_tag "small_expert3.jpg", :size=>'35x35'%>
+            <span style='width:80px;float:left;color:#ddf8c6'>
+              Selected<br /> Expert
+            </span>
+            <div class='experts'>
+              <%=image_tag "small_expert1.jpg", :size=>'35x35'%> 
+              <br />
+              [profile]
             </div> 
-            <div style='float:left'>
-            Pick feedback format <br />
-             <%=image_tag "microphone.png", :size=>'35x35'%>
-             <%=image_tag "clipboard.png", :size=>'35x35'%>
-             <%=image_tag "camera.png", :size=>'35x35'%>
+            <div class='experts'>
+              <%=image_tag "small_expert2.jpg", :size=>'35x35'%>
+              <br />
+              [profile]
             </div> 
-          </div>
+            <div class='experts'>
+              <%=image_tag "small_expert3.jpg", :size=>'35x35'%>
+              <br />
+              [profile]
+            </div> 
+            <div style='clear:both'></div>
+            <br />
+
+            <span style='width:80px; float:left;color:#ddf8c6'>
+              Feedback <br /> format 
+            </span>
+            <div class='format'>
+              <%=image_tag "microphone.png", :size=>'35x35'%> 
+              <br />
+              Audio 
+            </div> 
+            <div class='format'>
+              <%=image_tag "clipboard.png", :size=>'35x35'%>   
+              <br />
+              Image
+            </div> 
+            <div class='format'>
+              <%=image_tag "camera.png", :size=>'35x35'%> 
+              <br />
+              Video
+            </div> 
+          </div> 
         </div>
       </div>
       <div class='steps' style='margin-left:10px'> 
         <div class='preview'>
           <div class='arrow_box_noarrow'>
             <h1 class='logo'>Make it so</h1>
-              Submit 
-              <br /><br />
-              Receive your feedback within 48 hours!               
+            Submit 
+            <br /><br />
+            Receive your feedback within 48 hours!               
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div style='clear:both'></div>
 </div>
 
 <div id="why_and_how">
