@@ -640,4 +640,20 @@ height:420px;
   float:left;
   padding-left:10px;
   font-size:0.8em;
+  width:60px;
 }
+
+/* submit form styles */
+#submit_form div {
+  background-color: #5b9337;
+}
+
+.sf {
+  padding:10px;
+}
+
+.sf_label {
+  width:200px;
+  display:inline-block;
+}
+/* end submit form styles */

@@ -75,12 +75,21 @@
   <div class="row_fluid" style="text-align:center;color:#767676">
     <h1 class='title'>GET FEEDBACK, FAST</h1>
     <hr class='light_grey'/>
+      <p>Inputfarm is a new way to get feedback.</p>
+      <p> We focus on iteration rather than redesign.</p>
+      <p>We start with what you have, we connect you to great designers who review your site and give you feedback.</p>
+      <p>For $75, you will receive practical suggestions to improve your site within 48 hours directly from design experts. </p>
+      <p>No up-sell, no admin, no meetings, no quotes. Just really fast expert feedback. </p>
+      <p>It's the most cost effective way to improve your website.</p>
+<!--
     <p>Websites that are constantly updated look fresher </p>
     <p>Creating a fantastic website is about constant improvement </p>
     <p>Input Farm gives you access to expert designers who review your site for 30 minutes looking for ways you can make it better </p>
     <p>For $75, you will receive practical suggestions to improve your site within 48 hours. No up-sell, no meetings, no quotes. </p>
     <p>Try it now, if you're unhappy with the review, your money back! </p> 
+-->
     <br /><br />
+
   </div>
 </div>
 <div style='clear:both'></div>
@@ -119,22 +128,16 @@
           <div class='arrow_box' style='text-align:left'>
             <h1 class='logo'>Choose options</h1>
             <span style='width:80px;float:left;color:#ddf8c6'>
-              Selected<br /> Expert
+              Select<br /> Expert
             </span>
             <div class='experts'>
               <%=image_tag "small_expert1.jpg", :size=>'35x35'%> 
-              <br />
-              [profile]
             </div> 
             <div class='experts'>
               <%=image_tag "small_expert2.jpg", :size=>'35x35'%>
-              <br />
-              [profile]
             </div> 
             <div class='experts'>
               <%=image_tag "small_expert3.jpg", :size=>'35x35'%>
-              <br />
-              [profile]
             </div> 
             <div style='clear:both'></div>
             <br />
@@ -164,8 +167,8 @@
         <div class='preview'>
           <div class='arrow_box_noarrow'>
             <h1 class='logo'>Make it so</h1>
-            Submit 
-            <br /><br />
+                <a href="#submit_form" rel="prettyPhoto">Submit</a>
+           <br /><br />
             Receive your feedback within 48 hours!               
           </div>
         </div>
@@ -234,36 +237,26 @@
 </div>
 
 <div id="contact">
-  <h2>LET'S GET STARTED</h2>
+  <h2>CONTACT</h2>
   <br>
   <br>
 
   <%= form_tag("/front/contact", method: "post", :multipart => true) do %>
     <p>
-    <%=radio_button_tag 'classification', "helpee", true%> Get my site reviewed by an expert
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper"%> I'm an expert, sign me up!   
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> General enquiry
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper", true%> I'm an expert, sign me up!   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> Contact
     </p>
     <br>
     <div id="fieldss">
       <div class="row_fluid">
         <p><%= text_field_tag :name, "Name",{:class=>"field "} %></p>
         <p><%= text_field_tag :email, "Email",{:class=>"field "} %></p>
-        <div class='classification_helpee_field contact_form_field'>
-          <p><%= text_field_tag :url, "Site URL",{:class=>"field"} %></p>
-          OR 
-          <div style="padding-top:10px;align-text:center;margin-left:auto;margin-right:auto;background-color:white;width:410px;height:30px;">
-            Design Files: &nbsp; &nbsp;<%= file_field_tag :upload, multiple: true,name: "upload[]" %>
-          </div>
         </div>
       </div>
       <div class="row_fluid">
         <div style='margin: 0 auto;padding-top:10px'>
-          <div style='display:inline-block'>
-            <%= text_area_tag :fivethings, "Five main things to focus on",{:class=>"field area area-margin classification_helpee_field contact_form_field"} %>
-          </div>
           <div style='display:inline-block;padding:15px'>
-            <%= text_area_tag :message, "A link to your portfolio and anything else\nwe need to know",{:class=>"field area area-mragin classification_helper_field contact_form_field",:style=>'display:none'} %>
+            <%= text_area_tag :message, "A link to your portfolio and anything else we need to know",{:class=>"field area area-mragin classification_helper_field contact_form_field"} %>
             <%= text_area_tag :message, "Other things we need to know",{:class=>"field area area-mragin classification_helpee_field contact_form_field"} %>
             <%= text_area_tag :message, "Message",{:class=>"field area area-mragin classification_general_field classification_general_field contact_form_field",:style=>'display:none'} %>
           </div>
@@ -274,4 +267,19 @@
   <% end %>
 </div>
 
+<div id='submit_form' style='display:none;height:262px'>
+  <div style='height:262px'>
+  <div style='padding:5px;color:#fff;background-color:#5b9337'><%=link_to image_tag("logo_white_small.png",:size=>"106x14", :style=>"border:none"),"/", :style=>"border:none"%> - Make your website better, faster</div>
+  <div style='padding:10px'>
+  <div class='sf'><span class='sf_label'>Your site</span> <%=text_field_tag :sf_site %> </div>
+  <div class='sf'><span class='sf_label'>Your email address</span> <%=text_field_tag :sf_email %> </div>
+  <br />
+  <div class='sf'><span class='sf_label'>Your expert</span> xxx </div>
+  <div class='sf'><span class='sf_label'>Your feedback format</span> xxx </div>
+  <br />
+  <div class='sf'><span class='sf_label'>Price</span>$75 <br /></div>
+  <div class='sf'>Pay by paypal and get feedback NOW! </div>
+  </div>
+  </div>
+</div>
 

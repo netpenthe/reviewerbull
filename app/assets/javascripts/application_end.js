@@ -221,7 +221,8 @@ $.each(data.result.files, function (index, file) {
     setTimeout('nextImage()', 5000);
      $("a[rel^='prettyPhoto']").prettyPhoto({
       social_tools: false,
-      deeplinking: false
+      deeplinking: false,
+      default_height: '222px'
      });
 });
 
