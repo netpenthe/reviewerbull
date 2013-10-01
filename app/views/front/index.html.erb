@@ -24,11 +24,6 @@
 </div>
 
 <div style="clear:both"></div>
-<div id="sun" class="title">
-  <div class="row_fluid" style='color:#bbb;font-size:0.8em'>
-    <p>Often the difference between a good and great design is a matter of refining a few elements - Sun Tzu</p>
-  </div>
-</div>
 
 
 <!--
@@ -71,43 +66,49 @@
   <div style="clear:both;"></div>
 </div>  -->
 
-<div id="what_is_this" class="smoothScroll" style='background-color: #fff'>
-  <div class="row_fluid" style="text-align:center;color:#767676">
-    <h1 class='title'>GET FEEDBACK, FAST</h1>
-    <hr class='light_grey'/>
-      <p>Inputfarm is a new way to get feedback.</p>
-      <p> We focus on iteration rather than redesign.</p>
-      <p>We start with what you have, we connect you to great designers who review your site and give you feedback.</p>
+<div id="what_is_this" class="smoothScroll" style='background-color: #fff;'>
+  <div class="row_fluid" style="text-align:center;color:#767676;background-image:url('/assets/half_screenshot.png');background-repeat:no-repeat;background-position:left bottom;background-size:520px">
+    <div style='width:50%;padding-top:210px;float:left'>
+      <%#=image_tag 'half_screenshot.png',:width=>'500px' %>
+    </div>
+    <div style='float:left; width:50%;padding-top:70px;text-align:left'>
+      <h1 class='title'>Get feedback, fast.</h1>
+<!--
+      <p>Input Farm gives you access to expert designers who review your site for 30 minutes looking for ways you can make it better.</p>
+      <br />
+      <p>For <span style='color:#5BA93D'>$75</span>, you will receive practical suggestions to improve your site within 48 hours. No up-sell, no meetings, no quotes. Genuine, vetted, experts.</p>
+-->
+      <p>Inputfarm is a new way to get <strong>feedback</strong>.</p>
+      <p>We focus on iteration rather than redesign.</p>
+      <p>We connect you to great designers who review your site and give you feedback.</p>
       <p>For $75, you will receive practical suggestions to improve your site within 48 hours directly from design experts. </p>
       <p>No up-sell, no admin, no meetings, no quotes. Just really fast expert feedback. </p>
       <p>It's the most cost effective way to improve your website.</p>
-<!--
-    <p>Websites that are constantly updated look fresher </p>
-    <p>Creating a fantastic website is about constant improvement </p>
-    <p>Input Farm gives you access to expert designers who review your site for 30 minutes looking for ways you can make it better </p>
-    <p>For $75, you will receive practical suggestions to improve your site within 48 hours. No up-sell, no meetings, no quotes. </p>
-    <p>Try it now, if you're unhappy with the review, your money back! </p> 
--->
-    <br /><br />
-
+      <!--
+      <p>Websites that are constantly updated look fresher </p>
+      <p>Creating a fantastic website is about constant improvement </p>
+      <p>Input Farm gives you access to expert designers who review your site for 30 minutes looking for ways you can make it better </p>
+      <p>For $75, you will receive practical suggestions to improve your site within 48 hours. No up-sell, no meetings, no quotes. </p>
+      <p>Try it now, if you're unhappy with the review, your money back! </p> 
+      -->
+    </div>
+    <div style='clear:both'></div>
   </div>
 </div>
 <div style='clear:both'></div>
-<div id="how_it_works" class="smoothScroll" style='width:100%;background-color:#ededed;padding:1px 0 20px 0'>
+<div id="how_it_works" class="smoothScroll" style='width:100%;padding:70px 0 70px 0'>
   <a name='howitworks'></a>
-  <div class="row_fluid">
-    <h1 class='title'>HOW IT WORKS</h1>
-    <hr class='light_grey'/>
-    <div id='steps_wrapper'>
+  <div class="row_fluid" >
+    <h1 class='title'>How it works.</h1>
+    <br />
+    <div id='xsteps_wrapper'>
       <div class='steps'>
         <div class='preview' >
-          <div class='arrow_box'>
-            <h1 class='logo'>your site?</h1>
+          <div class='xarrow_box'>
             <div class="site_design">
               <%= text_field_tag :email, "Email",{:class=>"field "} %>
             </div>
             <br />
-
             <div id='site_url' class="site_design">
               <%= text_field_tag :url, "Site URL",{:class=>"field"} %>
               <br />
@@ -119,14 +120,13 @@
               <br />
               <p class='hand' style='font-size:0.8em' onclick="$('#site_upload_image').hide();$('#site_url').fadeIn()">[or enter a URL instead]</p>
             </div>
-
           </div>
+          <div class='howitworks_text'>Give us some details</div>
         </div>
       </div>
       <div class='steps' style='margin-left:10px'> 
         <div class='preview'>
-          <div class='arrow_box' style='text-align:left'>
-            <h1 class='logo'>Choose options</h1>
+          <div class='xarrow_box' style='text-align:left'>
             <span style='width:80px;float:left;color:#ddf8c6'>
               Select<br /> Expert
             </span>
@@ -162,16 +162,17 @@
             </div> 
           </div> 
         </div>
+        <div style='clear:both'></div>
+        <div class='howitworks_text'>Select options</div>
       </div>
       <div class='steps' style='margin-left:10px'> 
         <div class='preview'>
-          <div class='arrow_box_noarrow'>
-            <h1 class='logo'>Make it so</h1>
-                <a href="#submit_form" rel="prettyPhoto">Submit</a>
-           <br /><br />
-            Receive your feedback within 48 hours!               
+          <div class='xarrow_box_noarrow'>
+                <a href="#submit_form" rel="prettyPhoto"><%=image_tag 'submit_button.png'%></a>
           </div>
         </div>
+        <div style='clear:both'></div>
+        <div class='howitworks_text'>Receive feedback in 48 hours!</div>
       </div>
     </div>
   </div>
@@ -181,9 +182,14 @@
 <div id="why_and_how">
   <div class="row_fluid">
     <h1 class='title'>QUESTIONS?</h1>
-    <hr class='light_grey'/>
     <div id="left_why">
-      <h3 class="title">Why should I do this ?</h3>
+    <p>WHY SHOULD I DO THIS?</P>
+    <p>WHY NOT USE A WEB DESIGN COMPANY?</P>
+    <p>HOW LONG DOES IT TAKE?</P>
+    <p>HOW MUCH DOES IT COST?</P>
+    <p>WHAT DO I GET FOR MY MONEY?</P>
+    <p>WHAT IF I DON'T LIKE WHAT THEY DO?</P>
+    <!--  <h3 class="title">Why should I do this ?</h3>
       <p>
       As designers we've seen website owners get 'tired' of their perfectly good websites much too often, 
       deciding to do a full re-design that is both costly and time consuming. Get an objective opinion
@@ -203,9 +209,16 @@
 
       <h3 class="title">How long does it take?</h3>
       No more than 72 hours.
+-->
     </div>
 
     <div id="right_why">
+      <p>
+      As designers we've seen website owners get 'tired' of their perfectly good websites much too often, 
+      deciding to do a full re-design that is both costly and time consuming. Get an objective opinion
+      about whether your site really needs a full re-design, or whether a few tweaks will get the job done.
+      </p>
+<!--
       <h3>How much does it cost?</h3>
       <strong>$60</strong><br />
       <p>
@@ -230,6 +243,7 @@
       <br />
       See a sample report now!
       </p>
+-->
     </div>
 
     <div style="clear:both;"></div>
@@ -260,11 +274,17 @@
             <%= text_area_tag :message, "Other things we need to know",{:class=>"field area area-mragin classification_helpee_field contact_form_field"} %>
             <%= text_area_tag :message, "Message",{:class=>"field area area-mragin classification_general_field classification_general_field contact_form_field",:style=>'display:none'} %>
           </div>
-          <p><%= submit_tag "Get Reviewed", :id=>"submit_button"%></p>
+          <p><%= submit_tag "Send", :id=>"submit_button"%></p>
         </div>
       </div>
     </div>
   <% end %>
+</div>
+
+<div id="sun" class="title">
+  <div class="row_fluid" style='color:#bbb;font-size:0.8em'>
+    <p>Often the difference between a good and great design is a matter of refining a few elements - Sun Tzu</p>
+  </div>
 </div>
 
 <div id='submit_form' style='display:none;height:262px'>

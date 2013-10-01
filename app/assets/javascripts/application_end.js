@@ -217,8 +217,10 @@ $.each(data.result.files, function (index, file) {
   });
 }
 });
+/*
     preload(images);
     setTimeout('nextImage()', 5000);
+*/
      $("a[rel^='prettyPhoto']").prettyPhoto({
       social_tools: false,
       deeplinking: false,
