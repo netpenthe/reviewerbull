@@ -87,7 +87,7 @@ $('#classification_general, #classification_helpee, #classification_helper').cli
     $('#submit_button').val("Get Reviewed");
     break; 
     case "classification_helper":
-    $('#submit_button').val("Apply to be Expert");
+    $('#submit_button').val("Apply to be an Expert");
     break; 
     }
     });
