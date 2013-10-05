@@ -26,7 +26,15 @@
           <%=link_to "HOW IT WORKS","#howitworks",:class=>"smoothScroll link"%>
           <%=link_to "CONTACT","#contact",:class=>"smoothScroll link"%>
         </div>
-        <%=flash[:notice]%>
+        <% if flash[:notice].present? %>
+          <p id='flash_notice' class='flash_notice'> <%=flash[:notice]%></p>
+          <script>
+            $(function(){
+              $("#flash_notice").fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000);
+             });
+          </script>
+          
+        <% end %>
       </div>
     </div>
     <%= yield %>
@@ -39,8 +47,8 @@
           <%=link_to "HOME","/" %>&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;&nbsp; 
           <!--<%=link_to "Our Experts","#ourexperts", :class=>"smoothScroll"%> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp; -->
           <%=link_to "HOW IT WORKS","#howitworks", :class=>"smoothScroll"%>&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;&nbsp; 
-          <%=link_to "CONTACT","#contact", :class=>"smoothScroll"%>&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;&nbsp; 
-          <%=link_to "TERMS & CONDITIONS",""%> 
+          <%=link_to "CONTACT","#contact", :class=>"smoothScroll"%>
+          <%#=link_to "TERMS & CONDITIONS",""%> 
         </div>
       </div>
     </div>
