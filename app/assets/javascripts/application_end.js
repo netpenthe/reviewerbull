@@ -184,14 +184,12 @@ $(window).resize(function() {
     setTimeout(resize_bg,20);
     }); 
 
-// $(':input').focus(function(){
-//     if (!this.clicked) {
-//     $(this).attr('value', '');
-//     $(this).val('');    
-//     this.clicked = true;
-//     alert("hello");
-//     }
-//     });
+$('.classification').click(function(){
+     $(this).attr('value', '');
+     $(this).val('');    
+     this.clicked = true;
+     alert("hello");
+});
 
 /* control the image rotation..*/
 var images = [{'img':'blue_shirt.jpg','txt':'#fff'}, {'img':'brunette.jpg','txt':'#222'}, {'img':'overhead.jpg','txt':'#efefef'}, {'img':'green_chairs.jpg','txt':'#333'} ];
