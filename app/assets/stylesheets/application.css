@@ -26,7 +26,7 @@ body{
 @font-face {
   font-family: 'Roboto-Black';
   src: url('/assets/Roboto-Black.ttf');
-  src: local('☺'), url('/assets/vegur-r_0.602-webfont.woff') format('woff'), url('/assets/Roboto-Black.ttf') format('truetype'), url('/assets/vegur-r_0.602-webfont.svg#webfontlYuAwLPv') format('svg');
+  src: url('/assets/vegur-r_0.602-webfont.woff') format('woff'), url('/assets/Roboto-Black.ttf') format('truetype'), url('/assets/vegur-r_0.602-webfont.svg#webfontlYuAwLPv') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -316,9 +316,9 @@ hr.light_grey {
 
 #left_why {
   float:left;
-  color:#616161;
+  color:#9f9f9f;
   margin-left:60px;
-  width:350px;
+  width:400px;
   padding-bottom:25px;
   text-align: left;
 }
@@ -329,7 +329,7 @@ hr.light_grey {
 
 #right_why{
   float:right;
-  color:#616161;
+  color:#3c3c3c;
   margin-right:160px;
   width:550px;
   padding-bottom:25px;
@@ -426,7 +426,7 @@ hr.light_grey {
 }
 
 div#big_image_div {
-  background-image: url(/assets/main_bg/blue_shirt_f.jpg);
+  background-image: url(/assets/main_bg/blue_shirt.jpg);
   background-color:#ededed;
   border-bottom: 1px solid #cdcdcd;
   background-position: 90% top;
@@ -667,3 +667,19 @@ height:420px;
   font-style:italic;
   color: #999;
 }
+
+.qa_answers {
+  display:none;
+}
+
+.qa_questions {
+  cursor:pointer;
+  cursor:hand;
+}
+
+.qa_q_selected {
+  color:#3c3c3c;
+  font-weight:bold;
+  text-decoration: underline;
+}
+  

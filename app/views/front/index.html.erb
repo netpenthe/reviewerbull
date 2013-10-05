@@ -99,7 +99,7 @@
 <div id="how_it_works" class="smoothScroll" style='width:100%;padding:70px 0 70px 0'>
   <a name='howitworks'></a>
   <div class="row_fluid" >
-    <h1 class='title'>How it works.</h1>
+    <h1 class='title'>How it works</h1>
     <br />
     <div id='xsteps_wrapper'>
       <div class='steps'>
@@ -181,23 +181,22 @@
 
 <div id="why_and_how">
   <div class="row_fluid">
-    <h1 class='title'>QUESTIONS?</h1>
+    <h1 class='title'>Questions?</h1>
     <div id="left_why">
-    <p>WHY SHOULD I DO THIS?</P>
-    <p>WHY NOT USE A WEB DESIGN COMPANY?</P>
-    <p>HOW LONG DOES IT TAKE?</P>
-    <p>HOW MUCH DOES IT COST?</P>
-    <p>WHAT DO I GET FOR MY MONEY?</P>
-    <p>WHAT IF I DON'T LIKE WHAT THEY DO?</P>
-    <!--  <h3 class="title">Why should I do this ?</h3>
-      <p>
+    <p id='qa_q_why' class='qa_questions qa_q_selected'>WHY SHOULD I DO THIS?</P>
+    <p id='qa_q_webdesigncompany' class='qa_questions'>WHY NOT USE A WEB DESIGN COMPANY?</P>
+    <p id='qa_q_howlong' class='qa_questions'>HOW LONG DOES IT TAKE?</P>
+    <p id='qa_q_howmuch' class='qa_questions'>HOW MUCH DOES IT COST?</P>
+    <p id='qa_q_whatdoiget' class='qa_questions'>WHAT DO I GET FOR MY MONEY?</P>
+    <p id='qa_q_dontlike' class='qa_questions'>WHAT IF I DON'T LIKE WHAT THEY DO?</P>
+    </div>
+    <div id='right_why'>
+      <div id='qa_why' class='qa_answers' style='display:block'>
       As designers we've seen website owners get 'tired' of their perfectly good websites much too often, 
       deciding to do a full re-design that is both costly and time consuming. Get an objective opinion
       about whether your site really needs a full re-design, or whether a few tweaks will get the job done.
-      </p>
-      <br />
-      <h3 class="title">Why not use a web design company?</h3>
-      <p> 
+      </div>
+      <div id='qa_webdesigncompany' class='qa_answers'> 
       Asking a web design company if you need a new website is like asking a hairdresser if you need a 
       haircut - the answer is always yes! 
       <br /><br />
@@ -205,22 +204,12 @@
       you further paid services). Instead they'll look for the 'low hanging fruit' - how to make your site
       better with the least amount of effort. Once you receive the review you can either make the changes
       yourself or get your designer to do it for you.
-      </p>
-
-      <h3 class="title">How long does it take?</h3>
+      </div>
+      <div id='qa_howlong' class='qa_answers'>
       No more than 72 hours.
--->
-    </div>
-
-    <div id="right_why">
-      <p>
-      As designers we've seen website owners get 'tired' of their perfectly good websites much too often, 
-      deciding to do a full re-design that is both costly and time consuming. Get an objective opinion
-      about whether your site really needs a full re-design, or whether a few tweaks will get the job done.
-      </p>
-<!--
-      <h3>How much does it cost?</h3>
-      <strong>$60</strong><br />
+      </div> 
+      <div id='qa_howmuch' class='qa_answers'>
+      <strong>$75</strong><br />
       <p>
       But good designers often charge 2-3x this amount, how does that work? <br /><br />
       InputFarm removes all the extraneous work that a designer would ordinarily have to do - quotes,
@@ -228,11 +217,10 @@
       a higher hourly rate.
       <br /><br />
       By removing all this extra work they can provide this service at a very reasonable rate.
-      </p>
+      </div>
 
-      <h3>What do I get for my money ?</h3>
-      <p>
-      Your site gets reviewed by an expert for 30 minutes and they give you a report
+      <div id='qa_whatdoiget' class='qa_answers'>
+      Your site will be reviewed by an expert for 30 minutes and they give you a report
       containing:
       <ul style='padding-left:20px'>
         <li>Annotated markup of your site</li>
@@ -242,25 +230,24 @@
       </ul>
       <br />
       See a sample report now!
-      </p>
--->
+      </div>
+    
+      <div id='qa_dontlike' class='qa_answers'>
+        Don't like
+      </div>
     </div>
-
     <div style="clear:both;"></div>
   </div>
 </div>
 
 <div id="contact">
-  <h2>CONTACT</h2>
-  <br>
-  <br>
+  <h1 class="title">Contact</h1>
 
   <%= form_tag("/front/contact", method: "post", :multipart => true) do %>
     <p>
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper", true%> I'm an expert, sign me up!   
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> Contact
     </p>
-    <br>
     <div id="fieldss">
       <div class="row_fluid">
         <p><%= text_field_tag :name, "Name",{:class=>"field "} %></p>

@@ -226,5 +226,13 @@ $.each(data.result.files, function (index, file) {
       deeplinking: false,
       default_height: '222px'
      });
+      
+    $(".qa_questions").click(function() {
+      $(".qa_answers").hide();
+      var id = "#qa_"+this.id.replace('qa_q_','');
+      $(id).fadeIn();
+      $(".qa_q_selected").removeClass('qa_q_selected');
+      $(this).addClass('qa_q_selected');
+    });
 });
 
