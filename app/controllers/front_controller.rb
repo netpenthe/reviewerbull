@@ -20,7 +20,7 @@ class FrontController < ApplicationController
     end
 
 
-    redirect_to root_url, notice: "Thanks for contacting us. We will get back to you ASAP."
+    redirect_to root_url, notice: "Thanks for contacting us. We will get back to you soon."
   end
 
 end

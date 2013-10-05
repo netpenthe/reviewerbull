@@ -153,7 +153,7 @@ return false;
 
 function resize_bg() {
   var height = $(window).height() - 70;
-  height = height > 545 ? 545 : height;
+  height = height > 481 ? 481 : height;
   height = $(window).width() <= 1583 ? 456 : height;
   $('#big_image_div').css('height', height+"px");
   //:$('#bigimagediv').css('height','830px')
