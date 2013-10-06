@@ -128,18 +128,20 @@
       <div class='steps' style='margin-left:10px'> 
         <div class='preview'>
           <div class='xarrow_box' style='text-align:left'>
-            <span style='width:80px;float:left;color:#ddf8c6'>
+            <!--<span style='width:80px;float:left;color:#ddf8c6'>
               Select<br /> Expert
             </span>
-            <div class='experts'>
-              <%=image_tag "small_expert1.jpg", :size=>'35x35'%> 
+-->
+            <div class='experts bwWrapper personPopupTrigger' rel="4218,a17bee64-8593-436e-a2f8-599a626370df">
+              <%=image_tag "circle_expert1.png", :size=>'100x103'%> 
             </div> 
-            <div class='experts'>
-              <%=image_tag "small_expert2.jpg", :size=>'35x35'%>
+            <div class='experts bwWrapper personPopupTrigger' rel="4218,a17bee64-8593-436e-a2f8-599a626370df">
+              <%=image_tag "circle_expert2.png", :size=>'100x100'%> 
             </div> 
-            <div class='experts'>
-              <%=image_tag "small_expert3.jpg", :size=>'35x35'%>
+            <div class='experts bwWrapper personPopupTrigger' rel="4218,a17bee64-8593-436e-a2f8-599a626370df">
+              <%=image_tag "circle_expert3.png", :size=>'100x103'%> 
             </div> 
+<!--
             <div style='clear:both'></div>
             <br />
 
@@ -161,15 +163,16 @@
               <br />
               Video
             </div> 
+-->
           </div> 
         </div>
         <div style='clear:both'></div>
-        <div class='howitworks_text'>Select options</div>
+        <div class='howitworks_text'>Choose your expert designer </div>
       </div>
       <div class='steps' style='margin-left:10px'> 
         <div class='preview'>
-          <div class='xarrow_box_noarrow'>
-                <a href="#submit_form" rel="prettyPhoto"><%=image_tag 'submit_button.png'%></a>
+          <div id='submit_wrapper'>
+            <a href="#submit_form" class="button" rel="prettyPhoto">SUBMIT</a>
           </div>
         </div>
         <div style='clear:both'></div>
@@ -234,7 +237,7 @@
       </div>
     
       <div id='qa_dontlike' class='qa_answers'>
-        Don't like
+        A money back guarantee is offered if you don't think you received value from Input Farm.
       </div>
     </div>
     <div style="clear:both;"></div>
@@ -262,7 +265,7 @@
             <%# text_area_tag :message, "Other things we need to know",{:class=>"field area area-mragin classification_helpee_field contact_form_field"} %>
             <%= text_area_tag :message, "Message",{:class=>"field area area-mragin classification_general_field classification_general_field contact_form_field",:style=>'display:none'} %>
           </div>
-          <p><%= submit_tag "Apply to be an Expert", :id=>"submit_button"%></p>
+          <p><%= submit_tag "Send", :id=>"submit_button", :class=>'button'%></p>
         </div>
       </div>
     </div>
@@ -271,7 +274,7 @@
 
 <div id="sun" class="title">
   <div class="row_fluid" style='color:#bbb;font-size:0.8em'>
-    <p id='quotes'>Often the difference between a good and great design is a matter of refining a few elements - Sun Tzu</p>
+    <p id='quotes'><span style="font-family:arial;font-size:32px">"</span>  Often the difference between a good and great design is a matter of refining a few elements <span style='font-size:32px'>"</span> - Sun Tzu</p>
   </div>
 </div>
 
@@ -290,5 +293,9 @@
   </div>
   </div>
 </div>
+</div>
+
+<div id='expert_bio'>
+  This is my expert bio
 </div>
 

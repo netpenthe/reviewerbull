@@ -16,3 +16,4 @@
 // require_tree .
 //= require front
 //= require smoothscroll
+//= require jquery.BlackAndWhite
