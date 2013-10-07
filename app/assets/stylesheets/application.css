@@ -434,7 +434,7 @@ hr.light_grey {
   padding: 5px 15px 0px 15px;
   font-size:14px;
   height:40px;
-  width:350px;
+  width:90%;
 }
 
 .area{
@@ -514,8 +514,7 @@ div#big_image_div {
 
 .steps {
   float:left;
-  margin-right:33px;
-  width: 30%;
+  width: 33%;
  }
 .site_design { 
   text-align:center; 
@@ -671,6 +670,7 @@ height:420px;
   font-size:0.8em;
   cursor:pointer;
   cursor:hand;
+  width: 30%;
 }
 .bwWrapper {
   position:relative;
@@ -774,6 +774,8 @@ height:420px;
     top:0;
     display:none;
     z-index: 20000;
+    text-align: left;
+    max-width:550px;
 }
 
 .personPopupPopup
@@ -812,6 +814,7 @@ height:420px;
 .personPopupPopup .left 
 {
     background: url(/assets/personpopup/balloon_left.png) repeat-y;
+    float: none;
 }
     
 .personPopupPopup .right 
@@ -838,4 +841,13 @@ height:420px;
 {
     background: url(/assets/personpopup/balloon_bottom.png) repeat-x;
     text-align: center;
+}
+
+.green_links {
+  color: green;
+}
+
+.small_text 
+{
+  font-size: 0.8em;
 }

@@ -235,10 +235,6 @@ $(window).load(function(){
       $(this).removeClass('bwWrapper');
     });
     
-    $('.experts').hover(function(e){
-      $("#expert_bio").css({position:"absolute",left:e.pageX,top:e.pageY});
-      $('#expert_bio').fadeIn();
-    });
 });
 /*
     preload(images);
@@ -266,6 +262,7 @@ $(function()
   var hideDelay = 500;  
   var currentID;
   var hideTimer = null;
+  var expertPopup = null;
 
   // One instance that's reused to show info for the current person
   var container = $('<div id="personPopupContainer">'
@@ -292,6 +289,10 @@ $(function()
 
   $('.personPopupTrigger').on('mouseover', function()
   {
+      var expert = $(this).attr("id");
+      if (expertPopup == expert) {
+        return;
+      }
       // format of 'rel' tag: pageid,personguid
       var settings = $(this).attr('rel').split(',');
       var pageID = settings[0];
@@ -307,7 +308,7 @@ $(function()
       var pos = $(this).offset();
       var width = $(this).width();
       container.css({
-          left: (pos.left + width) + 'px',
+          left: (pos.left + width - 40) + 'px',
           top: pos.top - 5 + 'px'
       });
 
@@ -315,36 +316,42 @@ $(function()
 
       $.ajax({
           type: 'GET',
-          url: 'personajax.aspx',
-          data: 'page=' + pageID + '&guid=' + currentID,
+          url: '/expert_mini_profile/-1',
+          data: 'expert=' + pageID,
           success: function(data)
           {
               // Verify that we're pointed to a page that returned the expected results.
-              if (data.indexOf('personPopupResult') < 0)
+              if (data.indexOf('h3') < 0)
               {
                   $('#personPopupContent').html('<span >Page ' + pageID + ' did not return a valid result for person ' + currentID + '.<br />Please have your administrator check the error log.</span>');
               }
 
               // Verify requested person is this person since we could have multiple ajax
               // requests out if the server is taking a while.
-              if (data.indexOf(currentID) > 0)
-              {                  
+              //if (data.indexOf(currentID) > 0)
+              //{                  
                   var text = $(data).find('.personPopupResult').html();
-                  $('#personPopupContent').html(text);
-              }
+                  text = $(data).html();
+                  $('#personPopupContent').html(data);
+                  expertPopup = expert;
+              //}
           }
       });
 
-      container.css('display', 'block');
+      //container.css('display', 'block');
+      container.fadeIn();
   });
 
   $('.personPopupTrigger').on('mouseout', function()
   {
-      if (hideTimer)
+      if (hideTimer) {
           clearTimeout(hideTimer);
+      }
       hideTimer = setTimeout(function()
       {
-          container.css('display', 'none');
+          //container.css('display', 'none');
+        expertPopup = null;
+        container.fadeOut();
       }, hideDelay);
   });
 

@@ -23,4 +23,8 @@ class FrontController < ApplicationController
     redirect_to root_url, notice: "Thanks for contacting us. We will get back to you soon."
   end
 
+
+  def expert_mini_profile
+    render :layout => false  
+  end
 end
