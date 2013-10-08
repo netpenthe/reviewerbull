@@ -278,8 +278,8 @@
   </div>
 </div>
 
-<div id='submit_form' style='display:none;height:262px'>
-  <div style='height:262px'>
+<div id='submit_form' style='display:none;height:330px'>
+  <div style='height:330px'>
   <div style='padding:5px;color:#fff;background-color:#5b9337'><%=link_to image_tag("logo_white_small.png",:size=>"106x14", :style=>"border:none"),"/", :style=>"border:none"%> - Make your website better, faster</div>
   <div style='padding:10px'>
   <div class='sf'><span class='sf_label'>Your site</span> <%=text_field_tag :sf_site %> </div>
@@ -289,7 +289,14 @@
   <div class='sf'><span class='sf_label'>Your feedback format</span> xxx </div>
   <br />
   <div class='sf'><span class='sf_label'>Price</span>$75 <br /></div>
-  <div class='sf'>Pay by paypal and get feedback NOW! </div>
+  <div class='sf'>
+     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="VLGD58TSXM7QN">
+          <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
+    </form>
+  </div>
   </div>
   </div>
 </div>
