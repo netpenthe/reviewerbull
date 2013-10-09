@@ -1,6 +1,7 @@
 <script>
-  setTimeout(function(){rotate();},500);
-  setInterval(function(){rotate();},20000);
+  var randy = 0;
+  setTimeout(function(){randy = rotate(randy);},500);
+  setInterval(function(){randy = rotate(randy);},20000);
 </script>
 
 <div style="clear:both"></div>
