@@ -382,8 +382,9 @@ function rotate(){
   quotes[2] = "<span style='font-family:arial;font-size:32px'>'</span>A fanatic is one who can't change his mind and wont change the subject<span style='font-size:32px'>'</span> - Winston Churchill";
   quotes[3] = "<span style='font-family:arial;font-size:32px'>'</span>An eye for an eye only ends up making the whole world blind<span style='font-size:32px'>'</span> - Ghandi";
   quotes[4] = "<span style='font-family:arial;font-size:32px'>'</span>Intelligence is the ability to adapt to change.<span style='font-size:32px'>'</span> - Hawking";
- 
-  rand = Math.floor((Math.random()*4)+1);
+  quotes[5] = "<span style='font-family:arial;font-size:32px'>'</span>To improve is to change; to be perfect is to change often<span style='font-size:32px'>'</span> - Winston Churchill";
+  
+  rand = Math.floor((Math.random()*5)+1);
 
   $("#quotes").fadeOut(function() {
     $(this).html(quotes[rand]).fadeIn();
