@@ -384,8 +384,6 @@ function rotate(){
   quotes[4] = "<span style='font-family:arial;font-size:32px'>'</span>Intelligence is the ability to adapt to change.<span style='font-size:32px'>'</span> - Hawking";
  
   rand = Math.floor((Math.random()*4)+1);
-  //alert(rand);
-  //alert(quotes[rand]);
 
   $("#quotes").fadeOut(function() {
     $(this).html(quotes[rand]).fadeIn();
