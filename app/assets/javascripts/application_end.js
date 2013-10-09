@@ -263,6 +263,7 @@ $(function()
   var currentID;
   var hideTimer = null;
   var expertPopup = null;
+  var expertCache = [];
 
   // One instance that's reused to show info for the current person
   var container = $('<div id="personPopupContainer">'
@@ -312,31 +313,30 @@ $(function()
           top: pos.top - 5 + 'px'
       });
 
-      $('#personPopupContent').html('&nbsp;');
+      if (typeof expertCache[expert] !== "undefined") //check cache first
+      {
+        $('#personPopupContent').html(expertCache[expert]);
+      } else {
+        $('#personPopupContent').html('<img src="/assets/spinner.gif">');
+        $.ajax({
+            type: 'GET',
+            url: '/expert_mini_profile/-1',
+            data: 'expert=' + pageID,
+            success: function(data)
+            {
+                if (data.indexOf('h3') < 0)
+                {
+                    $('#personPopupContent').html('<span >Page ' + pageID + ' did not return a valid result for person ' + currentID + '.<br />Please have your administrator check the error log.</span>');
+                }
 
-      $.ajax({
-          type: 'GET',
-          url: '/expert_mini_profile/-1',
-          data: 'expert=' + pageID,
-          success: function(data)
-          {
-              // Verify that we're pointed to a page that returned the expected results.
-              if (data.indexOf('h3') < 0)
-              {
-                  $('#personPopupContent').html('<span >Page ' + pageID + ' did not return a valid result for person ' + currentID + '.<br />Please have your administrator check the error log.</span>');
-              }
-
-              // Verify requested person is this person since we could have multiple ajax
-              // requests out if the server is taking a while.
-              //if (data.indexOf(currentID) > 0)
-              //{                  
-                  var text = $(data).find('.personPopupResult').html();
-                  text = $(data).html();
-                  $('#personPopupContent').html(data);
-                  expertPopup = expert;
-              //}
-          }
-      });
+                    var text = $(data).find('.personPopupResult').html();
+                    text = $(data).html();
+                    $('#personPopupContent').html(data);
+                    expertPopup = expert;
+                    expertCache[expert] = data;
+            }
+        });
+      }
 
       //container.css('display', 'block');
       container.fadeIn();
