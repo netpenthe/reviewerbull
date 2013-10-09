@@ -373,3 +373,28 @@ $(function()
       }, hideDelay);
   });
 });
+
+
+function rotate(){
+  var quotes = new Array();
+
+  quotes[1] = "<span style='font-family:arial;font-size:32px'>'</span>  Often the difference between a good and great design is a matter of refining a few elements <span style='font-size:32px'>'</span> - Sun Tzu";
+  quotes[2] = "<span style='font-family:arial;font-size:32px'>'</span>  A fanatic is one who can't change his mind and wont change the subject <span style='font-size:32px'>'</span> - Winston Churchill";
+  quotes[3] = "<span style='font-family:arial;font-size:32px'>'</span>  An eye for an eye only ends up making the whole world blind. <span style='font-size:32px'>'</span> - Ghandi";
+  quotes[4] = "<span style='font-family:arial;font-size:32px'>'</span>  Intelligence is the ability to adapt to change. <span style='font-size:32px'>'</span> - Hawking";
+ 
+  rand = Math.floor((Math.random()*4)+1);
+  //alert(rand);
+  //alert(quotes[rand]);
+
+  $("#quotes").fadeOut(function() {
+    $(this).html(quotes[rand]).fadeIn();
+  });
+  
+}
+
+
+
+
+
+
