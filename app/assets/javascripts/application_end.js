@@ -317,7 +317,7 @@ $(function()
       {
         $('#personPopupContent').html(expertCache[expert]);
       } else {
-        $('#personPopupContent').html('&nbsp;');
+        $('#personPopupContent').html('<img src="/assets/spinner.gif">');
         $.ajax({
             type: 'GET',
             url: '/expert_mini_profile/-1',
