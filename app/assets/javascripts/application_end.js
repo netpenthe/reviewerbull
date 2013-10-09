@@ -376,7 +376,7 @@ $(function()
 
 
 function rotate(position){
-  
+  //position is the last one we saw
   rand = position;
 
   var quotes = new Array();
@@ -387,6 +387,7 @@ function rotate(position){
   quotes[5] = "<span style='font-family:arial;font-size:32px'>'</span>To improve is to change; to be perfect is to change often<span style='font-size:32px'>'</span> - Winston Churchill";
   
   //dont load the same one we just loaded :)
+  //set *x to the highest array index
   while(position==rand){
     rand = Math.floor((Math.random()*5)+1);
   }

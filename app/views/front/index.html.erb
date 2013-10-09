@@ -1,8 +1,12 @@
 <script>
   var randy = 0;
+  //load one randomly at first
   setTimeout(function(){randy = rotate(randy);},500);
+
+  //load a new one every 20 secs
   setInterval(function(){randy = rotate(randy);},20000);
 </script>
+
 
 <div style="clear:both"></div>
 <div id="main_round_box">
