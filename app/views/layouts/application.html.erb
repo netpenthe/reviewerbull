@@ -33,13 +33,20 @@
           <script>
             $(function(){
               $("#flash_notice").fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000);
-             });
+            });
           </script>
-          
+
         <% end %>
       </div>
     </div>
     <%= yield %>
+    <div id="sun" class="title" style="height:90px;">
+      <div class="row_fluid" style='color:#bbb;font-size:0.8em'>
+        <p id='quotes'>
+        </p>
+      </div>
+    </div>
+
     <div id="footer">
       <div class="row_fluid">
         <div id="copyright">

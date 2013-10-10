@@ -1,13 +1,3 @@
-<script>
-  var randy = 0;
-  //load one randomly at first
-  setTimeout(function(){randy = rotate(randy);},500);
-
-  //load a new one every 20 secs
-  setInterval(function(){randy = rotate(randy);},20000);
-</script>
-
-
 <div style="clear:both"></div>
 <div id="main_round_box">
 <div id='big_image_div' >
@@ -88,12 +78,13 @@
       <br />
       <p>For <span style='color:#5BA93D'>$75</span>, you will receive practical suggestions to improve your site within 48 hours. No up-sell, no meetings, no quotes. Genuine, vetted, experts.</p>
 -->
-      <p>Inputfarm is a new way to get <strong>feedback</strong>.</p>
+      <p>Inputfarm is a new way to get feedback.</p>
       <p>We focus on iteration rather than redesign.</p>
       <p>We connect you to great designers who review your site and give you feedback.</p>
       <p>For $75, you will receive practical suggestions to improve your site within 48 hours directly from design experts. </p>
       <p>No up-sell, no admin, no meetings, no quotes. Just really fast expert feedback. </p>
       <p>It's the most cost effective way to improve your website.</p>
+      <p><strong>Not sure? see what you'll get in this <%=link_to 'sample report','/sample_report/1', :class=>"green_links"%></strong></p>
       <!--
       <p>Websites that are constantly updated look fresher </p>
       <p>Creating a fantastic website is about constant improvement </p>
@@ -279,13 +270,6 @@
       </div>
     </div>
   <% end %>
-</div>
-
-<div id="sun" class="title" style="height:90px;">
-  <div class="row_fluid" style='color:#bbb;font-size:0.8em'>
-    <p id='quotes'>
-    </p>
-  </div>
 </div>
 
 <div id='submit_form' style='display:none;height:330px'>

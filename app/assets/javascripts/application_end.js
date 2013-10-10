@@ -401,7 +401,13 @@ function rotate(position){
   return rand;
 }
 
+/* random quotes */
+var randy = 0;
+//load one randomly at first
+setTimeout(function(){randy = rotate(randy);},500);
 
+//load a new one every 20 secs
+setInterval(function(){randy = rotate(randy);},20000);
 
 
 

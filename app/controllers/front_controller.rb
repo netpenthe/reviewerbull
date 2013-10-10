@@ -27,4 +27,8 @@ class FrontController < ApplicationController
   def expert_mini_profile
     render :layout => false  
   end
+
+  def sample_report
+    render "sample_reports/#{params[:id]}.html.erb"
+  end
 end

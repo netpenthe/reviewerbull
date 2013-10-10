@@ -850,3 +850,25 @@ height:420px;
 {
   font-size: 0.8em;
 }
+
+.sample_report {
+  background-color: #fff;
+}
+
+.dark_green_title {
+  color: #5A9236;
+  font-size: 16px;
+  font-weight: bold;
+}
+.light_green_title {
+  color: #18B23B;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#sample_report h3 {
+  color: #18B23B;
+}
+.darker_text {
+  color: #444;
+}

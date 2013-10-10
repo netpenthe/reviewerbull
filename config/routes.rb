@@ -52,6 +52,8 @@ Dwarfmongoose::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
 
+
+  match 'sample_report/:id' => 'front#sample_report', :as => :sample_report
   match 'expert_mini_profile/:id' => 'front#expert_mini_profile', :as => :expert_mini_profile
 
   root :to => 'front#index'
