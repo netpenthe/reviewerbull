@@ -386,10 +386,10 @@ function rotate(position){
   quotes[4] = "<span style='font-family:arial;font-size:32px'>'</span>Intelligence is the ability to adapt to change.<span style='font-size:32px'>'</span> - Hawking";
   quotes[5] = "<span style='font-family:arial;font-size:32px'>'</span>To improve is to change; to be perfect is to change often<span style='font-size:32px'>'</span> - Winston Churchill";
   quotes[6] = "<span style='font-family:arial;font-size:32px'>'</span>To save one from a mistake is a gift of paradise.<span style='font-size:32px'>'</span> - Stilgar";
-  quotes[7] = "<span style='font-family:arial;font-size:32px'>'</span> Those who initiate change will have a better opportunity to manage the change that is inevitable...<span style='font-size:32px'>'</span> - William Pollard";
+  quotes[7] = "<span style='font-family:arial;font-size:32px'>'</span>Those who initiate change will have a better opportunity to manage the change that is inevitable...<span style='font-size:32px'>'</span> - William Pollard";
+  quotes[8] = "<span style='font-family:arial;font-size:32px'>'</span>Change is such hard work.<span style='font-size:32px'>'</span> - Billy Crystal";
   
   //dont load the same one we just loaded :)
-  //set *x to the highest array index
   while(position==rand){
     rand = Math.floor((Math.random()*quotes.length)+1);
   }
