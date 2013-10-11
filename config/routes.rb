@@ -1,5 +1,7 @@
 Dwarfmongoose::Application.routes.draw do
 
+  devise_for :users
+
    match 'front/contact' => 'front#contact'
 
   # The priority is based upon order of creation:
