@@ -309,8 +309,8 @@ $(function()
       var pos = $(this).offset();
       var width = $(this).width();
       container.css({
-          left: (pos.left + width - 40) + 'px',
-          top: pos.top - 5 + 'px'
+          left: (pos.left + width - 70) + 'px',
+          top: pos.top + 60 + 'px'
       });
 
       if (typeof expertCache[expert] !== "undefined") //check cache first
@@ -385,13 +385,14 @@ function rotate(position){
   quotes[3] = "<span style='font-family:arial;font-size:32px'>'</span>An eye for an eye only ends up making the whole world blind<span style='font-size:32px'>'</span> - Ghandi";
   quotes[4] = "<span style='font-family:arial;font-size:32px'>'</span>Intelligence is the ability to adapt to change.<span style='font-size:32px'>'</span> - Hawking";
   quotes[5] = "<span style='font-family:arial;font-size:32px'>'</span>To improve is to change; to be perfect is to change often<span style='font-size:32px'>'</span> - Winston Churchill";
+  quotes[6] = "<span style='font-family:arial;font-size:32px'>'</span>To save one from a mistake is a gift of paradise.<span style='font-size:32px'>'</span> - Stilgar";
+  quotes[7] = "<span style='font-family:arial;font-size:32px'>'</span> Those who initiate change will have a better opportunity to manage the change that is inevitable...<span style='font-size:32px'>'</span> - William Pollard";
   
   //dont load the same one we just loaded :)
   //set *x to the highest array index
   while(position==rand){
-    rand = Math.floor((Math.random()*5)+1);
+    rand = Math.floor((Math.random()*quotes.length)+1);
   }
-
   //console.log(rand);
 
   $("#quotes").fadeOut(function() {
