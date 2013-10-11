@@ -279,11 +279,11 @@ hr.light_grey {
   background: -webkit-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
   background: -o-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
   background: -ms-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
-  background-color:#eee;
+  background-color:#ccc;
   padding-bottom:50px;
   margin-bottom:0px;
   padding-top:35px;
-  color:#616161;
+  color:#515151;
   text-align: center;
   border-top: 1px solid #cdcdcd;
   -moz-border-radius-bottomleft: 20px;
