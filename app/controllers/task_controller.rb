@@ -9,7 +9,7 @@ class TaskController < ApplicationController
       user = User.create!({:email => params[:email], :roles => [], :password => string, :password_confirmation => string })
     end
 
-    task = Task.new :description=>params[:description], :user_id=>user.id
+    task = Task.new :description=>params[:description], :user_id=>user.id, :url=>params[:url]
     task.save
 
     redirect_to front_submitted_url
