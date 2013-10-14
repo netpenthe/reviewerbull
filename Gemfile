@@ -13,6 +13,10 @@ gem 'therubyracer'
 
 gem 'paperclip'
 
+gem 'devise'
+
+gem 'activeadmin'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -25,7 +29,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '<3.0.0'
 gem 'prettyphoto-rails'
 
 # To use ActiveModel has_secure_password

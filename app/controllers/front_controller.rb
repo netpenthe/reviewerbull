@@ -19,7 +19,6 @@ class FrontController < ApplicationController
       end
     end
 
-
     redirect_to root_url, notice: "Thanks for contacting us. We will get back to you soon."
   end
 
@@ -31,4 +30,8 @@ class FrontController < ApplicationController
   def sample_report
     render "sample_reports/#{params[:id]}.html.erb"
   end
+
+  def submitted
+  end
+
 end
