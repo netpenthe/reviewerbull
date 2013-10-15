@@ -4,7 +4,7 @@ class FrontController < ApplicationController
   end
 
   def contact
-    contact = Contact.new :email=>params[:email], :name=>params[:name], :message=>params[:message], 
+    contact = Contact.new :email=>params[:contact_email], :name=>params[:name], :message=>params[:message], 
       :classification=>params[:classification], :url=>params[:url], :fivethings=>params[:fivethings]
 
     contact.save

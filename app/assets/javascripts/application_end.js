@@ -402,6 +402,13 @@ function rotate(position){
   return rand;
 }
 
+
+function getDetails(){
+  $('#sf_site').attr("value", $('#url').val());
+  $('#sf_email').attr("value", $('#email').val());
+};
+
+
 /* random quotes */
 var randy = 0;
 //load one randomly at first

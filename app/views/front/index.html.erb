@@ -113,13 +113,13 @@
             <div id='site_url' class="site_design">
               <%= text_field_tag :url, "Site URL",{:class=>"field"} %>
               <br />
-              <p class='hand' style='font-size:0.8em' onclick="$('#site_url').hide();$('#site_upload_image').fadeIn()">[or upload jpg/png file instead]</p>
+              <!--<p class='hand' style='font-size:0.8em' onclick="$('#site_url').hide();$('#site_upload_image').fadeIn()">[or upload jpg/png file instead]</p>-->
             </div>
 
             <div id='site_upload_image' class='site_design' style="display:none">
               <%= file_field_tag :upload, multiple: true,name: "upload[]", class: "field", style: "padding-top:10px;height:30px" %>
               <br />
-              <p class='hand' style='font-size:0.8em' onclick="$('#site_upload_image').hide();$('#site_url').fadeIn()">[or enter a URL instead]</p>
+             <!-- <p class='hand' style='font-size:0.8em' onclick="$('#site_upload_image').hide();$('#site_url').fadeIn()">[or enter a URL instead]</p>-->
             </div>
           </div>
           <div class='howitworks_text'>Give us some details</div>
@@ -172,7 +172,7 @@
       <div class='steps' style='margin-left:10px'> 
         <div class='preview'>
           <div id='submit_wrapper'>
-            <a href="#submit_form" class="button" rel="prettyPhoto">SUBMIT</a>
+            <a href="#submit_form" class="button" onclick='getDetails();' rel="prettyPhoto">SUBMIT</a>
           </div>
         </div>
         <div style='clear:both'></div>
@@ -254,8 +254,8 @@
     </p>
     <div id="fieldss">
       <div class="row_fluid">
-        <p><%= text_field_tag :name, "Name",{:class=>"field "} %></p>
-        <p><%= text_field_tag :email, "Email",{:class=>"field "} %></p>
+        <p><%= text_field_tag :name, "Name",{:class=>"field "}%></p>
+        <p><%= text_field_tag :contact_email, "Email",{:class=>"field "} %></p>
         </div>
       </div>
       <div class="row_fluid">
@@ -276,8 +276,9 @@
   <div style='height:330px'>
   <div style='padding:5px;color:#fff;background-color:#5b9337'><%=link_to image_tag("logo_white_small.png",:size=>"106x14", :style=>"border:none"),"/", :style=>"border:none"%> - Make your website better, faster</div>
   <div style='padding:10px'>
-  <div class='sf'><span class='sf_label'>Your site</span> <%=text_field_tag :sf_site %> </div>
+  <div class='sf'><span class='sf_label'>Your site</span> <%=text_field_tag :sf_site%> </div>
   <div class='sf'><span class='sf_label'>Your email address</span> <%=text_field_tag :sf_email %> </div>
+  <p id='fgh'></p>
   <br />
   <div class='sf'><span class='sf_label'>Your expert</span> xxx </div>
   <div class='sf'><span class='sf_label'>Your feedback format</span> xxx </div>
