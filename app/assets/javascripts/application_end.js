@@ -404,8 +404,12 @@ function rotate(position){
 
 
 function getDetails(){
-  $('#sf_site').attr("value", $('#url').val());
-  $('#sf_email').attr("value", $('#email').val());
+  if($('#url').val() != "Site URL"){
+    $('#sf_site').attr("value", $('#url').val());
+  }
+  if($('#email').val()!="Email"){
+    $('#sf_email').attr("value", $('#email').val());
+  }
 };
 
 
