@@ -236,6 +236,9 @@ $(window).load(function(){
     });
     
 });
+
+  // pre load the usebutton rollover so it doesn't flash
+  jQuery.get("/assets/use-button-rollover.png");
 /*
     preload(images);
     setTimeout('nextImage()', 5000);
