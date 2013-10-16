@@ -20,6 +20,7 @@
         <div id="logo">
           <%=link_to image_tag("logo_trans_med.png",:size=>"225x27"),"/", :style=>"border:false"%>
         </div>
+        <% if @show_header.nil? || @show_header %>
         <div id="header-links">
           <div class='left' style='border-bottom:2px solid #5b9337'>
             <%=link_to "HOME","", :class=>"link_home"%>
@@ -28,6 +29,7 @@
           <div class='left'><%=link_to "HOW IT WORKS","#howitworks",:class=>"smoothScroll link"%></div>
           <div class='left'><%=link_to "CONTACT","#contact",:class=>"smoothScroll link"%></div>
         </div>
+        <% end %>
         <% if flash[:notice].present? %>
           <p id='flash_notice' class='flash_notice'> <%=flash[:notice]%></p>
           <script>

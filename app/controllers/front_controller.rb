@@ -28,6 +28,7 @@ class FrontController < ApplicationController
   end
 
   def sample_report
+    @show_header = false
     render "sample_reports/#{params[:id]}.html.erb"
   end
 

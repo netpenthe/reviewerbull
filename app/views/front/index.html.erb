@@ -16,7 +16,7 @@
       <a href='#how_it_works' id='use_button_wrapper' class='smoothScroll'>
         <span id="use_button">
           <%#=link_to image_tag("use-button.png"), "#contact", :class=>'smoothScroll'%>
-          <strong>USE INPUTFARM TODAY</strong>
+          <span id='use_inputfarm'>USE INPUTFARM TODAY</span>
         </span>
       </a>
     </div>
@@ -245,10 +245,10 @@
 </div>
 
 <div id="contact">
-  <h1 class="title" style='color:#888'>Contact</h1>
+  <h1 class="title" style="color:#fff">Contact</h1>
 
   <%= form_tag("/front/contact", method: "post", :multipart => true) do %>
-    <p>
+    <p class="white">
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper", true%> I'm an expert, sign me up!   
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> Contact
     </p>
