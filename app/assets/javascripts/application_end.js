@@ -332,8 +332,8 @@ $(function()
                     $('#personPopupContent').html('<span >Page ' + pageID + ' did not return a valid result for person ' + currentID + '.<br />Please have your administrator check the error log.</span>');
                 }
 
-                    var text = $(data).find('.personPopupResult').html();
-                    text = $(data).html();
+                    //var text = $(data).find('.personPopupResult').html();
+                    //text = $(data).html();
                     $('#personPopupContent').html(data);
                     expertPopup = expert;
                     expertCache[expert] = data;

@@ -665,9 +665,10 @@ h1.logo {
 }
 
 input, textarea {
--moz-border-radius: 2px;
+/*-moz-border-radius: 2px;
 -webkit-border-radius: 2px;
 border-radius: 2px;
+*/
 font-family: 'Roboto', Arial, sans-serif;  
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
@@ -778,7 +779,7 @@ height:420px;
   color:#fff;
   font-size:14px;
   padding:10px 22px;
-  border-radius:2px;
+/*  border-radius:2px;*/
   border:1px solid #286968;
   text-shadow:0px 1px 1px rgba(0, 0, 0, 0.4);
   /*box-shadow:0px 1px 1px rgba(0, 0, 0, 0.2);*/
@@ -885,7 +886,7 @@ height:420px;
 }
 
 .green_links {
-  color: green;
+  color: #78B153;
 }
 
 .small_text 

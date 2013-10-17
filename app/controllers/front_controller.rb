@@ -24,7 +24,8 @@ class FrontController < ApplicationController
 
 
   def expert_mini_profile
-    render :layout => false  
+    expert = params[:expert]
+    render :layout => false, :template=>"experts/#{expert}"
   end
 
   def sample_report
