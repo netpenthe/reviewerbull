@@ -13,12 +13,14 @@
         tell you how you can improve your site -->
         Make your website better, faster
       </div>
+          <div id='use_inputfarm'>USE INPUTFARM TODAY</div>
+      <div id='use_button_outer'>
       <a href='#how_it_works' id='use_button_wrapper' class='smoothScroll'>
         <span id="use_button">
           <%#=link_to image_tag("use-button.png"), "#contact", :class=>'smoothScroll'%>
-          <span id='use_inputfarm'>USE INPUTFARM TODAY</span>
         </span>
       </a>
+      </div>
     </div>
   </div>
 </div>
@@ -249,8 +251,8 @@
 
   <%= form_tag("/front/contact", method: "post", :multipart => true) do %>
     <p class="white">
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper", true%> I'm an expert, sign me up!   
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> Contact
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper", true%> <label for='classification_helper'>I'm an expert, sign me up!</label>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> <label for='classification_general'>Contact</label>
     </p>
     <div id="fieldss">
       <div class="row_fluid">
@@ -265,7 +267,7 @@
             <%# text_area_tag :message, "Other things we need to know",{:class=>"field area area-mragin classification_helpee_field contact_form_field"} %>
             <%= text_area_tag :message, "Message",{:class=>"field area area-mragin classification_general_field classification_general_field contact_form_field",:style=>'display:none'} %>
           </div>
-          <p><%= submit_tag "Send", :id=>"submit_button", :class=>'button'%></p>
+          <p><%= submit_tag "I'M AN EXPERT", :id=>"submit_button", :class=>'button'%></p>
         </div>
       </div>
     </div>

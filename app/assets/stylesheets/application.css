@@ -28,6 +28,9 @@
 }
 
 body {
+opacity:0;
+transition: opacity 2s;
+-webkit-transition: opacity 2s; /* Safari */
   text-align:center; /*For IE6 Shenanigans*/
   background-color: #F0F0F0;
   margin:0;
@@ -472,20 +475,23 @@ div#big_image_div {
 #use_button:hover{
   float: left;
   border:none;
-  background-image:url('/assets/use-button-rollover.png') ;
   background-repeat:no-repeat;
   width:380px;
   height:70px;
   text-align: left;
 /* TRANSISITION */
--webkit-transition: background-image 1s ease-in-out;
--moz-transition: background-image 1s ease-in-out;
--ms-transition: background-image 1s ease-in-out;
--o-transition: background-image 1s ease-in-out;
-transition: background-image 1s ease-in-out;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+-moz-transition: opacity 1s ease-in-out;
+-webkit-transition: opacity 1s ease-in-out;
+-ms-transition: opacity 1s ease-in-out;
+-o-transition: opacity 1s ease-in-out;
+/*
+
   padding: 23px 22px;
   margin-top: 20px;
   margin-left: 20px;
+*/
   font-size: 14px;
   font-family: 'Roboto';
   letter-spacing: 2px;
@@ -493,23 +499,35 @@ transition: background-image 1s ease-in-out;
  text-shadow: 0 0 1px rgba(0,0,0,0.3);
   -webkit-font-smoothing: antialiased;
 }
-
+#use_inputfarm {
+  position: absolute;
+  color: #fff;
+margin-top: 45px;
+z-index: 999;
+margin-left: 39px;
+font-weight: bold;
+letter-spacing: 3px;
+font-size: 14px;
+  
+}
 #use_button{
   float: left;
   border:none;
   background-image:url('/assets/use-button.png') ;
   background-repeat:no-repeat;
+transition: opacity 1s ease-in-out;
+-moz-transition: opacity 1s ease-in-out;
+-webkit-transition: opacity 1s ease-in-out;
+-ms-transition: opacity 1s ease-in-out;
+-o-transition: opacity 1s ease-in-out;
   width:380px;
   height:70px;
--webkit-transition: background-image 1s ease-in-out;
--moz-transition: background-image 1s ease-in-out;
--ms-transition: background-image 1s ease-in-out;
--o-transition: background-image 1s ease-in-out;
-transition: background-image 1s ease-in-out;
   text-align: left;
+/*
   padding: 23px 22px;
   margin-top: 20px;
   margin-left: 20px;
+*/
   font-size: 14px;
   font-family: 'Roboto';
   letter-spacing: 2px;
@@ -518,7 +536,17 @@ transition: background-image 1s ease-in-out;
   -webkit-font-smoothing: antialiased;
 }
 
-#use_button_wrapper { color: #fff}
+#use_button_wrapper { color: #fff;
+  background-image:url('/assets/use-button-rollover.png') ;
+ width:380px;
+height:70px;
+display:block;
+}
+#use_button_outer {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+  
 
 #top_text {
   color: #555;
@@ -788,7 +816,7 @@ height:420px;
   text-transform: uppercase;
   cursor:hand;
   cursor:pointer;
-  letter-spacing:5px;
+  letter-spacing:3px;
 
   -webkit-transition: all 0.1s ease-in-out; 
   -moz-transition: all 0.1s ease-in-out; 
@@ -829,6 +857,11 @@ height:420px;
     background-color: #FFF;
     min-width: 175px;
     min-height: 50px;
+transition: opacity 1s ease-in-out;
+-moz-transition: opacity 1s ease-in-out;
+-webkit-transition: opacity 1s ease-in-out;
+-ms-transition: opacity 1s ease-in-out;
+-o-transition: opacity 1s ease-in-out;
 }
 
 .personPopupPopup .personPopupImage
