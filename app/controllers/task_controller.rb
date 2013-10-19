@@ -13,7 +13,7 @@ class TaskController < ApplicationController
     task.save
 
     #redirect_to front_submitted_url
-    render :nothing=>true
+    render json: {:id=>task.id}
   end
 
 end
