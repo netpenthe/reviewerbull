@@ -288,25 +288,10 @@
   <div class='sf'><span class='sf_label'>Your feedback format</span> xxx </div>
   <br />
   <div class='sf'><span class='sf_label'>Price</span>$75 <br /></div>
-  <div id='submit-task' onclick="$('#submit-task').css('display', 'none'); $('#paypal').show(); $('#save-task').submit();"> Submit Button </div>
+  <br>
+  <div id='submit-task' onclick="$('#save-task').submit();"> Submit Button </div>
   </form>
-  <script>
-  $('#save-task').submit(function() {
-    var site = $('#sf_site').attr("value");
-    var email = $('#sf_email').attr("value");
-
-    $.ajax({
-        url: '/task/create', //sumbits it to the given url of the form
-        data: {sf_email: email, sf_site: site},
-        type: "POST"
-    }).success(function(){
-        console.log("success")
-        $("#submit-task").css('display', 'none');
-        $("#paypal").show();
-    });
-    return false; // prevents normal behaviour
-});
-</script>
+  
 
   <div class='sf'>
      <form id='paypal' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style='display:none;'>

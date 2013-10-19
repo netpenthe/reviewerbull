@@ -415,8 +415,6 @@ function getDetails(){
   }
 };
 
-
-
   $('#save-task').submit(function() {
     var site = $('#sf_site').attr("value");
     var email = $('#sf_email').attr("value");
@@ -427,8 +425,8 @@ function getDetails(){
         type: "POST"
     }).success(function(){
         console.log("success")
-        $("#submit-task").css('display', 'none');
-        $("#paypal").show();
+        $("#pp_full_res #submit-task").hide(); 
+        $("#pp_full_res #paypal").show();
     });
     return false; // prevents normal behaviour
 });
