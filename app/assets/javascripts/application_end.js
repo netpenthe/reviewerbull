@@ -412,15 +412,22 @@ function getDetails(){
   if($('#email').val()!="Email"){
     $('#sf_email').attr("value", $('#email').val());
   }
+  //console.log($('#expert_name').val());
+  //$('#pp_full_res #sf_expert').attr("text",$('#expert_name').val());
+
+  // not sure why .text doesnt work. 
+  span = document.getElementById("sf_expert")
+  span.innerHTML = $('#expert_name').val();
 };
 
   $('#save-task').submit(function() {
     var site = $('#sf_site').attr("value");
     var email = $('#sf_email').attr("value");
+    var expert = $('#sf_expert').text();
 
     $.ajax({
         url: '/task/create', //sumbits it to the given url of the form
-        data: {sf_email: email, sf_site: site},
+        data: {sf_email: email, sf_site: site, sf_expert: expert},
         type: "POST",
         dataType: 'JSON'
     }).success(function(json){
@@ -432,6 +439,23 @@ function getDetails(){
     });
     return false; // prevents normal behaviour
 });
+
+
+$('#expert1').click(function(){
+    $('#expert_name').val("James McNaught");
+});
+
+
+$('#expert2').click(function(){
+    $('#expert_name').val("Stephen Grace");
+    console.log("grace");
+});
+
+$('#expert3').click(function(){
+    $('#expert_name').val("Robin Mather");
+});
+
+
 
 /* random quotes */
 var randy = 0;
