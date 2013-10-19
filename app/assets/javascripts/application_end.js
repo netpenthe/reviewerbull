@@ -416,6 +416,23 @@ function getDetails(){
 };
 
 
+
+  $('#save-task').submit(function() {
+    var site = $('#sf_site').attr("value");
+    var email = $('#sf_email').attr("value");
+
+    $.ajax({
+        url: '/task/create', //sumbits it to the given url of the form
+        data: {sf_email: email, sf_site: site},
+        type: "POST"
+    }).success(function(){
+        console.log("success")
+        $("#submit-task").css('display', 'none');
+        $("#paypal").show();
+    });
+    return false; // prevents normal behaviour
+});
+
 /* random quotes */
 var randy = 0;
 //load one randomly at first
