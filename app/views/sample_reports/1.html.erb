@@ -3,93 +3,77 @@
 <div style="clear:both"></div>
 <div id="main_round_box" style='background-color:#fff'>
 
-  <h1 class='darker_txt'>Sample Website Report</h1>
+  <h1 class='darker_txt'>Sample Website Review</h1>
 
   <div id='sample_report'  style='text-align:left; padding: 45px 40px 40px 116px '>
-    <span class='dark_green_title'>REVIEW DATE:</span> October 1st 2013
+    <span class='dark_green_title'>REVIEW DATE:</span> October 4th 2013
     <br />
-    <span class='light_green_title'>EXPERT REVIEWER:</span> Stephen Grace
+    <span class='light_green_title'>EXPERT REVIEWER:</span> Robin Mather
     <br />
-    <span class='dark_green_title'>REVIEW WEBSITE:</span> <%=link_to 'www.inputfarm.com', 'http://www.inputfarm.com', :target=>'_blank', :class=>'green_links'%>
+    <span class='dark_green_title'>REVIEW WEBSITE:</span> <%=link_to 'www.webtemplate.com.au', 'http://www.webtemplate.com.au', :target=>'_blank', :class=>'green_links'%>
     <br />
     <div style='float:left; width:780px; padding:10px 10px 80px 0'>
-      <h3>STRUCTURE REVIEW </h3>
-
-      You've got all the bones all down right and I can see what you're going for (a linear break down of your product). What I think it lacks is a bit of structure - elements float around and make it disjointed to navigate my way down the screen. To fix this up I'm recommending having a single box to contain all the info. This way you can easily determine the sections and keep things from spilling out on the edges.
-
-      <h3>TEXT REVIEW</h3>
-
-      Underneath the "Get feedback, fast" the dot points would flow much better as a solid paragraph. I understand that short bursts of text are, in theory, an effective way to get the message across. But I always find it a bit sloppy and incohesive.
-
+      <h3>FIRST IMPRESSIONS</h3>
+      The site is too visually busy.
       <br /><br />
-      In my mockup, I've got a flat-ish button that you are more than welcome to duplicate and/or tweak. 
-
-      <h3>PHOTO HEADER </h3>
-
-      I think the slider is a bit indulgent - as it's not presenting any new information, rather just flipping through nice stock photos. If you do go with the slider, the animations need to be tighter. At least on a Mac in Chrome, they kind of cough before changing. I believe http://www.slidesjs.com/ is pretty nice and customizable. And I'm not big on the gradient on the right. If the image isn't big 
-      enough, just bind it (you'll see I've done that in the mockup). Also, blurring is so hot right now. 
-
-      <h3>FONT CHOICE AND DETAIL </h3>
-
-      Roboto is a great font choice. Especially for the fact it has a wide range of font weights. Work it. 
-
+      Trim down the content on the landing page. 
       <br /><br />
-      You saw with Flarum how you we really capitalized on the font weight sizes. Especially going light for headings - it's an aesthetic I really dig and is pretty shit-hot at the moment.
+      It took me too long to process all of the information, and hence too long for me to work out what the site is about.
+      <h3>BACKGROUND</h3>
+      Reduce the 'noise' by
+      <ul>
+        <li>Replacing the background image to something more subtle, with less happening in it.</li>
+        <li>Increase the opacity of the content holder background, so the eye isn't distracted by the background.</li>
+      </ul>
 
 
+      <h3>FORMS </h3>
+        The forms are clunky and look basic.
+      <ul>
+        <li>Increase the line height to 20px</li>
+        <li>Add 4px border radius to soften them </li>
+        <li>Place descriptions in the fields using HTML 5 'placeholder' attribute (see the form here <%=link_to 'https://www.mint.com', 'https://www.mint.com/', :target=>'_blank', :class=>'green_links'%>)</li>
+      </ul>
+  
+      <h3>FLASH</h3>
+      Remove the laptop image &amp; flash animation. It looks dated.
+  
+      <h3>LOGO</h3>
+      Move the logo to the top (used a reduced size). Where it is at the moment is hard to find . bad for branding.
 
+      <h3>CONTENT/MENUS</h3>
+      Re-think the pages necessary for your site. For example I don't think you need all of the sub categories for each menu item. For example 'Power to Publish' has six sub categories with information that could be placed on one page, this is a more modern way to show content as it reduces the number of clicks a user has to make and improves load times.
 
-      <h3>COLOURS </h3>
+      <h3>PALETTE</h3>
+      The palette looks dated. If you're married to the green and orange, you could try updating the tones to #2D5544 &amp; #E89823
+    
+      <h3>LOGIN FORM</h3>
+      Hide the login panel using jquery - something like this would work: <%=link_to 'http://web-kreation.com/demos/Sliding_login_panel_jquery/', 'http://web-kreation.com/demos/Sliding_login_panel_jquery/', :class=>'green_links', :target=>'_blank'%>
 
-      The green is great, but I just lightened it up a bit to make it pop when it's in a button. I don't know how strict you are with the color, but I would recommend going a little bit lighter on the green. I.ve also complimented it with a blue as the other main color on the site.
+      <h3>CLOSING COMMENTS</h3>
+Most clients are generally pretty confused about what a CMS is and don't know what they need. 
+The design of your site should offer clarity and clearly display what it is you provide and how you can help them. 
 
-      <h3>INFOGRAPHIC </h3>
-
-      I made a little tooltip over a professional's head. Will look something like this: 
-
-
-
-      And splashing in some more images is a really easy way to make a page look sexy. I just stripped down the infographic a little bit. I like the use of green in your infographic - in fact my adaption of it could definitely use some green just to throw it back to the logo.
-
-      <h3>REFERENCES TO CONSIDER </h3>
-
-      Some single-page product inspiration:
+      <h3>REFERENCES</h3>
+      <%=link_to 'http://www.ilcreations.net/','http://www.ilcreations.net/', :class=>'green_links', :target=>'_blank'%>
+      <ul>
+        <li>notice how the landing page is clutter free, it clearly states what they do</li>
+      </ul>
       <br />
-      <%=link_to 'http://www.automatic.com/', 'http://www.automatic.com', :target=>'_blank', :class=>'green_links'%>
-      <br />
-      <%=link_to 'https://simple.com/', 'https://simple.com/', :target=>'_blank', :class=>'green_links'%>
-
-      <br />
-      <%=link_to 'http://www.squarespace.com', 'http://www.squarespace.com', :target=>'_blank', :class=>'green_links'%>
-      <br />
-
-      <%=link_to 'https://www.oysterbooks.com/', 'https://www.oysterbooks.com/', :target=>'_blank', :class=>'green_links'%>
-      <br />
-
-      <%=link_to 'http://www.apple.com/au/macbook-air/', 'http://www.apple.com/au/macbook-air/', :target=>'_blank', :class=>'green_links'%>
-      <br />
-
-      <%=link_to 'https://jawbone.com/up', 'https://jawbone.com/up', :target=>'_blank', :class=>'green_links'%>
-
-      <br />
-      <%=link_to 'http://www.misfitwearables.com/', 'http://www.misfitwearables.com/', :target=>'_blank', :class=>'green_links'%>
-
-
-      <br />
-
-
-      <!--<h3>TOP 3 THINGS STEPHEN WOULD CHANGE </h3>
-
-      #
-      #
-      #
--->
-
+      <%=link_to 'https://www.pipelinedeals.com/','https://www.pipelinedeals.com/', :class=>'green_links', :target=>'_blank'%>
+      <ul>
+        <li>a huge amount of information cleanly laid out to avoid confusion</li>
+        <li>quick contact us link in the header and a sticky contact us form in the footer</li>
+      </ul>
 
     </div>
     <div style='float:left; width:230px; padding:10px; text-align:right'>
       <h3>FILES</h3>
-      <%=link_to image_tag('sample_reports/1_a_thumb.jpg',:title=>"Input Farm sample report",:alt=>"Input Farm"),"/assets/sample_reports/1_a.jpg",{:rel=>"prettyPhoto[gallery1]",:title=>"Mockup showing fixed format and 'How it works'"} %>
+        <%=link_to image_tag('download_pdf.png',:size=>'50x50')+raw("<br />Download"), '/assets/sample_reports/Input Farm Report - webtemplate.com.au - robin mather - 4 Oct 2013.pdf', :class=>'green_links text_13px', :target=>'_blank'%> 
+      <br />
+      <br /><br />
+      <%=link_to image_tag('sample_reports/3_a_thumb.jpg',:title=>"Input Farm sample report",:alt=>"Input Farm: www.webtemplate.com.au"),"/assets/sample_reports/3_a.jpg",{:rel=>"prettyPhoto[gallery1]",:title=>"Marked up screenshot"} %>
+      
     </div>
   </div>
   <div style="clear:both"></div>

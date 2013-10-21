@@ -69,7 +69,7 @@
 </div>  -->
 
 <div id="what_is_this" class="smoothScroll" style='background-color: #fff;'>
-  <div class="row_fluid" style="text-align:center;color:#767676;background-image:url('/assets/half_screenshot.png');background-repeat:no-repeat;background-position:left bottom;background-size:520px">
+  <div class="row_fluid" style="text-align:center;color:#767676;background-image:url('/assets/half_screenshot.gif');background-repeat:no-repeat;background-position:left bottom;background-size:520px">
     <div style='width:50%;padding-top:210px;float:left'>
       <%#=image_tag 'half_screenshot.png',:width=>'500px' %>
     </div>
@@ -83,10 +83,13 @@
       <p>Input Farm is a new way to get feedback.</p>
       <p>We focus on iteration rather than redesign.</p>
       <p>We connect you to great designers who review your site and give you feedback.</p>
-      <p>For $75, you will receive practical suggestions to improve your site within 48 hours directly from design experts. </p>
+      <p>For <strong class='green_links'>$75</strong>, you will receive practical suggestions to improve your site within 48 hours directly from design experts. </p>
       <p>No up-sell, no admin, no meetings, no quotes. Just really fast expert feedback. </p>
       <p>It's the most cost effective way to improve your website.</p>
-      <p><strong>Not sure? see what you'll get in this <%=link_to 'sample report','/sample_report/1', :class=>"green_links"%></strong></p>
+      <p><strong>Not sure? see what you'll get: 
+        <%=link_to 'sample #1','/sample_report/1', :class=>"green_links"%> | 
+        <%=link_to 'sample #2','/sample_report/2', :class=>"green_links"%>
+        </strong></p>
       <!--
       <p>Websites that are constantly updated look fresher </p>
       <p>Creating a fantastic website is about constant improvement </p>
@@ -135,13 +138,13 @@
             </span>
 -->
             <div class='experts bwWrapper personPopupTrigger' rel="james_mcnaught,a17bee64-8593-436e-a2f8-599a626370df" id='expert1'>
-              <%=image_tag "circle_expert1.png", :size=>'100x103'%> 
+              <%=image_tag "circle_expert1.jpg", :size=>'100x103'%> 
             </div> 
             <div class='experts bwWrapper personPopupTrigger' rel="stephen_grace,a17bee64-8593-436e-a2f8-599a626370df" id='expert2'>
-              <%=image_tag "circle_expert2.png", :size=>'100x100'%> 
+              <%=image_tag "circle_expert2.jpg", :size=>'100x100'%> 
             </div> 
             <div class='experts bwWrapper personPopupTrigger' rel="robin_mather,a17bee64-8593-436e-a2f8-599a626370df" id='expert3'>
-              <%=image_tag "circle_expert3.png", :size=>'100x103'%> 
+              <%=image_tag "circle_expert3.jpg", :size=>'100x103'%> 
             </div> 
 <!--
             <div style='clear:both'></div>
@@ -277,15 +280,17 @@
 
 <div id='submit_form' style='display:none;height:330px'>
   <div style='height:330px'>
-  <div style='padding:5px;color:#fff;background-color:#5b9337'><%=link_to image_tag("logo_white_small.png",:size=>"106x14", :style=>"border:none"),"/", :style=>"border:none"%> - Make your website better, faster</div>
+<!--  <div style='padding:5px;color:#fff;background-color:#5b9337'><%=link_to image_tag("logo_white_small.png",:size=>"106x14", :style=>"border:none"),"/", :style=>"border:none"%> - Make your website better, faster</div>-->
+  <div id='submit_howitworks'> 
+    Your request will be sent to your choosen expert designer immediately. They have 24 hours to accept the job and another 48 hours to complete it.
+  </div>
   <div style='padding:10px'>
 
   <%=form_tag "/task/create", :id=>'save-task'%>
   <div class='sf'><span class='sf_label'>Your site</span> <%=text_field_tag :sf_site%> </div>
   <div class='sf'><span class='sf_label'>Your email address</span> <%=text_field_tag :sf_email %> </div>
-  <p id='fgh'></p>
-  <br />
   <div class='sf'><span class='sf_label'>Your expert</span> <span id='sf_expert'></span> </div>
+    If they do not reply within 24 hours are you happy for us to select a designer for you: <%=check_box_tag 'x'%>
   <br />
   <div class='sf'><span class='sf_label'>Price</span>$75 <br /></div>
   <br>

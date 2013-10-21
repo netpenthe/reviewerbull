@@ -5,7 +5,7 @@ class FrontController < ApplicationController
 
   def contact
     contact = Contact.new :email=>params[:contact_email], :name=>params[:name], :message=>params[:message], 
-      :classification=>params[:classification], :url=>params[:url], :fivethings=>params[:fivethings]
+      :classification=>params[:classification]
 
     contact.save
 
@@ -36,4 +36,6 @@ class FrontController < ApplicationController
   def submitted
   end
 
+  def experts
+  end
 end
