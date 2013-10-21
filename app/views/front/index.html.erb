@@ -80,10 +80,10 @@
       <br />
       <p>For <span style='color:#5BA93D'>$75</span>, you will receive practical suggestions to improve your site within 48 hours. No up-sell, no meetings, no quotes. Genuine, vetted, experts.</p>
 -->
-      <p>Input Farm is a new way to get feedback.</p>
+      <p>Input Farm is a new way to get expert feedback on your website.</p>
       <p>We focus on iteration rather than redesign.</p>
       <p>We connect you to great designers who review your site and give you feedback.</p>
-      <p>For <strong class='green_links'>$75</strong>, you will receive practical suggestions to improve your site within 48 hours directly from design experts. </p>
+      <p style='margin-right:5px'>For <strong class='green_links'>$75</strong>, you will receive practical suggestions to improve your site within 48 hours directly from design experts. </p>
       <p>No up-sell, no admin, no meetings, no quotes. Just really fast expert feedback. </p>
       <p>It's the most cost effective way to improve your website.</p>
       <p><strong>Not sure? see what you'll get: 
@@ -238,7 +238,9 @@
         <li>The first 3 things they would do if they were working on it</li>
       </ul>
       <br />
-      See a sample report now!
+      See a sample report now: 
+        <%=link_to 'sample #1','/sample_report/1', :class=>"green_links"%> | 
+        <%=link_to 'sample #2','/sample_report/2', :class=>"green_links"%>
       </div>
     
       <div id='qa_dontlike' class='qa_answers'>
@@ -278,29 +280,36 @@
   <% end %>
 </div>
 
-<div id='submit_form' style='display:none;height:330px'>
-  <div style='height:330px'>
+<div id='submit_form' style='display:none;height:380px'>
+  <div style='height:380px'>
 <!--  <div style='padding:5px;color:#fff;background-color:#5b9337'><%=link_to image_tag("logo_white_small.png",:size=>"106x14", :style=>"border:none"),"/", :style=>"border:none"%> - Make your website better, faster</div>-->
   <div id='submit_howitworks'> 
-    Your request will be sent to your choosen expert designer immediately. They have 24 hours to accept the job and another 48 hours to complete it.
+    Your request will be sent to your choosen expert designer immediately.
+    <br /><br />
+     They have 24 hours to accept the job and another 48 hours to complete it.
   </div>
   <div style='padding:10px'>
 
   <%=form_tag "/task/create", :id=>'save-task'%>
-  <div class='sf'><span class='sf_label'>Your site</span> <%=text_field_tag :sf_site%> </div>
-  <div class='sf'><span class='sf_label'>Your email address</span> <%=text_field_tag :sf_email %> </div>
+    <%=hidden_field_tag :sf_site%>
+    <%=hidden_field_tag :sf_email%>
+  <div class='sf'><span class='sf_label'>Your site</span> <span id='sf_site_span'></span></div>
+  <div class='sf'><span class='sf_label'>Your email address</span> <span id='sf_email_span'></span></div>
   <div class='sf'><span class='sf_label'>Your expert</span> <span id='sf_expert'></span> </div>
-    If they do not reply within 24 hours are you happy for us to select a designer for you: <%=check_box_tag 'x'%>
   <br />
-  <div class='sf'><span class='sf_label'>Price</span>$75 <br /></div>
+  <div class='sf' style='background-color:#FFFDBC;border:solid 1px #E7FFBC'><span class='sf_label'>Price</span><strong>$75</strong><br /></div>
   <br>
-  <a href="#blah" id='submit-task' class='button' onclick="$('#save-task').submit();"> Submit </a>
+  <br>
+  <div style='text-align:center'><a href="#b" id='submit-task' class='button' onclick="$('#save-task').submit();"> Get review! </a></div>
   </form>
   
 
   <div id='paypal' class='sf' style='display:none;'>
+      <div style='float:left'>
     <p>Thanks now time to pay :)</p>
+</div>
     <!--https://developer.paypal.com/webapps/developer/docs/classic/paypal-payments-standard/integration-guide/Appx_websitestandard_htmlvariables/#id08A6HF080O3-->
+      <div style='float:left'>
      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" >
           <input type="hidden" name="cmd" value="_s-xclick">
           <input type="hidden" name="hosted_button_id" value="VLGD58TSXM7QN">
@@ -309,6 +318,7 @@
           <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
           <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
     </form>
+  </div>
   </div>
   </div>
   </div>

@@ -756,6 +756,7 @@ height:420px;
 .sf_label {
   width:200px;
   display:inline-block;
+  font-weight:bold;
 }
 /* end submit form styles */
 .howitworks_text {

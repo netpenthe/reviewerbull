@@ -384,7 +384,7 @@ function rotate(position){
 
   var quotes = new Array();
   quotes[1] = "Often the difference between a good and great design is a matter of refining a few elements <span class='quote_author'> - Sun Tzu</span>";
-  quotes[2] = "A fanatic is one who can't change his mind and wont change the subject <span class='quote_author'> - Winston Churchill</span>";
+  quotes[2] = "A fanatic is one who can't change his mind and won't change the subject <span class='quote_author'> - Winston Churchill</span>";
   quotes[3] = "An eye for an eye only ends up making the whole world blind <span class='quote_author'> - Ghandi</span>";
   quotes[4] = "Intelligence is the ability to adapt to change. <span class='quote_author'> - Stephen Hawking</span>";
   quotes[5] = "To improve is to change; to be perfect is to change often <span class='quote_author'> - Winston Churchill</span>";
@@ -408,9 +408,13 @@ function rotate(position){
 function getDetails(){
   if($('#url').val() != "Site URL"){
     $('#sf_site').attr("value", $('#url').val());
+    //$('#pp_full_res #sf_site_span').html($('#url').val());
+    document.getElementById("sf_site_span").innerHTML = $('#url').val();
   }
   if($('#email').val()!="Email"){
     $('#sf_email').attr("value", $('#email').val());
+    //$('#pp_full_res #sf_email_span').html($('#email').val());
+    document.getElementById("sf_email_span").innerHTML = $('#email').val();
   }
   //console.log($('#expert_name').val());
   //$('#pp_full_res #sf_expert').attr("text",$('#expert_name').val());
@@ -418,6 +422,8 @@ function getDetails(){
   // not sure why .text doesnt work. 
   span = document.getElementById("sf_expert")
   span.innerHTML = $('#expert_name').val();
+
+  
 };
 
   $('#save-task').submit(function() {
