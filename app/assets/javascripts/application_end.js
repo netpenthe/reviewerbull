@@ -425,6 +425,10 @@ function getDetails(){
     var email = $('#sf_email').attr("value");
     var expert = $('#sf_expert').text();
 
+    $('#save-task').hide();
+    $('#pp_full_res').toggle();
+    $('#pp_full_res').toggle();
+       
     $.ajax({
         url: '/task/create', //sumbits it to the given url of the form
         data: {sf_email: email, sf_site: site, sf_expert: expert},
