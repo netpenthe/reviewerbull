@@ -293,9 +293,10 @@
   </form>
   
 
-  <div class='sf'>
+  <div id='paypal' class='sf' style='display:none;'>
+    <p>Thanks now time to pay :)</p>
     <!--https://developer.paypal.com/webapps/developer/docs/classic/paypal-payments-standard/integration-guide/Appx_websitestandard_htmlvariables/#id08A6HF080O3-->
-     <form id='paypal' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style='display:none;'>
+     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" >
           <input type="hidden" name="cmd" value="_s-xclick">
           <input type="hidden" name="hosted_button_id" value="VLGD58TSXM7QN">
           <input type="hidden" name="item_name" value="Input Farm Consultation">
