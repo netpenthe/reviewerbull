@@ -1,11 +1,14 @@
-<h1>Expert SignUp</h1>
+<h1>Expert Sign Up</h1>
 
 <%=form_tag '/expert/create' do %>
-  <p>Name: <%=text_field_tag :name,nil,:size=>60 %></p>
-  <p>Email: <%=text_field_tag :email, nil, :size=>60%></p>
-  <p>Portfolio URL: <%=text_field_tag :url, nil, :size=>60 %></p>
-  <p>Other Info: <%=text_area_tag :info ,nil, :rows=>20, :cols=>60%></p>
-  <p><%=submit_tag :save%></p>
+  <table>
+  <tr><td>Name:</td> <td><%=text_field_tag :name,nil,:size=>60 %></td></tr>
+   <tr><td>Email:</td><td> <%=text_field_tag :email, nil, :size=>60%></td></tr>
+   <tr><td>Links:</td><td> <%=text_area_tag :links, nil, :rows=>5, :cols=>60 %></td></tr>
+   <tr><td><p>Profile:</td><td> <%=text_area_tag :profile ,nil, :rows=>12, :cols=>60%></td></tr>
+   <tr><td>Other Info:</td><td> <%=text_area_tag :info ,nil, :rows=>12, :cols=>60%></td></tr>
+   <tr><td><%=submit_tag :save%></td></tr>
+  </table>
 <%end%>
 
 
