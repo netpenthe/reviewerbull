@@ -50,9 +50,18 @@ class FrontController < ApplicationController
       string = (0...15).map{ o[rand(o.length)] }.join
       user = User.create!({:email => params[:email], :password => string, :password_confirmation => string, :name=>params[:name] })
     end
+
     UserData.create :user_id=>user.id, :type=>"ExpertLinks", :value=>params[:links]
     UserData.create :user_id=>user.id, :type=>"ExpertOther", :value=>params[:info]
     UserData.create :user_id=>user.id, :type=>"ExpertProfile", :value=>params[:profile]
+
+    ud = UserData.create :user_id=>user.id, :type=>"ExpertProfilePic"
+    attachment = Attachment.new
+    attachment.upload = params[:pic] 
+    attachment.save
+    ud.attachments << attachment
+    ud.save
+
     render :text=>"Thanks for submitting your info !" 
   end
 
