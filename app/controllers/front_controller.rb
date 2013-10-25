@@ -38,4 +38,21 @@ class FrontController < ApplicationController
 
   def experts
   end
+
+  def expert
+    render :layout=>false
+  end
+
+  def expert_create
+    user = User.find_by_email params[:email]
+    if user.blank?
+      o = [('a'..'z'), ('A'..'Z')].map { |i| i.to_a }.flatten
+      string = (0...15).map{ o[rand(o.length)] }.join
+      user = User.create!({:email => params[:email], :password => string, :password_confirmation => string, :name=>params[:name] })
+    end
+    UserData.create :user_id=>user.id, :type=>"ExpertPortfolio", :value=>params[:url]
+    UserData.create :user_id=>user.id, :type=>"ExpertOther", :value=>params[:info]
+    render :text=>"Thanks for submitting your info !" 
+  end
+
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131022102616) do
+ActiveRecord::Schema.define(:version => 20131025103515) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -78,6 +78,14 @@ ActiveRecord::Schema.define(:version => 20131022102616) do
     t.boolean  "paid"
   end
 
+  create_table "user_data", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "type"
+    t.text     "value"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
@@ -91,6 +99,7 @@ ActiveRecord::Schema.define(:version => 20131022102616) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
