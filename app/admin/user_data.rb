@@ -7,5 +7,6 @@ ActiveAdmin.register UserData do
     column "user" do |data|
       data.user.email unless data.user.blank?
     end 
+    default_actions
   end
 end
