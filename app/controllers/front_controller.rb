@@ -38,4 +38,35 @@ class FrontController < ApplicationController
 
   def experts
   end
+
+  def expert
+    render :layout=>'basic'
+  end
+
+  def expert_create
+    #set random password for now
+    user = User.find_by_email params[:email]
+    if user.blank?
+      o = [('a'..'z'), ('A'..'Z')].map { |i| i.to_a }.flatten
+      string = (0...15).map{ o[rand(o.length)] }.join
+      user = User.create!({:email => params[:email], :password => string, :password_confirmation => string, :name=>params[:name] })
+    end
+
+    UserData.create :user_id=>user.id, :type=>"ExpertLinks", :value=>params[:links] unless params[:links].blank?
+    UserData.create :user_id=>user.id, :type=>"ExpertOther", :value=>params[:info] unless params[:info].blank?
+    UserData.create :user_id=>user.id, :type=>"ExpertProfile", :value=>params[:profile] unless params[:profile].blank?
+    UserData.create :user_id=>user.id, :type=>"ExpertLocation", :value=>params[:location] unless params[:location].blank?
+
+    unless params[:pic].blank?
+      ud = UserData.create :user_id=>user.id, :type=>"ExpertProfilePic"
+      attachment = Attachment.new
+      attachment.upload = params[:pic] 
+      attachment.save
+      ud.attachments << attachment
+      ud.save
+    end
+
+    render :text=>"Thanks for submitting your info !" 
+  end
+
 end

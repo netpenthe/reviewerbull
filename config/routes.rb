@@ -6,6 +6,9 @@ Dwarfmongoose::Application.routes.draw do
   match 'front/contact' => 'front#contact'
   match 'front/submitted' => 'front#submitted', :as=>:front_submitted
   post '/task/create' => 'task#create', :as=>:task_create
+  
+  match '/expert' => 'front#expert', :as=>:expert_signup 
+  match '/expert/create' => 'front#expert_create'
 
   root :to => 'front#index'	
 
