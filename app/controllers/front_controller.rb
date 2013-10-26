@@ -45,6 +45,11 @@ class FrontController < ApplicationController
 
   def expert_create
     #set random password for now
+    if params[:email].blank?
+      render :text=>"Email address is required"
+      return
+    end
+
     user = User.find_by_email params[:email]
     if user.blank?
       o = [('a'..'z'), ('A'..'Z')].map { |i| i.to_a }.flatten
