@@ -13,7 +13,7 @@
         tell you how you can improve your site -->
         Make your website better, faster
       </div>
-          <div id='use_inputfarm'>USE INPUTFARM TODAY</div>
+          <div id='use_inputfarm'>USE INPUT FARM TODAY</div>
       <div id='use_button_outer'>
       <a href='#how_it_works' id='use_button_wrapper' class='smoothScroll'>
         <span id="use_button">
@@ -105,7 +105,7 @@
 <div id="how_it_works" class="smoothScroll" style='width:100%;'>
   <a name='howitworks'></a>
   <div class="row_fluid" >
-    <h1 class='title'>How it works</h1>
+    <h1 class='title'>Use Input Farm today</h1>
     <br />
     <div id='xsteps_wrapper'>
       <div class='steps'>
@@ -132,11 +132,14 @@
       </div>
       <div class='steps' > 
         <div class='preview'>
-          <div class='xarrow_box' style='text-align:left'>
+          <div class='xarrow_box' style='text-align:center'>
+          <div id='find_reviewer_wrapper'>
+            <a href="#find_reviewer" id="find_reviewer_button" class="button" >FIND REVIEWER</a>
+          </div>
+ 
             <!--<span style='width:80px;float:left;color:#ddf8c6'>
               Select<br /> Expert
             </span>
--->
             <div class='experts bwWrapper personPopupTrigger' rel="james_mcnaught,a17bee64-8593-436e-a2f8-599a626370df" id='expert1'>
               <%=image_tag "circle_expert1.jpg", :size=>'100x103'%> 
             </div> 
@@ -146,7 +149,6 @@
             <div class='experts bwWrapper personPopupTrigger' rel="robin_mather,a17bee64-8593-436e-a2f8-599a626370df" id='expert3'>
               <%=image_tag "circle_expert3.jpg", :size=>'100x103'%> 
             </div> 
-<!--
             <div style='clear:both'></div>
             <br />
 
@@ -279,7 +281,76 @@
     </div>
   <% end %>
 </div>
-
+<!--
+<div id='find_reviewer' style='display:none' style='height:300px'>
+  <div class='expert' style='height:300px'>
+-->
+<div id='find_reviewer' style='display:none;height:450px'>
+  <div style='height:450px'>
+    <div class='expert_header'>
+      <div class='expert_name' style='float:left;width:70px;padding:10px'>
+        <%=image_tag "circle_expert1_gray.jpg", :size=>'70x71'%> 
+      </div>
+      <div class='expert_name' style='float:left;width:160px;padding-top:20px;'>
+        <p style='font-size:18px;color:#fff;padding:0;margin:0'>James McNaught</p>
+        <br />
+        <p style='padding:0;margin:0;font-size:11px;color:#fff'>Adelaide, Australia</p>
+      </div>
+      <div class='divider'></div>
+      <div class='expert_details' style='float:left;padding:20px;padding-left:30px;font-size:12px;line-height:16px;'>
+        4 reviews <br />
+        32 hr avg. response time <br />
+        www.jamesmcnaught.co.uk
+      </div>
+      <div class='expert_details' style='float:left;text-align:right;padding:20px;padding-left:85px;font-size:12px;line-height:16px;padding-top:30px;padding-right:43px'>
+          <%= submit_tag "SELECT THIS EXPERT", :id=>"submit_button", :class=>'button'%>
+      </div>
+      <div class='expert_details' style='float:right;text-align:right;font-size:12px;position:absolute;right:24px;top:3px'>
+          prev expert | next expert
+      </div>
+    </div>
+    <div style="clear:both"></div>
+    <div class='expert_body'>
+      <div class='expert_body_left'>
+        <p class='expert_subtitle' style='margin:0;color:#6e6e6e'>About </p>
+        <hr class='light_grey'>
+        I'm a graphic design graduate with international experience, industry recognition, and a borderline unhealthy interest in all things typographic. That said, my love of solid kerning, leading and alignment doesn't mean I don't get my hands dirty with the creative side of things. 
+        <br /><br />
+        <p class='expert_subtitle' style='margin:0'>Portfolio </p>
+        <hr class='light_grey'>
+        <%=image_tag 'portfolio1.jpg', :size=>'72x58'%>
+        <%=image_tag 'portfolio2.jpg', :size=>'72x58', :style=>'padding-left:13px;'%>
+        <%=image_tag 'portfolio3.jpg', :size=>'72x58', :style=>'padding-left:13px;'%>
+      </div>
+      <div class='expert_body_right'>
+        <p class='expert_subtitle' style='margin:0'>Feedback </p>
+        <hr class='light_grey'>
+        <div>
+          "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."
+        </div>
+        <div style='float:right'>
+          - John Hall of <em>Sport-o-mate</em>
+        </div>
+        <br />
+        <br />
+        <div>
+          "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."
+        </div>
+        <div style='float:right'>
+          - John Hall of <em>Sport-o-mate</em>
+        </div>
+        <br />
+        <br />
+        <div>
+          "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."
+        </div>
+        <div style='float:right'>
+          - John Hall of <em>Sport-o-mate</em>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div id='submit_form' style='display:none;height:380px'>
   <div style='height:380px'>
 <!--  <div style='padding:5px;color:#fff;background-color:#5b9337'><%=link_to image_tag("logo_white_small.png",:size=>"106x14", :style=>"border:none"),"/", :style=>"border:none"%> - Make your website better, faster</div>-->

@@ -248,6 +248,12 @@ $(window).load(function(){
       deeplinking: false,
       default_height: '222px'
      });
+
+      $("#find_reviewer_button").prettyPhoto({
+      social_tools: false,
+      deeplinking: false,
+      default_width: '850px'
+     });
       
     $(".qa_questions").click(function() {
       $(".qa_answers").hide();

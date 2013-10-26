@@ -103,6 +103,7 @@ hr.light_grey {
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 5px;
 }
 .flash_notice {
   color: hotpink;
@@ -836,7 +837,7 @@ height:420px;
     background-color:#286968;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   }
-#submit_wrapper {
+#submit_wrapper, #find_reviewer_wrapper {
   padding-top: 40px;
 }
 
@@ -966,23 +967,36 @@ transition: opacity 1s ease-in-out;
 }
 
 .expert {
-  border: 1px solid grey;
 }
 .expert_header {
-  background-color: #abababa;
+  background-color: #ababab;
+  height:100px;
+  color: #fff;
+}
+.expert_body {
+  height: 300px;
+  color: #575757;
 }
 .expert_body_left {
   float:left;
+  width:250px;
+  padding:20px;
+  font-size: 14px;
+  line-height:18px;
 }
 .expert_body_right {
   float:left;
+  padding:20px;
+  width:500px;
+  line-height:18px;
+  font-size: 14px;
 }
 
 .expert_name {
-width:200px;
+width:100px;
 }
 .expert_details {
-width:400px;
+width:200px;
 }
 
 #submit_howitworks {
@@ -994,4 +1008,17 @@ width:400px;
 }
 .submit_titles {
   color: #393c3d;
+}
+
+.expert_subtitle {
+ color: #6e6e6e;
+ padding-bottom:10px;
+  font-size: 18px;
+} 
+.divider{
+    position:absolute;
+    left:270px;
+    top:10px;
+    height:80px;
+    border-left:1px solid white;
 }
