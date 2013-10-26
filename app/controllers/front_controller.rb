@@ -40,10 +40,11 @@ class FrontController < ApplicationController
   end
 
   def expert
-    render :layout=>false
+    render :layout=>'basic'
   end
 
   def expert_create
+    #set random password for now
     user = User.find_by_email params[:email]
     if user.blank?
       o = [('a'..'z'), ('A'..'Z')].map { |i| i.to_a }.flatten
@@ -51,16 +52,19 @@ class FrontController < ApplicationController
       user = User.create!({:email => params[:email], :password => string, :password_confirmation => string, :name=>params[:name] })
     end
 
-    UserData.create :user_id=>user.id, :type=>"ExpertLinks", :value=>params[:links]
-    UserData.create :user_id=>user.id, :type=>"ExpertOther", :value=>params[:info]
-    UserData.create :user_id=>user.id, :type=>"ExpertProfile", :value=>params[:profile]
+    UserData.create :user_id=>user.id, :type=>"ExpertLinks", :value=>params[:links] unless params[:links].blank?
+    UserData.create :user_id=>user.id, :type=>"ExpertOther", :value=>params[:info] unless params[:info].blank?
+    UserData.create :user_id=>user.id, :type=>"ExpertProfile", :value=>params[:profile] unless params[:profile].blank?
+    UserData.create :user_id=>user.id, :type=>"ExpertLocation", :value=>params[:location] unless params[:location].blank?
 
-    ud = UserData.create :user_id=>user.id, :type=>"ExpertProfilePic"
-    attachment = Attachment.new
-    attachment.upload = params[:pic] 
-    attachment.save
-    ud.attachments << attachment
-    ud.save
+    unless params[:pic].blank?
+      ud = UserData.create :user_id=>user.id, :type=>"ExpertProfilePic"
+      attachment = Attachment.new
+      attachment.upload = params[:pic] 
+      attachment.save
+      ud.attachments << attachment
+      ud.save
+    end
 
     render :text=>"Thanks for submitting your info !" 
   end

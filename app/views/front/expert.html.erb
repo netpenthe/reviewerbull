@@ -1,14 +1,21 @@
-<h1>Expert Sign Up</h1>
 
+<div style='float:left; padding-left:40px; padding-bottom:50px;'>
+  <h1>Expert Sign Up</h1>
+  <br><br>
 <%=form_tag '/expert/create', multipart: true do %>
   <table>
-  <tr><td>Name:</td> <td><%= text_field_tag :name,nil,:size=>60 %></td></tr>
+   <tr><td>Name:</td> <td><%= text_field_tag :name,nil,:size=>60 %></td></tr>
    <tr><td>Email:</td><td> <%= text_field_tag :email, nil, :size=>60%></td></tr>
-   <tr><td>Links:</td><td> <%= text_area_tag :links, nil, :rows=>5, :cols=>60 %></td></tr>
-   <tr><td>Profile [50 words]:</td><td> <%= text_area_tag :profile ,nil, :rows=>12, :cols=>60%></td></tr>
-   <tr><td>Other Info:</td><td> <%= text_area_tag :info ,nil, :rows=>12, :cols=>60%></td></tr>
+   <tr><td>Location:</td><td> <%= text_field_tag :location, nil, :size=>60%></td></tr>
    <tr><td>Profile Pic:</td> <td><%= file_field_tag :pic %></td></tr>
+   <tr><td>About [50 words]:</td><td> <%= text_area_tag :profile ,nil, :rows=>12, :cols=>60%></td></tr>
+   <tr><td>Portfolio [2-3 links]:</td><td> <%= text_area_tag :links, nil, :rows=>5, :cols=>60 %></td></tr>
+   <tr><td>Other Info:</td><td> <%= text_area_tag :info ,nil, :rows=>12, :cols=>60%></td></tr>
    <tr><td><%=submit_tag :save%></td></tr>
   </table>
 <%end%>
+</div>
 
+<!--<div style='float:right;padding-top:150px; padding-right:150px;'>
+  <%=image_tag 'example-profile.png'%>
+</div>-->
