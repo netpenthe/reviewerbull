@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  </head>
+ </head>
   <body  onload="document.body.style.opacity='1'">
     <div id="header">
       <div class='row_fluid'>
@@ -64,6 +64,42 @@
       </div>
     </div>
     <%= javascript_include_tag "application_end" %>
+    <%= javascript_tag do %>
+      //expert_profiles = '<%#= raw ExpertProfiles.to_json %>';
+      var expert_profiles = [];
+      expert_profiles.push(new ExpertProfile(1,"James McNaughtx", "London, UKx", 4, "www.jamesmcnaught.co.ukxx", "xxI'm a graphic design graduate with international experience, industry recognition, and a borderline unhealthy interest in all things typographic. That said, my love of solid kerning, leading and alignment doesn't mean I don't get my hands dirty with the creative side of things.", 32.3));
+      var ep = expert_profiles[0];
+      ep.feedbacks.push( new Feedback('John Hall','sportomate.com', "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
+      ep.feedbacks.push( new Feedback('John Hall','sportomate.com', "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
+      ep.feedbacks.push( new Feedback('John Hall','sportomate.com', "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
+      ep.feedbacks.push( new Feedback('John Hall','sportomate.com', "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
+      ep.portfolios.push( new Portfolio('www.google.com', '/assets/portfolio1.jpg', 'goog','tes') ); 
+      ep.portfolios.push( new Portfolio('www.google.com', '/assets/portfolio2.jpg', 'goog','tes') ); 
+      ep.portfolios.push( new Portfolio('www.google.com', '/assets/portfolio3.jpg', 'goog','tes') ); 
+
+      expert_profiles.push(new ExpertProfile(2,"Stephen Grace", "Adelaide, Australia", 5, "www.jamesmcnaught.co.uk", "STEVEnnm a graphic design graduate with international experience, industry recognition, and a borderline unhealthy interest in all things typographic. That said, my love of solid kerning, leading and alignment doesn't mean I don't get my hands dirty with the creative side of things.", 32.3));
+      ep = expert_profiles[1];
+      ep.feedbacks.push( new Feedback('John Hall','sportomate.com', "2Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
+      ep.feedbacks.push( new Feedback('John Hall','sportomate.com', "2Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
+      ep.feedbacks.push( new Feedback('John Hall','sportomate.com', "2Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
+      ep.feedbacks.push( new Feedback('John Hall','sportomate.com', "2Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
+      ep.portfolios.push( new Portfolio('www.google.com', '/assets/portfolio1.jpg', 'goog','tes') ); 
+      ep.portfolios.push( new Portfolio('www.google.com', '/assets/portfolio2.jpg', 'goog','tes') ); 
+      ep.portfolios.push( new Portfolio('www.google.com', '/assets/portfolio3.jpg', 'goog','tes') ); 
+
+     
+      expert_profiles.push(new ExpertProfile(3,"Robin Mather", "Adelaide, Australia", 9, "www.jamesmcnaught.co.uk", "ROBBY graphic design graduate with international experience, industry recognition, and a borderline unhealthy interest in all things typographic. That said, my love of solid kerning, leading and alignment doesn't mean I don't get my hands dirty with the creative side of things.", 33.3));
+      ep = expert_profiles[2];
+      ep.feedbacks.push( new Feedback('John Hall','sportomate.com', "3Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
+      ep.feedbacks.push( new Feedback('John Hall','sportomate.com', "3Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
+      ep.feedbacks.push( new Feedback('John Hall','sportomate.com', "3Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
+      ep.feedbacks.push( new Feedback('John Hall','sportomate.com', "3Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
+      ep.portfolios.push( new Portfolio('www.google.com', '/assets/portfolio1.jpg', 'goog','tes') ); 
+      ep.portfolios.push( new Portfolio('www.google.com', '/assets/portfolio2.jpg', 'goog','tes') ); 
+      ep.portfolios.push( new Portfolio('www.google.com', '/assets/portfolio3.jpg', 'goog','tes') ); 
+
+
+    <% end %>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

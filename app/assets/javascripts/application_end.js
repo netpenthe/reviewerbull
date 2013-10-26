@@ -249,7 +249,7 @@ $(window).load(function(){
       default_height: '222px'
      });
 
-      $("#find_reviewer_button").prettyPhoto({
+      $("#find_reviewer_button, #change_reviewer_button").prettyPhoto({
       social_tools: false,
       deeplinking: false,
       default_width: '850px'
@@ -381,8 +381,36 @@ $(function()
           container.css('display', 'none');
       }, hideDelay);
   });
+
+  // Load up the Experts
+   //function ExpertProfile(id, name, city, num_of_reviews, main_url, about, response_time, portfolio1, portfolio2, portfolio3 ) {
+  view_expert = 0;
+  showExpert(0);
 });
 
+function showExpert(num) {
+  var ep = expert_profiles[num];
+  $('#pp_full_res #ep_name, #ep_name').html(ep.name);
+  $('#pp_full_res #ep_city, #ep_city').html(ep.city);
+  $('#pp_full_res #ep_profile, #ep_profile').html(ep.num_of_reviews + " reviews<br />" + ep.response_time + " avg. response time<br /><a href='" + ep.main_url +"'>http://"+ep.main_url+"</a>");
+  $('#pp_full_res #ep_about, #ep_about').html(ep.about);
+  $('#pp_full_res #ep_image, #ep_image').attr("src", "/assets/experts/"+ep.id+"/"+ep.id+".jpg");
+
+  $('#pp_full_res #ep_feedbacks, #ep_feedbacks').empty();
+  for (var i=0; i < ep.feedbacks.length; i++) { 
+    var fb = ep.feedbacks[i];
+    var e = $("<div class='ep_feedback'><div style='float:right'>"+fb.txt+"</div><div style='float:right'>- "+fb.from+" of <em>"+fb.site+"</em><br /><br></div><br /><br /></div>");
+    e.appendTo($('#pp_full_res #ep_feedbacks, #ep_feedbacks'));
+  }
+
+  $('#pp_full_res #ep_portfolio, #ep_portfolio').empty();
+  for (var i=0; i < ep.portfolios.length; i++) {
+    var p = ep.portfolios[i];
+    var padding = (i == 0) ? 0 :"13px";
+    var e = $("<a href='"+p.url+"'><img src='http://www.inputfarm.com"+p.image_url+"' width='72' style='padding-left:"+padding+"'/></a>");
+    e.appendTo($('#pp_full_res #ep_portfolio, #ep_portfolio'));
+  }
+}
 
 function rotate(position){
   //position is the last one we saw
@@ -409,6 +437,26 @@ function rotate(position){
   });
 
   return rand;
+}
+
+var view_expert = 0;
+var selected_expert = 0;
+function changeExpert(dir) {
+  if (dir == 1) { // show next
+    view_expert = ( view_expert == (expert_profiles.length - 1)) ? 0 : ( view_expert + 1);
+  } else {
+    view_expert = ( view_expert == 0) ? (expert_profiles.length - 1) : ( view_expert - 1);
+  }
+  showExpert(view_expert); 
+  return false;
+}
+
+function selectExpert() {
+  var e = expert_profiles[selected_expert];
+  $('#selected_expert_image').attr("src", "/assets/experts/"+e.id+"/"+e.id+".jpg");
+  $('#selected_expert_name').html("<strong>Your expert:</strong> "+e.name); 
+  $('#found_reviewer_wrapper').fadeIn();
+  $('#find_reviewer_wrapper').fadeOut();
 }
 
 function getDetails(){
@@ -471,7 +519,32 @@ $('#expert3').click(function(){
     $('#expert_name').val("Robin Mather");
 });
 
+function ExpertProfile(id, name, city, num_of_reviews, main_url, about, response_time, portfolio1, portfolio2, portfolio3 ) {
+    this.id = id;
+    this.name = name;
+    this.city = city;
+    this.num_of_reviews = num_of_reviews;
+    this.main_url = main_url;
+    this.about = about;
+    this.response_time = response_time;
+    this.portfolios = [];
+    this.feedbacks = [];  
+    this.foo = function() { // one function per User instance, can access 'name' variable
+    };
+}
 
+function Feedback(from, site, txt) {
+  this.from = from;
+  this.site = site;
+  this.txt = txt;
+}
+
+function Portfolio(url, image_url, title, txt) {
+  this.url = url;
+  this.image_url = image_url;
+  this.title = title;
+  this.txt = txt;
+}
 
 /* random quotes */
 var randy = 0;
@@ -480,7 +553,5 @@ setTimeout(function(){randy = rotate(randy);},500);
 
 //load a new one every 20 secs
 setInterval(function(){randy = rotate(randy);},20000);
-
-
 
 

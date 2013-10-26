@@ -133,8 +133,17 @@
       <div class='steps' > 
         <div class='preview'>
           <div class='xarrow_box' style='text-align:center'>
+          <div id='found_reviewer_wrapper' style='display:none'>
+            <%=image_tag "circle_expert1.jpg", :size=>'100x103',:style=>'float:left;padding-left:30px',:id=>'selected_expert_image'%>
+            <div style='padding-top:30px'>
+             <p style='margin:0;padding:0;color:#575757;font-size:16px' id='selected_expert_name'> <strong>Your expert:</strong>James McNaught</p>
+              <div style='padding:20px 0 0 20px;float:left'>
+              <a href="#find_reviewer" id="change_reviewer_button" style='color:#429e9d'> Choose different expert...</a>
+              </div>
+            </div>
+          </div>
           <div id='find_reviewer_wrapper'>
-            <a href="#find_reviewer" id="find_reviewer_button" class="button" >FIND REVIEWER</a>
+            <a href="#find_reviewer" id="find_reviewer_button" class="button" >FIND EXPERT REVIEWER</a>
           </div>
  
             <!--<span style='width:80px;float:left;color:#ddf8c6'>
@@ -289,24 +298,24 @@
   <div style='height:450px'>
     <div class='expert_header'>
       <div class='expert_name' style='float:left;width:70px;padding:10px'>
-        <%=image_tag "circle_expert1_gray.jpg", :size=>'70x71'%> 
+        <%=image_tag "circle_expert1_gray.jpg", :size=>'70x71', :id=>'ep_image'%>
       </div>
       <div class='expert_name' style='float:left;width:160px;padding-top:20px;'>
-        <p style='font-size:18px;color:#fff;padding:0;margin:0'>James McNaught</p>
+        <p style='font-size:18px;color:#fff;padding:0;margin:0' id='ep_name'>James McNaught</p>
         <br />
-        <p style='padding:0;margin:0;font-size:11px;color:#fff'>Adelaide, Australia</p>
+        <p style='padding:0;margin:0;font-size:11px;color:#fff' id='ep_city'>Adelaide, Australia</p>
       </div>
       <div class='divider'></div>
-      <div class='expert_details' style='float:left;padding:20px;padding-left:30px;font-size:12px;line-height:16px;'>
+      <div class='expert_details' style='float:left;padding:20px;padding-left:30px;font-size:12px;line-height:16px;' id='ep_profile'>
         4 reviews <br />
         32 hr avg. response time <br />
         www.jamesmcnaught.co.uk
       </div>
       <div class='expert_details' style='float:left;text-align:right;padding:20px;padding-left:85px;font-size:12px;line-height:16px;padding-top:30px;padding-right:43px'>
-          <%= submit_tag "SELECT THIS EXPERT", :id=>"submit_button", :class=>'button'%>
+          <%= submit_tag "SELECT THIS EXPERT", :id=>"submit_button", :class=>'button', :onclick=>'selected_expert=view_expert;selectExpert();$.prettyPhoto.close()'%>
       </div>
-      <div class='expert_details' style='float:right;text-align:right;font-size:12px;position:absolute;right:24px;top:3px'>
-          prev expert | next expert
+      <div class='expert_details' style='float:right;text-align:right;font-size:10px;position:absolute;right:24px;top:5px;letter-spacing:3px;'>
+          [ <a href='#' onclick='return changeExpert(-1)'>PREV</a> | <a href='#' onclick='return changeExpert(1)'>NEXT</a> ] EXPERT
       </div>
     </div>
     <div style="clear:both"></div>
@@ -314,38 +323,27 @@
       <div class='expert_body_left'>
         <p class='expert_subtitle' style='margin:0;color:#6e6e6e'>About </p>
         <hr class='light_grey'>
-        I'm a graphic design graduate with international experience, industry recognition, and a borderline unhealthy interest in all things typographic. That said, my love of solid kerning, leading and alignment doesn't mean I don't get my hands dirty with the creative side of things. 
-        <br /><br />
+          <p id='ep_about'>
+          I'm a graphic design graduate with international experience, industry recognition, and a borderline unhealthy interest in all things typographic. That said, my love of solid kerning, leading and alignment doesn't mean I don't get my hands dirty with the creative side of things. 
+          </p>
         <p class='expert_subtitle' style='margin:0'>Portfolio </p>
         <hr class='light_grey'>
-        <%=image_tag 'portfolio1.jpg', :size=>'72x58'%>
-        <%=image_tag 'portfolio2.jpg', :size=>'72x58', :style=>'padding-left:13px;'%>
-        <%=image_tag 'portfolio3.jpg', :size=>'72x58', :style=>'padding-left:13px;'%>
+        <p id='ep_portfolio' style='margin:0;padding:0'>
+        </p>
       </div>
       <div class='expert_body_right'>
         <p class='expert_subtitle' style='margin:0'>Feedback </p>
         <hr class='light_grey'>
-        <div>
-          "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."
-        </div>
-        <div style='float:right'>
-          - John Hall of <em>Sport-o-mate</em>
-        </div>
-        <br />
-        <br />
-        <div>
-          "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."
-        </div>
-        <div style='float:right'>
-          - John Hall of <em>Sport-o-mate</em>
-        </div>
-        <br />
-        <br />
-        <div>
-          "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."
-        </div>
-        <div style='float:right'>
-          - John Hall of <em>Sport-o-mate</em>
+        <div id='ep_feedbacks' style='height:230px;overflow-y:auto'>
+          <div class='ep_feedback'>
+<!--            <div style='float:right'>
+              "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."
+            </div>
+            <div style='float:right'>
+              - John Hall of <em>Sport-o-mate</em>
+            </div>
+-->
+          </div>
         </div>
       </div>
     </div>
@@ -353,11 +351,11 @@
 </div>
 <div id='submit_form' style='display:none;height:380px'>
   <div style='height:380px'>
-<!--  <div style='padding:5px;color:#fff;background-color:#5b9337'><%=link_to image_tag("logo_white_small.png",:size=>"106x14", :style=>"border:none"),"/", :style=>"border:none"%> - Make your website better, faster</div>-->
-  <div id='submit_howitworks'> 
-    Your request will be sent to your choosen expert designer immediately.
-    <br /><br />
-     They have 24 hours to accept the job and another 48 hours to complete it.
+    <!--  <div style='padding:5px;color:#fff;background-color:#5b9337'><%=link_to image_tag("logo_white_small.png",:size=>"106x14", :style=>"border:none"),"/", :style=>"border:none"%> - Make your website better, faster</div>-->
+    <div id='submit_howitworks'> 
+      Your request will be sent to your choosen expert designer immediately.
+      <br /><br />
+      They have 24 hours to accept the job and another 48 hours to complete it.
   </div>
   <div style='padding:10px'>
 

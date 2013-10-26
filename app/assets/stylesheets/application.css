@@ -513,6 +513,7 @@ margin-left: 39px;
 font-weight: bold;
 letter-spacing: 3px;
 font-size: 14px;
+  white-space:nowrap;
   
 }
 #use_button{
@@ -1020,5 +1021,14 @@ width:200px;
     left:270px;
     top:10px;
     height:80px;
-    border-left:1px solid white;
+    border-left:1px solid #efefef;
+}
+
+#ep_about {
+  color: #575757;
+}
+#ep_portfolio_images, #ep_about {
+  margin: 0;
+  padding: 0;
+  color: #575757;
 }
