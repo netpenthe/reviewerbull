@@ -4,13 +4,15 @@
   <br><br>
 <%=form_tag '/expert/create', multipart: true do %>
   <table>
-   <tr><td>Name:</td> <td><%= text_field_tag :name,nil,:size=>60, :class=>'field' %></td></tr>
-   <tr><td>Email:</td><td> <%= text_field_tag :email, nil, :size=>60, :class=>'field'%></td></tr>
-   <tr><td>Location:</td><td> <%= text_field_tag :location, nil, :size=>60, :class=>'field'%></td></tr>
-   <tr><td>Profile Pic:</td> <td><%= file_field_tag :pic %></td></tr>
-   <tr><td>About <br> [50 words]:</td><td> <%= text_area_tag :profile ,nil, :rows=>12, :cols=>60, :class=>'area'%></td></tr>
-   <tr><td>Portfolio <br> [2-3 links on <br> separate lines]:</td><td> <%= text_area_tag :links, nil, :rows=>5, :cols=>60, :class=>'area' %></td></tr>
-   <tr><td>Other Info:</td><td> <%= text_area_tag :info ,nil, :rows=>12, :cols=>60, :class=>'area'%></td></tr>
+   <tr><td>Name [public]:</td> <td><%= text_field_tag :name,nil,:size=>60, :class=>'field' %></td></tr>
+   <tr><td>Email [private]:</td><td> <%= text_field_tag :email, nil, :size=>60, :class=>'field'%></td></tr>
+   <tr><td>Skype [private]:</td><td> <%= text_field_tag :skype, nil, :size=>60, :class=>'field'%></td></tr>
+   <tr><td>Ph [private]:</td><td> <%= text_field_tag :phone, nil, :size=>60, :class=>'field'%></td></tr>
+   <tr><td>Location [public]:</td><td> <%= text_field_tag :location, nil, :size=>60, :class=>'field'%></td></tr>
+   <tr><td>Profile Pic <br> [public] <br> [300x300 non transparent] :</td> <td><%= file_field_tag :pic %></td></tr>
+   <tr><td>About <br> [public] <br> [50 words]:</td><td> <%= text_area_tag :profile ,nil, :rows=>12, :cols=>60, :class=>'area'%></td></tr>
+   <tr><td>Portfolio <br> [public] <br> [2-3 links on <br> separate lines]:</td><td> <%= text_area_tag :links, nil, :rows=>5, :cols=>60, :class=>'area' %></td></tr>
+   <tr><td>Other Info <br> [public][twitter, google+ etc...] :</td><td> <%= text_area_tag :info ,nil, :rows=>12, :cols=>60, :class=>'area'%></td></tr>
    <tr><td></td><td><br><%=submit_tag :save, :class=>"button"%></td></tr>
   </table>
 <%end%>

@@ -61,6 +61,8 @@ class FrontController < ApplicationController
     UserData.create :user_id=>user.id, :type=>"ExpertOther", :value=>params[:info] unless params[:info].blank?
     UserData.create :user_id=>user.id, :type=>"ExpertProfile", :value=>params[:profile] unless params[:profile].blank?
     UserData.create :user_id=>user.id, :type=>"ExpertLocation", :value=>params[:location] unless params[:location].blank?
+    UserData.create :user_id=>user.id, :type=>"ExpertSkype", :value=>params[:skype] unless params[:skype].blank?
+    UserData.create :user_id=>user.id, :type=>"ExpertPhone", :value=>params[:phone] unless params[:phone].blank?
 
     unless params[:pic].blank?
       ud = UserData.create :user_id=>user.id, :type=>"ExpertProfilePic"
