@@ -246,7 +246,6 @@ $(window).load(function(){
      $("a[rel^='prettyPhoto']").prettyPhoto({
       social_tools: false,
       deeplinking: false,
-      default_height: '222px'
      });
 
       $("#find_reviewer_button, #change_reviewer_button").prettyPhoto({
@@ -392,7 +391,7 @@ function showExpert(num) {
   var ep = expert_profiles[num];
   $('#pp_full_res #ep_name, #ep_name').html(ep.name);
   $('#pp_full_res #ep_city, #ep_city').html(ep.city);
-  $('#pp_full_res #ep_profile, #ep_profile').html(ep.num_of_reviews + " reviews<br />" + ep.response_time + " avg. response time<br /><a href='" + ep.main_url +"'>http://"+ep.main_url+"</a>");
+  $('#pp_full_res #ep_profile, #ep_profile').html(ep.num_of_reviews + " reviews<br />" + ep.response_time + " avg. response time<br /><a href='http://" + ep.main_url +"' target='_blank' class='dark_green_hover'>http://"+ep.main_url+"</a>");
   $('#pp_full_res #ep_about, #ep_about').html(ep.about);
   $('#pp_full_res #ep_image, #ep_image').attr("src", "/assets/experts/"+ep.id+"/"+ep.id+".jpg");
 
@@ -407,7 +406,7 @@ function showExpert(num) {
   for (var i=0; i < ep.portfolios.length; i++) {
     var p = ep.portfolios[i];
     var padding = (i == 0) ? 0 :"13px";
-    var e = $("<a href='"+p.url+"'><img src='http://www.inputfarm.com"+p.image_url+"' width='72' style='padding-left:"+padding+"'/></a>");
+    var e = $("<a href='http://"+p.url+"' target=_blank><img class='ep_portfolio_image' src='"+p.image_url+"' width='70' style='margin-left:"+padding+"'/></a>");
     e.appendTo($('#pp_full_res #ep_portfolio, #ep_portfolio'));
   }
 }
@@ -453,6 +452,7 @@ function changeExpert(dir) {
 
 function selectExpert() {
   var e = expert_profiles[selected_expert];
+  $('#expert_name').val(e.name);
   $('#selected_expert_image').attr("src", "/assets/experts/"+e.id+"/"+e.id+".jpg");
   $('#selected_expert_name').html("<strong>Your expert:</strong> "+e.name); 
   $('#found_reviewer_wrapper').fadeIn();

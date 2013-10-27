@@ -51,6 +51,11 @@ a:hover {
   background:none;
   text-decoration:none;
 }
+a.dark_green_hover:hover {
+  color:#133700;
+  background:none;
+  text-decoration:none;
+}
 h1, h2, h3 {
   margin:.8em 0 .2em 0;
   padding:0;
@@ -1031,4 +1036,8 @@ width:200px;
   margin: 0;
   padding: 0;
   color: #575757;
+}
+
+.ep_portfolio_image {
+  border: 2px solid #b4b4b4;
 }

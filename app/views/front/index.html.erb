@@ -134,7 +134,7 @@
         <div class='preview'>
           <div class='xarrow_box' style='text-align:center'>
           <div id='found_reviewer_wrapper' style='display:none'>
-            <%=image_tag "circle_expert1.jpg", :size=>'100x103',:style=>'float:left;padding-left:30px',:id=>'selected_expert_image'%>
+            <%=image_tag "circle_expert1.jpg", :size=>'100x103',:style=>'float:left;padding-left:29px',:id=>'selected_expert_image'%>
             <div style='padding-top:30px'>
              <p style='margin:0;padding:0;color:#575757;font-size:16px' id='selected_expert_name'> <strong>Your expert:</strong>James McNaught</p>
               <div style='padding:20px 0 0 20px;float:left'>
@@ -192,7 +192,7 @@
           </div>
         </div>
         <div style='clear:both'></div>
-        <div class='howitworks_text'>Receive feedback in 48 hours!</div>
+        <div class='howitworks_text'>Receive feedback fast!</div>
       </div>
     </div>
   </div>
@@ -315,7 +315,7 @@
           <%= submit_tag "SELECT THIS EXPERT", :id=>"submit_button", :class=>'button', :onclick=>'selected_expert=view_expert;selectExpert();$.prettyPhoto.close()'%>
       </div>
       <div class='expert_details' style='float:right;text-align:right;font-size:10px;position:absolute;right:24px;top:5px;letter-spacing:3px;'>
-          [ <a href='#' onclick='return changeExpert(-1)'>PREV</a> | <a href='#' onclick='return changeExpert(1)'>NEXT</a> ] EXPERT
+          [ <a href='#' onclick='return changeExpert(-1)'>PREV</a> | <a href='#' onclick='return changeExpert(1)'>NEXT</a> ] 
       </div>
     </div>
     <div style="clear:both"></div>
@@ -349,8 +349,8 @@
     </div>
   </div>
 </div>
-<div id='submit_form' style='display:none;height:380px'>
-  <div style='height:380px'>
+<div id='submit_form' style='display:none;height:320px'>
+  <div style='height:320px'>
     <!--  <div style='padding:5px;color:#fff;background-color:#5b9337'><%=link_to image_tag("logo_white_small.png",:size=>"106x14", :style=>"border:none"),"/", :style=>"border:none"%> - Make your website better, faster</div>-->
     <div id='submit_howitworks'> 
       Your request will be sent to your choosen expert designer immediately.
