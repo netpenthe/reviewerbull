@@ -459,6 +459,8 @@ function selectExpert() {
   $('#find_reviewer_wrapper').fadeOut();
 }
 
+
+// this is called when you hit "submit"
 function getDetails(){
   if($('#url').val() != "Site URL"){
     $('#sf_site').attr("value", $('#url').val());
@@ -477,7 +479,7 @@ function getDetails(){
   span = document.getElementById("sf_expert")
   span.innerHTML = $('#expert_name').val();
 
-  
+  $('#pp_full_res #save-task, #save-task').show();
 };
 
   $('#save-task').submit(function() {
@@ -497,7 +499,7 @@ function getDetails(){
     }).success(function(json){
         //console.log(json["id"]);
         //console.log("success")
-        $("#pp_full_res #submit-task").hide(); 
+        $("#pp_full_res #submit-task-wrapper").hide(); 
         $("#pp_full_res #paypal").show();
         $("#pp_full_res #paypal_item_number").val(json["id"]);
     });

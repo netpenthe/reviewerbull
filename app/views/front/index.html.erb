@@ -326,7 +326,7 @@
           <p id='ep_about'>
           I'm a graphic design graduate with international experience, industry recognition, and a borderline unhealthy interest in all things typographic. That said, my love of solid kerning, leading and alignment doesn't mean I don't get my hands dirty with the creative side of things. 
           </p>
-        <p class='expert_subtitle' style='margin:0'>Portfolio </p>
+        <p class='expert_subtitle' style='margin:0'>Work </p>
         <hr class='light_grey'>
         <p id='ep_portfolio' style='margin:0;padding:0'>
         </p>
@@ -349,8 +349,8 @@
     </div>
   </div>
 </div>
-<div id='submit_form' style='display:none;height:320px'>
-  <div style='height:320px'>
+<div id='submit_form' style='display:none;height:330px'>
+  <div style='height:330px' id='form_wrapper'>
     <!--  <div style='padding:5px;color:#fff;background-color:#5b9337'><%=link_to image_tag("logo_white_small.png",:size=>"106x14", :style=>"border:none"),"/", :style=>"border:none"%> - Make your website better, faster</div>-->
     <div id='submit_howitworks'> 
       Your request will be sent to your choosen expert designer immediately.
@@ -366,38 +366,36 @@
   <div class='sf'><span class='sf_label'>Your email address</span> <span id='sf_email_span'></span></div>
   <div class='sf'><span class='sf_label'>Your expert</span> <span id='sf_expert'></span> </div>
   <br />
-  <div class='sf' style='background-color:#FFFDBC;border:solid 1px #E7FFBC'><span class='sf_label'>Price</span><strong>$75</strong><br /></div>
-  <br>
-  <br>
-  <div style='text-align:center'><a href="#b" id='submit-task' class='button' onclick="$('#save-task').submit();"> Get review! </a></div>
+  <div class='sf' style='background-color:#FFFDBC;border:solid 1px #E7FFBC'><span class='sf_label'>Price</span><strong>$75</strong></div>
+  <div style='text-align:center' id='submit-task-wrapper'><br><br><a href="#b" id='submit-task' class='button' onclick="$('#save-task').submit();"> Get review! </a></div>
   </form>
   
 
   <div id='paypal' class='sf' style='display:none;'>
-      <div style='float:left'>
-    <p>Thanks now time to pay :)</p>
-</div>
+    <div style='float:left'>
+      <p>Thanks now time to pay :)</p>
+    </div>
     <!--https://developer.paypal.com/webapps/developer/docs/classic/paypal-payments-standard/integration-guide/Appx_websitestandard_htmlvariables/#id08A6HF080O3-->
-      <div style='float:left'>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-          <input type="hidden" name="cmd" value="_xclick">
-          <input type="hidden" name="business" value="info@inputfarm.com">
-          <input type="hidden" name="lc" value="AU">
-          <input type="hidden" name="amount" value="75.00">
-          <input type="hidden" name="currency_code" value="USD">
-          <input type="hidden" name="button_subtype" value="services">
-          <input type="hidden" name="no_note" value="0">
-          <input type="hidden" name="cn" value="Add special instructions to the seller:">
-          <input type="hidden" name="no_shipping" value="2">
-          <input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynowCC_LG.gif:NonHosted">
-          <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
-          <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
-          <input type="hidden" id="paypal_item_number" name="item_number" value="">
-          <input type="hidden" name="item_name" value="Input Farm Consultation">
-        </form>
+    <div style='float:left'>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="info@inputfarm.com">
+        <input type="hidden" name="lc" value="AU">
+        <input type="hidden" name="amount" value="75.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="no_note" value="0">
+        <input type="hidden" name="cn" value="Add special instructions to the seller:">
+        <input type="hidden" name="no_shipping" value="2">
+        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynowCC_LG.gif:NonHosted">
+        <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
+        <input type="hidden" id="paypal_item_number" name="item_number" value="">
+        <input type="hidden" name="item_name" value="Input Farm Consultation">
+      </form>
+    </div>
   </div>
-  </div>
-  </div>
+</div>
   </div>
 </div>
 </div>
