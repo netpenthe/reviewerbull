@@ -349,23 +349,26 @@
     </div>
   </div>
 </div>
-<div id='submit_form' style='display:none;height:330px'>
+<div id='submit_form' style='display:none;height:340px'>
   <div style='height:330px' id='form_wrapper'>
     <!--  <div style='padding:5px;color:#fff;background-color:#5b9337'><%=link_to image_tag("logo_white_small.png",:size=>"106x14", :style=>"border:none"),"/", :style=>"border:none"%> - Make your website better, faster</div>-->
     <div id='submit_howitworks'> 
-      Your request will be sent to your choosen expert designer immediately.
+      Your request will be sent to your choosen expert designer.
       <br /><br />
-      They have 24 hours to accept the job and another 48 hours to complete it.
+      They have 24 hours to accept and another 48 hours to complete it.
   </div>
   <div style='padding:10px'>
 
   <%=form_tag "/task/create", :id=>'save-task'%>
     <%=hidden_field_tag :sf_site%>
     <%=hidden_field_tag :sf_email%>
+
   <div class='sf'><span class='sf_label'>Your site</span> <span id='sf_site_span'></span></div>
   <div class='sf'><span class='sf_label'>Your email address</span> <span id='sf_email_span'></span></div>
   <div class='sf'><span class='sf_label'>Your expert</span> <span id='sf_expert'></span> </div>
-  <br />
+  <div class='sf'><span class='sf_label'>Notes to reviewer</span> 
+    <span id='sf_notes_span'> <textarea id='sf_notes' cols=35, rows=2></textarea></span> 
+  </div>
   <div class='sf' style='background-color:#FFFDBC;border:solid 1px #E7FFBC'><span class='sf_label'>Price</span><strong>$75</strong></div>
   <div style='text-align:center' id='submit-task-wrapper'><br><br><a href="#b" id='submit-task' class='button' onclick="$('#save-task').submit();"> Get review! </a></div>
   </form>
