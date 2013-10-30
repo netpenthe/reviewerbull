@@ -11,4 +11,6 @@ class User < ActiveRecord::Base
 
   has_many :data, :class_name=>"UserData", :order=>"id desc" 
 
+  has_many :tasks
+
 end

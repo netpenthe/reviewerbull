@@ -1,15 +1,26 @@
 ActiveAdmin.register User do
-  
+
   index do
   	column :id
   	column :email
+  	column :name
   	column :created_at
-  	actions do |task|
-    end
+
+        column "Tasks" do |user|
+          user.tasks.size unless user.tasks.blank?
+        end
+
+        actions :defaults=>false do |user|
+          link_to "Edit", edit_admin_user_path(user)
+        end
+        
+        actions :defaults=>false do |user|
+          link_to "View", admin_user_path(user)
+        end
   end
 
 
-   show do |user|
+  show do |user|
       attributes_table do
         row :id
         row :email
