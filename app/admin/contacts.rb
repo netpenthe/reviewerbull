@@ -8,7 +8,8 @@ ActiveAdmin.register Contact do
     column :name                     
     column :message
     column :classification  
-    column :created_at  
+    column :created_at 
+    bool_column :sent 
     default_actions                   
   end    
 end
