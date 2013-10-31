@@ -54,11 +54,15 @@
         <div id="copyright">
           <%=link_to image_tag("logo_white_small.png",:size=>"106x14", :style=>"border:none"),"/", :style=>"border:none"%>
         </div>
-        <div id="footerlinks"> 
+        <div id="footerlinks">
+          <span style="padding-right:200px; height:100px;"> 
+           <%#image_tag "twitter.png",:size=>"40x40", :style=>'padding-top:200px;'%> 
+          </span>
           <%=link_to "HOME","/" %>&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;&nbsp; 
           <!--<%=link_to "Our Experts","#ourexperts", :class=>"smoothScroll"%> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp; -->
           <%=link_to "HOW IT WORKS","#howitworks", :class=>"smoothScroll"%>&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;&nbsp; 
-          <%=link_to "CONTACT","#contact", :class=>"smoothScroll"%>
+          <%=link_to "CONTACT","#contact", :class=>"smoothScroll"%> / 
+          &nbsp; &nbsp;<%=link_to "@InputFarm", "http://twitter.com/inputfarm"%>
           <%#=link_to "TERMS & CONDITIONS",""%> 
         </div>
       </div>
