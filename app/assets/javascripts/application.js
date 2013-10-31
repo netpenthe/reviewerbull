@@ -17,3 +17,4 @@
 //= require front
 //= require smoothscroll
 //= require jquery.BlackAndWhite
+//require twitter/bootstrap

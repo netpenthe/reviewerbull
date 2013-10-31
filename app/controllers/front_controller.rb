@@ -76,4 +76,8 @@ class FrontController < ApplicationController
     render :text=>"Thanks for submitting your info !" 
   end
 
+  def bootstrap
+    render :layout=> 'bootstrap'
+  end
+
 end
