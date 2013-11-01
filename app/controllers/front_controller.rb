@@ -50,13 +50,17 @@ class FrontController < ApplicationController
       return
     end
 
-    user = User.new :email => params[:email]
-    unless user.valid?
-      render :text=>"Email address not valid"
-      return
+    user = User.find_by_email params[:email]
+
+    if user.blank?
+      #check valid fake the pwd for now
+      usr = User.new :email => params[:email], :password=>"sdfsdfsdfsdfsd", :password_confirmation=>"sdfsdfsdfsdfsd"
+      unless usr.valid?
+        render :text=>"Invalid email address"
+        return
+      end
     end
 
-    user = User.find_by_email params[:email]
     if user.blank?
       o = [('a'..'z'), ('A'..'Z')].map { |i| i.to_a }.flatten
       string = (0...15).map{ o[rand(o.length)] }.join
@@ -69,6 +73,7 @@ class FrontController < ApplicationController
     UserData.create :user_id=>user.id, :type=>"ExpertLocation", :value=>params[:location] unless params[:location].blank?
     UserData.create :user_id=>user.id, :type=>"ExpertSkype", :value=>params[:skype] unless params[:skype].blank?
     UserData.create :user_id=>user.id, :type=>"ExpertPhone", :value=>params[:phone] unless params[:phone].blank?
+    UserData.create :user_id=>user.id, :type=>"ExpertSpecialty", :value=>params[:domain] unless params[:domain].blank?
 
     unless params[:pic].blank?
       ud = UserData.create :user_id=>user.id, :type=>"ExpertProfilePic"
