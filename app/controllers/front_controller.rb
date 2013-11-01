@@ -50,6 +50,12 @@ class FrontController < ApplicationController
       return
     end
 
+    user = User.new :email => params[:email]
+    unless user.valid?
+      render :text=>"Email address not valid"
+      return
+    end
+
     user = User.find_by_email params[:email]
     if user.blank?
       o = [('a'..'z'), ('A'..'Z')].map { |i| i.to_a }.flatten
