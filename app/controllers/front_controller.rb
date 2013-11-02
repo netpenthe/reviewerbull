@@ -4,8 +4,13 @@ class FrontController < ApplicationController
   end
 
   def contact
-    contact = Contact.new :email=>params[:contact_email], :name=>params[:name], :message=>params[:message], 
+    if params[:classification]=="helper"
+     contact = Contact.new :email=>params[:contact_email], :name=>params[:name], :message=>params[:expert_message], 
       :classification=>params[:classification]
+    else
+     contact = Contact.new :email=>params[:contact_email], :name=>params[:name], :message=>params[:contact_message], 
+      :classification=>params[:classification]
+    end
 
     contact.save
 
