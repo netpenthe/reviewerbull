@@ -12,7 +12,6 @@ class TaskController < ApplicationController
     task = Task.new :description=>params[:sf_notes], :user_id=>user.id, :url=>params[:sf_site], :expert_name=>params[:sf_expert], :expert_id=>params[:sf_expert_id]
     task.save
 
-    #redirect_to front_submitted_url
     render json: {:id=>task.id}
   end
 

@@ -84,7 +84,8 @@ class FrontController < ApplicationController
       ud.save
     end
 
-    render :text=>"Thanks for submitting your info !" 
+    #render :text=>"Thanks for submitting your info !" 
+    redirect_to root_url, :notice=>"Thanks for submitting your info we will be in touch ASAP!"
   end
 
   def bootstrap
