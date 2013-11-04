@@ -9,4 +9,15 @@ ActiveAdmin.register UserData do
     end 
     default_actions
   end
+
+
+  form do |f|  
+      f.inputs "User Data" do |ud|
+        f.input :user_id,:as => :select, :collection => User.all.map{|u| ["#{u.email}", u.id]}
+        f.input :type
+        f.input :value
+      end
+      f.actions
+    end
+
 end

@@ -33,9 +33,10 @@ ActiveAdmin.register User do
         user.data.each do |data|
          div do 
            if data.type=="ExpertProfilePic"
-             image_tag(data.attachments.first.upload(:medium)) unless data.attachments.first.blank?
+             simple_format "<b>#{data.type}:</b> <p>#{data.value}</p> #{image_tag(data.attachments.first.upload(:medium)) unless data.attachments.first.blank?}
+                           #{link_to "edit", edit_admin_user_datum_path(data.attachments.first.id) unless data.attachments.first.blank?}"              
            else
-             simple_format "<b>#{data.type}:</b> <p>#{data.value}</p>"
+             simple_format "<b>#{data.type}:</b> <p>#{data.value}</p> #{link_to "edit", edit_admin_user_datum_path(data.id) unless data.blank?}"
            end 
          end
         end 
