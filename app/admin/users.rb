@@ -5,6 +5,7 @@ ActiveAdmin.register User do
   	column :email
   	column :name
   	column :created_at
+    column "Expert Live?", :live
 
         column "Tasks" do |user|
           user.tasks.size unless user.tasks.blank?
@@ -26,6 +27,7 @@ ActiveAdmin.register User do
         row :email
         row :name
         row :created_at
+        bool_row :live
       end
 
         user.data.each do |data|
