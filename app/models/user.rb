@@ -10,7 +10,6 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_many :data, :class_name=>"UserData", :order=>"id desc" 
-
   has_many :tasks
 
 end
