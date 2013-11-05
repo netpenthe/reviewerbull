@@ -1,0 +1,13 @@
+<%= form_tag "" do %>
+
+	<p><b>Email: </b> <%= @user_data.user.email %></p>
+
+	<p><b>Type:</b> <%= @user_data.type %></p>
+
+	<p><b>Value: </b> <%= @user_data.value %></p>
+
+	<% if @user_data.type == "ExpertProfilePic" %>
+	      <%=image_tag @user_data.attachments.first.upload(:medium) %>
+	<% end %>
+
+<% end %>
