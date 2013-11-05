@@ -34,7 +34,7 @@ ActiveAdmin.register User do
          div do 
            if data.type=="ExpertProfilePic"
              simple_format "<b>#{data.type}:</b> <p>#{data.value}</p> #{image_tag(data.attachments.first.upload(:medium)) unless data.attachments.first.blank?}
-                           #{link_to "edit", edit_admin_user_datum_path(data.attachments.first.id) unless data.attachments.first.blank?}"              
+                           #{link_to "edit", edit_admin_user_datum_path(data.id) unless data.blank?}"              
            else
              simple_format "<b>#{data.type}:</b> <p>#{data.value}</p> #{link_to "edit", edit_admin_user_datum_path(data.id) unless data.blank?}"
            end 
