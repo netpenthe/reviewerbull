@@ -1,0 +1,1127 @@
+<!-- Primary Page Layout 
+================================================== -->
+<!-- globalWrapper -->
+<div id="globalWrapper" class="localscroll">
+  <!-- header -->
+  <header id="mainHeader" class="navbar-fixed-top" role="banner">
+  <div class="container">
+    <nav class="navbar navbar-default scrollMenu" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="index.html"><%=image_tag 'logo_trans_med.png', :size=>'225x27',:alt=>'Input Farm logo'%></a> </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse" id="scrollTarget">
+      <ul class="nav navbar-nav pull-right" id='header_links'>
+        <li class="active"><%=link_to 'HOME', "#globalWrapper", :class=>'link_home'%></li>
+        <li><%=link_to "WHAT IS THIS","#what",:class=>"smoothScroll link"%></li>
+        <li><%=link_to "USE NOW","#use",:class=>"smoothScroll link"%></li>
+        <li><%=link_to "CONTACT","#contact",:class=>"smoothScroll link"%></li>
+      </ul>
+    </div>
+
+    </nav>
+  </div>
+  </header>
+  <!-- header -->
+  <!-- content -->
+  <section id="home" data-stellar-background-ratio="1.0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-sm-6">
+        <div class="flexslider" id="flexHome">
+          <ul class="slides">
+            <li>
+            <h1>Expert feedback </h1>
+            <h2>The quickest way to improve your site</h2>
+            </li>
+            <li>
+            <h1>Fast iteration</h1>
+            <h2>Great sites evolve, they rarely re-design</h2>
+            </li>
+            <li>
+            <h1>As big as Apple</h1>
+            <h2>On the web your business can look massive</h2>
+            </li>
+          </ul>
+        </div> 
+      </div>
+      <div class="col-lg-5 col-sm-6 hidden-xs">
+        <!--<img src="/assets/altea/theme-pics/home-girl.png" alt="Ashley, Bootstrap website template" class="img-responsive"/>-->
+        <%#=image_tag "main_bg/brunette.jpg" %>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!-- call to action -->
+  <section class="color4 slice">  
+  <div class="ctaBox ctaBoxFullwidth">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1>
+            <strong>Input Farm</strong> makes your website better, faster.
+          </h1>
+        </div>
+        <div class="col-md-4">
+          <a class="btn btn-lg smoothScroll" title="" href="#use">
+            <i class="icon-flash"></i> Use Input Farm now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!-- call to action -->
+  <!-- news -->
+  <section class="slice" id="what">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>What is this</h1>
+        <h2 class="subTitle">Get expert feedback on your website, fast</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4"> <img src="/assets/half_screenshot.gif" alt="services" class="img-responsive"> </div>
+      <div class="col-sm-4">
+        <h2>Make your website better</h2>
+        <p>Input Farm is a new way to get expert feedback on your website.</p>
+        <p>We connect you to great designers who review your site and give you feedback.</p>
+        <p>We focus on iteration rather than redesign.</p>
+      </div>
+
+      <div class="col-sm-4">
+        <h2>OK, how much?</h2>
+        <p style='margin-right:5px'>For <strong class='green_links'>$75</strong>, you will receive practical suggestions to improve your site directly from design experts. </p>
+        <p>No up-sell, no admin, no meetings, no quotes. Just really fast expert feedback. </p>
+        <p>It's the most cost effective way to improve your website.</p>
+        <p>
+        Not sure? 
+        <br />
+        <br />
+        <strong>See what you'll get:
+          <%=link_to 'sample #1','/sample_report/1', :class=>"green_links"%> |
+          <%=link_to 'sample #2','/sample_report/2', :class=>"green_links"%>
+        </strong>
+        </p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!--
+  <section class="slice" id="news">
+  <div class="container imgHover">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>What is this</h1>
+        <h2 class="subTitle">Here, there and everywhere... what we've been doing</h2>
+      </div>
+
+      <article class="col-sm-4">
+
+      <section class="imgWrapper"> 
+      <img src="/assets/altea/news/news1.jpg" class="img-responsive" alt="Ashleye template image news" /> 
+      </section>
+
+      <div class="mediaHover">
+        <div class="mask"></div>
+        <div class="iconLinks"> 
+
+          <a href="images/news/news1.jpg" class="image-link" title="Zoom" ><i class="icon-search iconRounded iconBig"></i><span>zoom</span></a> 
+        </div>
+      </div>
+      <section class="newsText color4">
+      <h3>New hair cut today</h3>
+      <h4 class="date">September 12</h4>
+      <p>The Duchess took her choice, and was gone in a moment. 'Let's go on with the game,' the Queen said to Alice; and Alice was  too much frightened to say a word, but slowly followed her back to the  croquet-ground.</p>
+      <a href="https://wrapbootstrap.com/theme/ashley-one-page-parallax-bootstrap-3-WB0R11207" class="btn btn-sm"><i class="icon-right-open-mini"></i>read more</a>
+      </section>
+
+      </article>
+
+
+      <article class="col-sm-4">
+      <section class="imgWrapper"> 
+      <img src="/assets/altea/news/news2.jpg" class="img-responsive" alt="snowflake template image news" /> 
+      </section>
+      <div class="mediaHover">
+        <div class="mask"></div>
+        <div class="iconLinks"> 
+          <a href="images/news/news2.jpg" class="image-link" title="Zoom" ><i class="icon-search iconRounded iconBig"></i><span>zoom</span></a> 
+        </div>
+      </div>
+      <section class="newsText color4">
+      <h3>We are a family</h3>
+      <h4 class="date">November 24</h4>
+      <p>The Duchess took her choice, and was gone in a moment. 'Let's go on with the game,' the Queen said to Alice; and Alice was  too much frightened to say a word, but slowly followed her back to the  croquet-ground.</p>
+      <a href="https://wrapbootstrap.com/theme/ashley-one-page-parallax-bootstrap-3-WB0R11207" class="btn btn-sm"><i class="icon-right-open-mini "></i>read more</a>
+      </section>
+      </article>
+
+
+      <article class="col-sm-4">
+      <section class="imgWrapper"> 
+      <img src="/assets/altea/news/news3.jpg" class="img-responsive" alt="snowflake template image news" /> 
+      </section>
+      <div class="mediaHover">
+        <div class="mask"></div>
+        <div class="iconLinks"> 
+          <a href="images/news/news3.jpg" class="image-link" title="Zoom" ><i class="icon-search iconRounded iconBig"></i><span>zoom</span></a> 
+        </div>
+      </div>
+      <section class="newsText color4">
+      <h3>Call me if you can</h3>
+      <h4 class="date">November 24</h4>
+      <p>The Duchess took her choice, and was gone in a moment. 'Let's go on with the game,' the Queen said to Alice; and Alice was  too much frightened to say a word, but slowly followed her back to the  croquet-ground.</p>
+      <a href="https://wrapbootstrap.com/theme/ashley-one-page-parallax-bootstrap-3-WB0R11207" class="btn btn-sm"><i class="icon-right-open-mini"></i>read more</a>
+      </section>
+      </article>
+
+
+    </div>
+  </div>
+  </section>
+  -->
+  <!-- news -->
+  <!-- services -->
+  <section class="slice color1" id="use">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Use Input Farm today</h1>
+        <h2 class="subTitle">No risk - if you don't like it, your money back!</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class='steps'>
+        <div class='preview' >
+          <div class='xarrow_box'>
+            <div class="site_design">
+              <%= text_field_tag :email, "Email",{:class=>"field "} %>
+            </div>
+            <br />
+            <div id='site_url' class="site_design">
+              <%= text_field_tag :url, "Site URL",{:class=>"field"} %>
+              <br />
+              <!--<p class='hand' style='font-size:0.8em' onclick="$('#site_url').hide();$('#site_upload_image').fadeIn()">[or upload jpg/png file instead]</p>-->
+            </div>
+
+            <div id='site_upload_image' class='site_design' style="display:none">
+              <%= file_field_tag :upload, multiple: true,name: "upload[]", class: "field", style: "padding-top:10px;height:30px" %>
+              <br />
+              <!-- <p class='hand' style='font-size:0.8em' onclick="$('#site_upload_image').hide();$('#site_url').fadeIn()">[or enter a URL instead]</p>-->
+            </div>
+          </div>
+          <div class='howitworks_text'>Give us some details</div>
+        </div>
+      </div>
+      <div class='steps' > 
+        <div class='preview'>
+          <div class='xarrow_box' style='text-align:center'>
+            <div id='found_reviewer_wrapper' style='display:none'>
+              <%=image_tag "circle_expert1.jpg", :size=>'100x103',:style=>'float:left;padding-left:29px',:id=>'selected_expert_image'%>
+              <div style='padding-top:30px'>
+                <p style='margin:0;padding:0;color:#575757;font-size:16px' id='selected_expert_name'> <strong>Your expert:</strong>James McNaught</p>
+                <div style='padding:20px 0 0 20px;float:left'>
+                  <a href="#find_reviewer" id="change_reviewer_button" style='color:#429e9d'> Choose different expert...</a>
+                </div>
+              </div>
+            </div>
+            <div id='find_reviewer_wrapper'>
+              <a href="#find_reviewer" id="find_reviewer_button" class="button" style='color:#fff' >FIND EXPERT REVIEWER</a>
+            </div>
+
+            <!--<span style='width:80px;float:left;color:#ddf8c6'>
+              Select<br /> Expert
+            </span>
+            <div class='experts bwWrapper personPopupTrigger' rel="james_mcnaught,a17bee64-8593-436e-a2f8-599a626370df" id='expert1'>
+              <%=image_tag "circle_expert1.jpg", :size=>'100x103'%> 
+            </div> 
+            <div class='experts bwWrapper personPopupTrigger' rel="stephen_grace,a17bee64-8593-436e-a2f8-599a626370df" id='expert2'>
+              <%=image_tag "circle_expert2.jpg", :size=>'100x100'%> 
+            </div> 
+            <div class='experts bwWrapper personPopupTrigger' rel="robin_mather,a17bee64-8593-436e-a2f8-599a626370df" id='expert3'>
+              <%=image_tag "circle_expert3.jpg", :size=>'100x103'%> 
+            </div> 
+            <div style='clear:both'></div>
+            <br />
+
+            <span style='width:80px; float:left;color:#ddf8c6'>
+              Feedback <br /> format 
+            </span>
+            <div class='format'>
+              <%=image_tag "microphone.png", :size=>'35x35'%> 
+              <br />
+              Audio 
+            </div> 
+            <div class='format'>
+              <%=image_tag "clipboard.png", :size=>'35x35'%>   
+              <br />
+              Image
+            </div> 
+            <div class='format'>
+              <%=image_tag "camera.png", :size=>'35x35'%> 
+              <br />
+              Video
+            </div> 
+            -->
+          </div> 
+        </div>
+        <div style='clear:both'></div>
+        <div class='howitworks_text'>Choose your expert designer </div>
+      </div>
+      <div class='steps' style='margin-left:10px'> 
+        <div class='preview'>
+          <div id='submit_wrapper'>
+            <a href="#submit_form" class="button" onclick='getDetails();' rel="prettyPhoto" style='color:#fff'>SUBMIT</a>
+          </div>
+        </div>
+        <div style='clear:both'></div>
+        <div class='howitworks_text'>Receive feedback fast!</div>
+      </div>
+    </div>
+
+
+    <!--
+    <div class="col-sm-6">
+      <div class="row boxFeature">
+        <div class="col-xs-3">
+          <i class="icon-heart iconBig"></i>
+        </div>
+        <div class="col-xs-9">
+          <h2>Clean design</h2>
+          <p>Elegant layouts that help you organize your content in the best way</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="row boxFeature">
+        <div class="col-xs-3">
+          <i class="icon-plane-outline  iconBig"></i>
+        </div>
+        <div class="col-xs-9">
+          <h2>HTML5 & CSS3</h2>
+          <p>Built with modern technologies like HTML5 and CSS3, SEO optimised</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="row boxFeature">
+        <div class="col-xs-3">
+          <i class="icon-resize-full-outline iconBig"></i>
+        </div>
+        <div class="col-xs-9">
+          <h2>Responsive design</h2>
+          <p>Compatible with various desktop, tablet, and mobile devices.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="row boxFeature">
+        <div class="col-xs-3">
+          <i class="icon-edit iconBig"></i>
+        </div>
+        <div class="col-xs-9">
+          <h2>Easy Customization</h2>
+          <p>Clear code and documentation, base on Bootstrap 3</p>
+        </div>
+      </div>
+    </div>
+    -->
+  </div>
+</div>
+</section>
+<!-- services --> 
+
+
+<div id="paralaxSlice1" data-stellar-background-ratio="0.5">
+  <div class="maskParent">
+    <div class="paralaxMask"></div>
+    <div class="paralaxText container">
+      <i class="icon-megaphone "></i>
+      <blockquote class="bigTitle">Being a famous designer<br/>is like being a famous dentist<br/><small>NOREEN MORIOKA</small></blockquote>
+    </div>
+  </div>
+</div>
+<% if false %>
+  <section class="pricing slice color1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="noSubtitle">Our plans</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="alert alert-info alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <strong>Heads up!</strong> This template comes with all the features you need. <a href="features.html" class="alert-link portfolioSheet">check them here</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="pricingBloc">
+          <h2>Free</h2>
+          <h3>0$<span>per month</span></h3>
+          <ul>
+            <li>This is what you get For free</li>
+            <li>Not bad, but could be better</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+          </ul>
+          <p class="sign">
+          <a class="btn" href="https://wrapbootstrap.com/theme/ashley-one-page-parallax-bootstrap-3-WB0R11207">
+            Sign up
+          </a>
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="pricingBloc">
+          <h2>Silver</h2>
+          <h3>10$<span>per month</span></h3>
+          <ul>
+            <li>This is a little better</li>
+            <li>Though</li>
+            <li>Not the best plan for you!</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+          </ul>
+          <p class="sign">
+          <a class="btn" href="https://wrapbootstrap.com/theme/ashley-one-page-parallax-bootstrap-3-WB0R11207">
+            Sign up
+          </a>
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="pricingBloc focusPlan">
+          <h2>Gold</h2>
+          <h3>25$<span>per month</span></h3>
+          <ul>
+            <li>Honestly, go Premium</li>
+            <li>We have a lot</li>
+            <li>of cool features for you!</li>
+            <li>Really, you will love what you will get</li>
+            <li>Come on!!</li>
+            <li>Please!!!</li>
+          </ul>
+          <p class="sign">
+          <a class="btn btn-large" href="https://wrapbootstrap.com/theme/ashley-one-page-parallax-bootstrap-3-WB0R11207">
+            Sign up
+          </a>
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="pricingBloc">
+          <h2>Platinium</h2>
+          <h3>40$<span>per month</span></h3>
+          <ul>
+            <li>This one is super good</li>
+            <li>Super awesome</li>
+            <li>Just the right plan for you</li>
+            <li>If you are</li>
+            <li>A super pro!</li>
+            <li>No kidding</li>
+          </ul>
+          <p class="sign">
+          <a class="btn" href="https://wrapbootstrap.com/theme/ashley-one-page-parallax-bootstrap-3-WB0R11207">
+            Sign up
+          </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <div id="paralaxSlice2" data-stellar-background-ratio="0.5">
+    <div class="maskParent">
+      <div class="paralaxMask"></div>
+      <div class="paralaxText container">
+        <i class="icon-mobile iconBig"></i><i class="icon-tablet iconBig"></i><i class="icon-laptop iconBig"></i><i class="icon-desktop iconBig"></i>
+        <blockquote class="bigTitle">Mobile first, truly responsive,<br /> based on bootstrap 3</blockquote>
+      </div>
+    </div>
+  </div>
+
+  <section class="slice" id="works">
+  <div class="container clearfix">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Our Work</h1>
+        <h2 class="subTitle">Latest cool projects we've been working on</h2>
+      </div>
+      <nav id="filter" class="col-md-12 text-center">
+      <ul>
+        <li><a href="" class="current btn btn-sm" data-filter="*">All</a></li>
+        <li><a href=""  class="btn btn-sm" data-filter=".graphics" >Graphics</a></li>
+        <li><a href=""  class="btn btn-sm" data-filter=".women">Women</a></li>
+        <li ><a href="" class="btn btn-sm" data-filter=".cats">Cats</a></li>
+      </ul>
+      </nav>
+
+      <div class="portfolio-items  isotopeWrapper clearfix imgHover" id="3">
+        <article class="col-sm-4 isotopeItem women">
+        <section class="imgWrapper">
+        <img alt="" src="/assets/altea/portfolio/vign6.jpg" class="img-responsive">
+        </section>
+        <div class="mediaHover">
+          <div class="mask"></div>
+          <div class="iconLinks"> 
+            <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
+              <i class="icon-picture iconRounded iconBig"></i>
+              <span>link</span>
+            </a> 
+            <a href="images/portfolio/zoom6.jpg" class="image-link" title="Full width image">
+              <i class="icon-search iconRounded iconBig"></i>
+              <span>zoom</span>
+            </a> 
+          </div>
+        </div>
+        <section class="boxContent">
+        <h3>Full width image</h3>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus sollicitudin placerat. <br>
+        <a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read more</a>
+        </p>
+        </section>
+        </article>
+
+        <article class="col-sm-4 isotopeItem cats">
+        <section class="imgWrapper"> 
+        <img alt="" src="/assets/altea/portfolio/vign1.jpg" class="img-responsive"> 
+        </section>
+        <div class="mediaHover">
+          <div class="mask"></div>
+          <div class="iconLinks"> 
+            <a href="portfolio-project-fullwidth-video.html" title="link" class="portfolioSheet sizer">
+              <i class="icon-videocam iconRounded iconBig"></i>
+              <span>link</span>
+            </a> 
+            <a href="http://www.youtube.com/watch?v=aqrtF7L86NQ" class="image-iframe" title="Video Popup" >
+              <i class="icon-search iconRounded iconBig"></i>
+              <span>video</span>
+            </a> 
+          </div>   
+        </div>
+        <section class="boxContent">
+        <h3>Video YouTube</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus sollicitudin placerat. <br>
+        <a href="portfolio-project-fullwidth-video.html" class="moreLink portfolioSheet">&rarr; read more</a>
+        </p>
+        </section>
+        </article>
+
+        <article class="col-sm-4 isotopeItem graphics">
+        <section class="imgWrapper">
+        <img alt="" src="/assets/altea/portfolio/vign7.jpg" class="img-responsive">
+        </section>
+        <div class="mediaHover">
+          <div class="mask"></div>
+          <div class="iconLinks"> 
+            <a href="portfolio-project-fullwidth-video.html" title="link" class="sizer portfolioSheet">
+              <i class="icon-videocam iconRounded iconBig"></i>
+              <span>link</span>
+            </a> 
+            <a href="http://vimeo.com/ondemand/5335/75660130" class="image-iframe" title="Video Popup" >
+              <i class="icon-search iconRounded iconBig"></i>
+              <span>video</span>
+            </a> 
+          </div>
+        </div>
+        <section class="boxContent">
+        <h3>Video Vimeo</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus sollicitudin placerat. <br>
+        <a href="portfolio-project-fullwidth-video.html" class="moreLink portfolioSheet">&rarr; read more</a>
+        </p>
+        </section>
+        </article>
+
+        <article class="col-sm-4 isotopeItem cats">
+        <section class="imgWrapper">
+        <img alt="" src="/assets/altea/portfolio/vign3.jpg" class="img-responsive">
+        </section>
+        <div class="mediaHover">
+          <div class="mask"></div>
+          <div class="iconLinks"> 
+            <a href="portfolio-project-fullwidth-carousel.html" title="link" class="sizer portfolioSheet">
+              <i class="icon-camera iconRounded iconBig"></i>
+              <span>link</span>
+            </a> 
+            <a href="images/portfolio/carousel-1.jpg" class="image-link" title="Zoom" data-gallery="images/portfolio/carousel-2.jpg,images/portfolio/carousel-3.jpg">
+              <i class="icon-search iconRounded iconBig"></i>
+              <span>gallery</span>
+            </a> 
+          </div>
+        </div>
+        <section class="boxContent">
+        <h3>Gallery</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus sollicitudin placerat. <br>
+        <a href="portfolio-project-fullwidth-carousel.html" class="moreLink portfolioSheet">&rarr; read more</a> 
+        </p>
+        </section>
+        </article>
+        <article class="col-sm-4 isotopeItem cats">
+        <section class="imgWrapper"> 
+        <img alt="" src="/assets/altea/portfolio/vign2.jpg" class="img-responsive"> 
+        </section>
+        <div class="mediaHover">
+          <div class="mask"></div>
+          <div class="iconLinks">
+            <a href="portfolio-project-fullwidth-carousel.html" title="link" class="sizer portfolioSheet"> <i class="icon-picture iconRounded iconBig"></i>
+              <span>link</span>
+            </a>
+            <a href="images/portfolio/zoom2.jpg" class="image-link" title="Gallery Popup" >
+              <i class="icon-search iconRounded iconBig"></i>
+              <span>zoom</span>
+            </a>
+          </div>
+        </div>
+        <section class="boxContent">
+        <h3>Lorem ipsum dolor sit amet</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus sollicitudin placerat. <br>
+        <a href="portfolio-project-fullwidth-carousel.html" class="moreLink portfolioSheet">&rarr; read more</a> 
+        </p>
+        </section>
+        </article>
+
+        <article class="col-sm-4 isotopeItem women">
+        <section class="imgWrapper"> 
+        <img alt="" src="/assets/altea/portfolio/vign4.jpg" class="img-responsive"> 
+        </section>
+        <div class="mediaHover">
+          <div class="mask"></div>
+          <div class="iconLinks">
+            <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
+              <i class="icon-picture iconRounded iconBig"></i>
+              <span>link</span>
+            </a>
+            <a href="images/portfolio/zoom4.jpg" class="image-link" title="Zoom">
+              <i class="icon-search iconRounded iconBig"></i>
+              <span>zoom</span>
+            </a>
+          </div>
+        </div>
+        <section class="boxContent">
+        <h3>Lorem ipsum dolor sit amet</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus sollicitudin placerat. <br>
+        <a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read more</a> 
+        </p>
+        </section>
+        </article>
+
+
+        <article class="col-sm-4 isotopeItem graphics">
+        <section class="imgWrapper"> 
+        <img alt="" src="/assets/altea/portfolio/vign8.jpg" class="img-responsive"> 
+        </section>
+        <div class="mediaHover">
+          <div class="mask"></div>
+          <div class="iconLinks">
+            <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
+              <i class="icon-picture iconRounded iconBig"></i>
+              <span>link</span>
+            </a>
+            <a href="images/portfolio/zoom8.jpg" class="image-link" title="Zoom" >
+              <i class="icon-search iconRounded iconBig"></i>
+              <span>zoom</span>
+            </a>
+          </div>
+        </div>
+        <section class="boxContent">
+        <h3>Lorem ipsum dolor sit amet</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus sollicitudin placerat.<br>
+        <a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read more</a> 
+        </p>
+        </section>
+        </article>
+
+        <article class="col-sm-4 isotopeItem women">
+        <section class="imgWrapper"> 
+        <img alt="" src="/assets/altea/portfolio/vign5.jpg" class="img-responsive"> 
+        </section>
+        <div class="mediaHover">
+          <div class="mask"></div>
+          <div class="iconLinks">
+            <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
+              <i class="icon-picture iconRounded iconBig"></i>
+              <span>link</span>
+            </a>
+            <a href="images/portfolio/zoom5.jpg" class="image-link" title="Zoom" >
+              <i class="icon-search iconRounded iconBig"></i>
+              <span>zoom</span>
+            </a>
+          </div>
+        </div>
+        <section class="boxContent">
+        <h3>Lorem ipsum dolor sit amet</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus sollicitudin placerat.<br>
+        <a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read more</a> 
+        </p>
+        </section>
+        </article>
+
+        <article class="col-sm-4 isotopeItem graphics">
+        <section class="imgWrapper"> 
+        <img alt="" src="/assets/altea/portfolio/vign9.jpg" class="img-responsive"> 
+        </section>
+        <div class="mediaHover">
+          <div class="mask"></div>
+          <div class="iconLinks">
+            <a href="portfolio-project-fullwidth-carousel.html" title="link" class="sizer portfolioSheet">
+              <i class="icon-camera iconRounded iconBig"></i>
+              <span>link</span>
+            </a>
+            <a href="images/portfolio/zoom9.jpg" class="image-link" title="Zoom">
+              <i class="icon-search iconRounded iconBig"></i>
+              <span>zoom</span>
+          </a> </div>
+        </div>
+        <section class="boxContent">
+        <h3>Lorem ipsum dolor sit amet</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus sollicitudin placerat. <br>
+        <a href="portfolio-project-fullwidth-carousel.html" class="moreLink portfolioSheet">&rarr; read more</a> 
+        </p>
+        </section>
+        </article>
+
+
+      </div>
+    </div>
+  </div>
+  </section>
+
+<!--
+  <div id="paralaxSlice3" data-stellar-background-ratio="0.5">
+    <div class="maskParent">
+      <div class="paralaxMask"></div>
+      <div class="paralaxText">
+        <i class="icon-star iconBig"></i>
+        <blockquote class="mt15">Great suggestions, we plan to implement them as soon as possible.<br/><small>Matt M.</small></blockquote>
+      </div>
+    </div>
+  </div>
+-->
+  <section class="slice" id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Meet our team</h1>
+        <h2 class="subTitle">We are beautiful and smart</h2>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <article>
+        <div><img src="/assets/altea/team/pic1.jpg" alt="" class="img-responsive"></div>
+        <div class="boxContent color4">
+          <h3>John DOE</h3>
+          <p>Executive Director</p>
+        </div>
+        <div class="boxContent"> <a href="mailto:your.email@little-neko.com">j.doe@ashley.com</a>
+          <ul class="socialNetwork mt15">
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Facebook"><i class="icon-facebook-1 iconRounded"></i></a></li>
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Twitter"><i class="icon-twitter-bird iconRounded"></i></a></li>
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Google+"><i class="icon-gplus-1 iconRounded"></i></a></li>
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Dribble"><i class="icon-dribbble iconRounded"></i></a></li>
+          </ul>
+        </div>
+        </article>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <article>
+        <div><img src="/assets/altea/team/pic2.jpg" alt="" class="img-responsive"></div>
+        <div class="boxContent color4">
+          <h3>Johanna Newsom</h3>
+          <p>Salesman</p>
+        </div>
+        <div class="boxContent"> <a href="mailto:your.email@little-neko.com">j.newsom@ashley.com</a>
+          <ul class="socialNetwork mt15">
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Facebook"><i class="icon-facebook-1 iconRounded"></i></a></li>
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Twitter"><i class="icon-twitter-bird iconRounded"></i></a></li>
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Google+"><i class="icon-gplus-1 iconRounded"></i></a></li>
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Tumblr"><i class="icon-tumblr-1 iconRounded"></i></a></li>
+          </ul>
+        </div>
+        </article>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <article>
+        <div><img src="/assets/altea/team/pic3.jpg" alt="" class="img-responsive"></div>
+        <div class="boxContent color4">
+          <h3>Alexander Doe</h3>
+          <p>Graphic designer</p>
+        </div>
+        <div class="boxContent"> <a href="mailto:your.email@little-neko.com">a.doe@ashley.com</a>
+          <ul class="socialNetwork mt15">
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Facebook"><i class="icon-facebook-1 iconRounded"></i></a></li>
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Twitter"><i class="icon-twitter-bird iconRounded"></i></a></li>
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Google+"><i class="icon-gplus-1 iconRounded"></i></a></li>
+            <li><a href="#" class="tips" title="" data-original-title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
+            <li><a href="#" class="tips" title="" data-original-title="follow me on YouTube"><i class="icon-youtube iconRounded"></i></a></li>
+          </ul>
+        </div>
+        </article>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <article>
+        <div><img src="/assets/altea/team/pic4.jpg" alt="" class="img-responsive"></div>
+        <div class="boxContent color4">
+          <h3>Pamela Anderson</h3>
+          <p>Programmer</p>
+        </div>
+        <div class="boxContent"> <a href="mailto:your.email@little-neko.com">p.anderson66@ashley.com</a>
+          <ul class="socialNetwork mt15">
+            <li> <a href="#" class="tips" title="" data-original-title="follow me on Facebook"><i class="icon-facebook-1 iconRounded"></i></a> </li>
+            <li> <a href="#" class="tips" title="" data-original-title="follow me on Twitter"><i class="icon-twitter-bird iconRounded"></i></a> </li>
+            <li> <a href="#" class="tips" title="" data-original-title="follow me on Google+"><i class="icon-gplus-1 iconRounded"></i></a> </li>
+            <li> <a href="#" class="tips" title="" data-original-title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i> </a> </li>
+            <li> <a href="#" class="tips" title="" data-original-title="follow me on Flickr"><i class="icon-flickr iconRounded"></i> </a> </li>
+          </ul>
+        </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <div id="paralaxSlice4" data-stellar-background-ratio="0.5" >
+    <div class="maskParent">
+      <div class="paralaxMask"></div>
+
+      <div class="paralaxText">
+        <blockquote>Keep in touch with us</blockquote>
+
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<section class="slice"  id="questionsSlice" >
+<div class="container">
+  <div class="row">
+    <div class="row_fluid">
+      <h1 class='title'>Questions?</h1>
+      <div id="left_why">
+        <p id='qa_q_why' class='qa_questions qa_q_selected'>WHY SHOULD I DO THIS?</P>
+        <p id='qa_q_webdesigncompany' class='qa_questions'>WHY NOT USE A WEB DESIGN COMPANY?</P>
+        <p id='qa_q_howlong' class='qa_questions'>HOW LONG DOES IT TAKE?</P>
+        <p id='qa_q_howmuch' class='qa_questions'>HOW MUCH DOES IT COST?</P>
+        <p id='qa_q_whatdoiget' class='qa_questions'>WHAT DO I GET FOR MY MONEY?</P>
+        <p id='qa_q_dontlike' class='qa_questions'>WHAT IF I DON'T LIKE WHAT THEY DO?</P>
+      </div>
+      <div id='right_why'>
+        <div id='qa_why' class='qa_answers' style='display:block'>
+          We've seen website owners get 'tired' of their perfectly good websites much too often, 
+          deciding to do a full re-design that is both costly and time consuming. Get an objective opinion
+          about whether your site really needs a full re-design, or whether a few tweaks will get the job done.
+        </div>
+        <div id='qa_webdesigncompany' class='qa_answers'> 
+          Asking a web design company if you need a new website is like asking a hairdresser if you need a 
+          haircut - the answer is always yes! 
+          <br /><br />
+          Input Farm's experts are not looking to sell you a site re-design (in fact they'll never try to sell
+          you further paid services). Instead they'll look for the 'low hanging fruit' - how to make your site
+          better with the least amount of effort. Once you receive the review you can either make the changes
+          yourself or get your designer to do it for you.
+        </div>
+        <div id='qa_howlong' class='qa_answers'>
+          No more than 72 hours.
+        </div> 
+        <div id='qa_howmuch' class='qa_answers'>
+          <strong>$75</strong><br />
+          <p>
+          But good designers often charge 2-3x this amount, how does that work? <br /><br />
+          InputFarm removes all the extraneous work that a designer would ordinarily have to do - quotes,
+          client meetings, client communications and reports. This 'unbillable' work turns up as
+          a higher hourly rate.
+          <br /><br />
+          By removing all this extra work they can provide this service at a very reasonable rate.
+        </div>
+
+        <div id='qa_whatdoiget' class='qa_answers'>
+          Your site will be reviewed by an expert for 30 minutes and they give you a report
+          containing:
+          <ul style='padding-left:20px'>
+            <li>Annotated markup of your site</li>
+            <li>What they think is good about your site</li>
+            <li>What could be improved and how</li>
+            <li>The first 3 things they would do if they were working on it</li>
+          </ul>
+          <br />
+          See a sample report now: 
+          <%=link_to 'sample #1','/sample_report/1', :class=>"green_links"%> | 
+          <%=link_to 'sample #2','/sample_report/2', :class=>"green_links"%>
+        </div>
+
+        <div id='qa_dontlike' class='qa_answers'>
+          A money back guarantee is offered if you don't think you received value from Input Farm.
+        </div>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </div>
+</div>
+</section>
+<!--
+<div id="paralaxSlice3" data-stellar-background-ratio="0.5">
+  <div class="maskParent">
+    <div class="paralaxMask"></div>
+    <div class="paralaxText">
+      <i class="icon-star iconBig"></i>
+      <blockquote class="mt15">Great suggestions,<br /> we plan to implement them as soon as possible.<br/><small>Matt M.</small></blockquote>
+    </div>
+  </div>
+</div>
+-->
+
+<section class="slice"  id="contact" >
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-12">
+      <h1 class="title" style='color:#fff'>Contact us</h1>
+    </div>
+<% if false %>
+    <div class="col-sm-12">
+      <div id="mapWrapper" class="mb30"></div>
+    </div>
+<% end %>
+<!--
+    <div class="col-sm-4">
+      <h4>Address:</h4>
+      <address>
+        Himalaya Company<br/>
+        77 Mass. Ave., E14/E15<br/>
+        Cambridge, MA 02139-4307 USA <br/>
+      </address>
+      <h4>Phone:</h4>
+      <address>
+        615.987.1234<br/>
+      </address>
+    </div>
+-->
+  <div class="col-md-12 text-center">
+  <%= form_tag("/front/contact", method: "post", :multipart => true) do %>
+    <p class="white">
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper", true%> <label for='classification_helper'>I'm an expert, sign me up!</label>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> <label for='classification_general'>Contact</label>
+    </p>
+    <div id="fieldss">
+      <div class="row_fluid">
+        <p><%= text_field_tag :name, "Name",{:class=>"field "}%></p>
+        <p><%= text_field_tag :contact_email, "Email",{:class=>"field "} %></p>
+        <input type='hidden' id='expert_name' value=""></input>
+        </div>
+      </div>
+      <div class="row_fluid">
+        <div style='margin: 0 auto;padding-top:10px'>
+          <div style='display:inline-block;padding:15px'>
+            <%= text_area_tag :expert_message, "A link to your portfolio and anything else we need to know",{:class=>"field area area-mragin classification_helper_field contact_form_field"} %>
+            <%# text_area_tag :message, "Other things we need to know",{:class=>"field area area-mragin classification_helpee_field contact_form_field"} %>
+            <%= text_area_tag :contact_message, "Message",{:class=>"field area area-mragin classification_general_field classification_general_field contact_form_field",:style=>'display:none'} %>
+          </div>
+          <p><%= submit_tag "I'M AN EXPERT", :id=>"submit_button", :class=>'button'%></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+
+
+<!--
+    <form method="post" action="js-plugin/neko-contact-ajax-plugin/php/form-handler.php" id="contactfrm" role="form">
+      <div class="col-sm-4"> 
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" name="name" id="name" placeholder="Enter name"  title="Please enter your name (at least 2 characters)"/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address"/>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input name="phone" class="form-control required digits" type="tel" id="phone" size="30" value="" placeholder="Enter email phone" title="Please enter a valid phone number (at least 10 characters)">
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="comments">Comments</label>
+          <textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message." title="Please enter your message (at least 10 characters)"></textarea>
+        </div>
+      </div>                        
+      <div class="col-md-8 col-md-offset-4">
+        <div class="result"></div>
+        <button name="submit" type="submit" class="btn btn-lg" id="submit"> Submit</button>
+      </div>
+    </form>
+-->
+  </div>
+</div>
+</section>
+
+<!-- content -->
+<!-- footer -->
+<!--
+<footer>
+<section id="mainFooter">
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="footerWidget">
+        <img src="/assets/altea/neko-logo.png" alt="latest Little Neko news" id="footerLogo">
+        <p><a href="http://www.little-neko.com" title="Little Neko, website template creation">Little Neko</a> is a web design and development studio. We build responsive HTML5 and CSS3 templates, integrating best web design practises and up-to-date web technologies to create great user experiences. We love what we do and we hope you too ! </p>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="footerWidget">
+
+        <h3>Little NEKO</h3>
+        <address>
+          <p> <i class="icon-location"></i>&nbsp;77 Mass. Ave., E14/E15<br>
+          Cambridge, MA 02139-4307 USA <br>
+          <i class="icon-phone"></i>&nbsp;615.987.1234 <br>
+          <i class="icon-mail-alt"></i>&nbsp;<a href="mailto:little@little-neko.com">little@little-neko.com</a> </p>
+        </address>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</footer>
+-->
+<section  id="footerRights">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <p>Copyright &copy; 2013 <a href="http://www.inputfarm.com" target="blank">Input Farm</a> / All rights reserved.</p>
+    </div>
+    <div class="col-sm-6">
+      <ul class="socialNetwork pull-right">
+<!--
+        <li><a href="#" class="tips" title="" data-original-title="follow me on Facebook"><i class="icon-facebook-1 iconRounded"></i></a></li>
+        <li><a href="https://twitter.com/LIttleNeko1" class="tips" title="" data-original-title="follow me on Twitter" target="_blank"><i class="icon-twitter-bird iconRounded"></i></a></li>
+        <li><a href="#" class="tips" title="" data-original-title="follow me on Google+"><i class="icon-gplus-1 iconRounded"></i></a></li>
+        <li><a href="#" class="tips" title="" data-original-title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
+        <li><a href="#" class="tips" title="" data-original-title="follow me on Dribble"><i class="icon-dribbble iconRounded"></i></a></li>
+-->
+      </ul>     
+    </div>
+  </div>
+</div>
+</section>
+<!-- End footer -->
+          </div>
+          <!-- global wrapper -->
+
+<div id='find_reviewer' style='display:none;height:450px'>
+  <div style='height:450px'>
+    <div class='expert_header'>
+      <div class='expert_name' style='float:left;width:90px;padding:10px'>
+        <%=image_tag "circle_expert1_gray.jpg", :size=>'70x71', :id=>'ep_image'%>
+      </div>
+      <div class='expert_name' style='float:left;width:160px;padding-top:20px;'>
+        <p style='font-size:18px;color:#fff;padding:0;margin:0' id='ep_name'>James McNaught</p>
+        <br />
+        <p style='padding:0;margin:0;font-size:11px;color:#fff' id='ep_city'>Adelaide, Australia</p>
+      </div>
+      <div class='divider'></div>
+      <div class='expert_details' style='float:left;padding:20px;padding-left:30px;font-size:12px;line-height:16px;' id='ep_profile'>
+        4 reviews <br />
+        32 hr avg. response time <br />
+        www.jamesmcnaught.co.uk
+      </div>
+      <div class='expert_details' style='float:left;text-align:right;padding:20px;padding-left:120px;font-size:12px;line-height:16px;padding-top:30px;padding-right:43px'>
+        <%= submit_tag "SELECT THIS EXPERT", :id=>"submit_button", :class=>'button', :onclick=>'selected_expert=view_expert;selectExpert();$.prettyPhoto.close()'%>
+      </div>
+      <div class='expert_details' style='float:right;text-align:right;font-size:10px;position:absolute;right:24px;top:5px;letter-spacing:3px;'>
+        [ <a href='#' onclick='return changeExpert(-1)'>PREV</a> | <a href='#' onclick='return changeExpert(1)'>NEXT</a> ] 
+      </div>
+    </div>
+    <div style="clear:both"></div>
+    <div class='expert_body'>
+      <div class='expert_body_left'>
+        <p class='expert_subtitle' style='margin:0;color:#6e6e6e'>About </p>
+        <hr class='light_grey'>
+        <p id='ep_about'>
+        I'm a graphic design graduate with international experience, industry recognition, and a borderline unhealthy interest in all things typographic. That said, my love of solid kerning, leading and alignment doesn't mean I don't get my hands dirty with the creative side of things. 
+        </p>
+        <p class='expert_subtitle' style='margin:0'>Work </p>
+        <hr class='light_grey'>
+        <p id='ep_portfolio' style='margin:0;padding:0'>
+        </p>
+      </div>
+      <div class='expert_body_right'>
+        <p class='expert_subtitle' style='margin:0'>Feedback </p>
+        <hr class='light_grey'>
+        <div id='ep_feedbacks' style='height:230px;overflow-y:auto'>
+          <div class='ep_feedback'>
+            <!--            <div style='float:right'>
+              "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."
+            </div>
+            <div style='float:right'>
+              - John Hall of <em>Sport-o-mate</em>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id='submit_form' style='display:none;height:340px'>
+  <div style='height:330px' id='form_wrapper'>
+    <div id='submit_howitworks'> 
+      Your request will be sent to your choosen expert designer.
+      <br /><br />
+      They have 24 hours to accept and another 48 hours to complete it.
+    </div>
+    <div style='padding:10px'>
+
+      <%=form_tag "/task/create", :id=>'save-task'%>
+      <%=hidden_field_tag :sf_site%>
+      <%=hidden_field_tag :sf_email%>
+
+      <div class='sf'><span class='sf_label'>Your site</span> <span id='sf_site_span'></span></div>
+      <div class='sf'><span class='sf_label'>Your email address</span> <span id='sf_email_span'></span></div>
+      <div class='sf'><span class='sf_label'>Your expert</span> <span id='sf_expert'></span> </div>
+      <div class='sf' style='position:relative;display:inline-block;padding-bottom:20px'><span class='sf_label'>Notes to reviewer</span> 
+        <span id='sf_notes_span' style='position:absolute;top:0;left:215px'> <textarea id='sf_notes' cols='30' rows=2></textarea></span> 
+      </div>
+      <br>
+      <div class='sf' style='background-color:#FFFDBC;border:solid 1px #E7FFBC'><span class='sf_label'>Price</span><strong>$75</strong></div>
+      <div style='text-align:center' id='submit-task-wrapper'><br><br><a href="#b" id='submit-task' class='button' onclick="$('#save-task').submit();"> Get review! </a></div>
+    </form>
+
+
+    <div id='paypal' class='sf' style='display:none;'>
+      <div style='float:left'>
+        <p>Thanks now time to pay :)</p>
+      </div>
+      <!--https://developer.paypal.com/webapps/developer/docs/classic/paypal-payments-standard/integration-guide/Appx_websitestandard_htmlvariables/#id08A6HF080O3-->
+      <div style='float:left'>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="info@inputfarm.com">
+          <input type="hidden" name="lc" value="AU">
+          <input type="hidden" name="amount" value="75.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="hidden" name="button_subtype" value="services">
+          <input type="hidden" name="no_note" value="0">
+          <input type="hidden" name="cn" value="Add special instructions to the seller:">
+          <input type="hidden" name="no_shipping" value="2">
+          <input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynowCC_LG.gif:NonHosted">
+          <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
+          <input type="hidden" id="paypal_item_number" name="item_number" value="">

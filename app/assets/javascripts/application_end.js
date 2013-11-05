@@ -210,14 +210,15 @@ function nextImage() {
 
 $(function() {
     setTimeout(resize_bg,20);
-    $('#fileupload').fileupload({
+    /*$('#fileupload').fileupload({
 dataType: 'json',
 done: function (e, data) {
 $.each(data.result.files, function (index, file) {
   $('<p/>').text(file.name).appendTo(document.body);
   });
 }
-});
+}); */
+/*
 $(window).load(function(){
     $('.bwWrapper').BlackAndWhite({
         hoverEffect : true, // default true
@@ -235,7 +236,7 @@ $(window).load(function(){
       $(this).removeClass('bwWrapper');
     });
     
-});
+}); */
 
   // pre load the usebutton rollover so it doesn't flash
   jQuery.get("/assets/use-button-rollover.png");

@@ -5,6 +5,7 @@ Dwarfmongoose::Application.routes.draw do
   match 'experts/(:id)' => 'front#experts', :as => :experts
 
   match 'bootstrap' => 'front#bootstrap'
+  match 'bootstrap2' => 'front#bootstrap2'
 
   match 'front/contact' => 'front#contact'
   match 'front/submitted' => 'front#submitted', :as=>:front_submitted

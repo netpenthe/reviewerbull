@@ -97,4 +97,7 @@ class FrontController < ApplicationController
     render :layout=> 'bootstrap'
   end
 
+  def bootstrap2
+    render :layout=> 'bootstrap2'
+  end
 end
