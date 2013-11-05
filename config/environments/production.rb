@@ -20,6 +20,7 @@ Dwarfmongoose::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
   config.assets.precompile += %w( .svg .eot .woff .ttf .css)
+  config.assets.precompile += %w( foo.css)
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
