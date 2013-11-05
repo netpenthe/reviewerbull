@@ -232,4 +232,29 @@ hr.light_grey {
   background:none;
   text-decoration:none;
 }
+#submit_howitworks {
+  background-color: #E7FFBC;
+  color: #5f5f57;
+  padding: 5px;
+  border: 1px solid #c3c3c3;
+  padding:10px;
+}
+.submit_titles {
+  color: #393c3d;
+}
+/* submit form styles */
+#submit_form div {
+  background-color: #5b9337;
+}
+
+.sf {
+  padding:10px;
+}
+
+.sf_label {
+  width:200px;
+  display:inline-block;
+  font-weight:bold;
+}
+/
 

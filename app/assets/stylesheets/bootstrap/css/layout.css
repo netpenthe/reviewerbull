@@ -212,7 +212,7 @@ h1.noSubtitle{
 	line-height: 33px;
 	margin-bottom: 0;
 	font-weight: 300;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	padding-left: 0;
 	border: none;
 	text-transform: uppercase;
@@ -298,7 +298,7 @@ p, ul {
 }
 strong {
 	font-weight:bold;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 small, aside {
 }
@@ -307,7 +307,7 @@ li {
 }
 a:link, a:visited {
 	text-decoration:none;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 a:hover, a:active {
 	text-decoration:underline;
@@ -325,7 +325,7 @@ blockquote {
 	line-height: 33px;
 	margin-bottom:0;
 	font-weight:300;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	padding:0;
 	border:none;
 	text-align:left;
