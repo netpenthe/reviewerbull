@@ -13,4 +13,27 @@ ActiveAdmin.register UserData do
 
   form :partial=>"user_data"
 
+   controller do
+
+      def update
+        @user_data = UserData.find params[:id]
+
+        upload = params[:user_data][:upload]
+
+        #lolz but fck it
+        params[:user_data].delete "upload"
+
+        @user_data.update_attributes(params[:user_data])
+
+        unless upload.blank?
+          attachment = @user_data.attachments.first
+          attachment.upload = upload 
+          attachment.save
+        end
+
+        redirect_to admin_user_datum_path(params[:user_data])
+      end
+
+    end
+
 end

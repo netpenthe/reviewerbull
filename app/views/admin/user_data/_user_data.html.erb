@@ -1,19 +1,26 @@
-<%= form_for @user_data, url: admin_user_datum_path(@user_data), :method=>:put, :multipart=>true do |f| %>
+<%= form_for @user_data, url: admin_user_datum_path, :method=>:put, :multipart=>true do |f| %>
 
 	<p><b>Email: </b> <%= @user_data.user.email %></p>
+	<%=f.hidden_field :user_id %>
 
 	<p><b>Type:</b> <%= @user_data.type %></p>
+	<%=f.hidden_field :type %>
 
 	<br>
 
 	<% if @user_data.type == "ExpertProfilePic" %>
-	   <%=image_tag @user_data.attachments.first.upload(:medium) %>
+
+	   <p><%=image_tag @user_data.attachments.first.upload(:medium) %></p>
+	   <p><%=f.file_field :upload %></p>
+
 	<% else %>
+
 	   <p><b>Value: </b> <%=f.text_area :value %></p>
+
 	<% end %>
 
 	<br>
 
-	<%=submit_tag "save" %>
+	<%=f.submit "save" %>
 
 <% end %>
