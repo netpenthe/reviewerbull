@@ -1,13 +1,19 @@
-<%= form_tag "" do %>
+<%= form_for @user_data, url: admin_user_datum_path(@user_data), :method=>:put, :multipart=>true do |f| %>
 
 	<p><b>Email: </b> <%= @user_data.user.email %></p>
 
 	<p><b>Type:</b> <%= @user_data.type %></p>
 
-	<p><b>Value: </b> <%= @user_data.value %></p>
+	<br>
 
 	<% if @user_data.type == "ExpertProfilePic" %>
-	      <%=image_tag @user_data.attachments.first.upload(:medium) %>
+	   <%=image_tag @user_data.attachments.first.upload(:medium) %>
+	<% else %>
+	   <p><b>Value: </b> <%=f.text_area :value %></p>
 	<% end %>
+
+	<br>
+
+	<%=submit_tag "save" %>
 
 <% end %>
