@@ -1,6 +1,6 @@
 <%= form_for @user_data, url: admin_user_datum_path, :method=>:put, :multipart=>true do |f| %>
 
-	<p><b>Email: </b> <%= @user_data.user.email %></p>
+	<p><b>Email: </b> <%= @user_data.user.email unless @user_data.user.blank? %></p>
 	<%=f.hidden_field :user_id %>
 
 	<p><b>Type:</b> <%= @user_data.type %></p>
