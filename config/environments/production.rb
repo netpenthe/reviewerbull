@@ -19,8 +19,6 @@ Dwarfmongoose::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
-  config.assets.precompile += %w( .svg .eot .woff .ttf .css)
-  config.assets.precompile += %w( foo.css)
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
@@ -51,6 +49,17 @@ Dwarfmongoose::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
+  config.assets.precompile += %w( .svg .eot .woff .ttf .css)
+  config.assets.precompile += %w( font/custom-icons.svg font/custom-icons.ttf font/custom-icons.woff)
+  config.assets.precompile += %w( bootstrap.js custom.js)
+  config.assets.precompile += %w( bootstrap.min.css)
+  config.assets.precompile += %w( js-plugin/parallax/js/jquery.localscroll-1.2.7-min.js js-plugin/isotope/jquery.isotope.js js-plugin/respond/respond.min.js)
+  config.assets.precompile += %w( js-plugin/jquery-ui/jquery-ui-1.8.23.custom.min.js  js-plugin/easing/jquery.easing.1.3.js js-plugin/neko-contact-ajax-plugin/js/jquery.form.js)
+  config.assets.precompile += %w( js-plugin/parallax/js/jquery.scrollTo-1.4.3.1-min.js modernizr-2.6.1.min.js js-plugin/parallax/js/jquery.stellar.min.js)
+  config.assets.precompile += %w( js-plugin/jquery.pageslide-custom.js js-plugin/jquery.sharrre-1.3.4/jquery.sharrre-1.3.4.min.js js-plugin/owl.carousel/owl-carousel/owl.carousel.min.js)
+  config.assets.precompile += %w( js-plugin/magnific-popup/jquery.magnific-popup.min.js js-plugin/neko-contact-ajax-plugin/js.jquery.validate.min.js)
+  config.assets.precompile += %w( js-plugin/flexslider/jquery.flexslider-min.js)
+
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
