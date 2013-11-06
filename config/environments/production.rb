@@ -50,7 +50,7 @@ Dwarfmongoose::Application.configure do
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
   config.assets.precompile += %w( .svg .eot .woff .ttf .css)
-  config.assets.precompile += %w( font/custom-icons.svg font/custom-icons.ttf font/custom-icons.woff)
+  config.assets.precompile += %w( font-icons/custom-icons/font/custom-icons.svg font-icons/custom-icons/font/custom-icons.ttf font-icons/custom-icons/font/custom-icons.woff font-icons/custom-icons/font/custom-icons.woff)
   config.assets.precompile += %w( bootstrap.js custom.js)
   config.assets.precompile += %w( bootstrap.min.css foo.css)
   config.assets.precompile += %w( js-plugin/parallax/js/jquery.localscroll-1.2.7-min.js js-plugin/isotope/jquery.isotope.js js-plugin/respond/respond.min.js)
