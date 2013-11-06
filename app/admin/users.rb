@@ -30,7 +30,7 @@ ActiveAdmin.register User do
         bool_row :live
       end
 
-        user.data.each do |data|
+        user.info.each do |data|
          div do 
            if data.type=="ExpertProfilePic"
              simple_format "<b>#{data.type}:</b> <p>#{data.value}</p> #{image_tag(data.attachments.first.upload(:medium)) unless data.attachments.first.blank?}
