@@ -129,10 +129,13 @@ padding-top: 10px
 }
 #contact {
   width:100%;
+  background-color: #7DC24F;
+/*
   background: -webkit-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
   background: -o-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
   background: -ms-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
-  background-color:#78B153;
+  background-color:##7DC24F;
+*/
   padding-bottom:50px;
   margin-bottom:0px;
   padding-top:35px;
@@ -255,4 +258,28 @@ hr.light_grey {
   width:200px;
   display:inline-block;
   font-weight:bold;
+}
+#qa_why {
+  color: #3c3c3c;
+}
+.qa_answers {
+  display:none;
+  color: #3c3c3c;
+  padding-left:38px;
+  line-height: 2em;
+}
+
+.qa_questions {
+  cursor:pointer;
+  cursor:hand;
+}
+
+.qa_q_selected {
+  color:#3c3c3c;
+  font-weight:bold;
+  text-decoration: underline;
+}
+ 
+label {
+  font-weight: normal;
 }

@@ -417,14 +417,14 @@ function rotate(position){
   rand = position;
 
   var quotes = new Array();
-  quotes[1] = "Often the difference between a good and great design is a matter of refining a few elements <span class='quote_author'> - Sun Tzu</span>";
-  quotes[2] = "A fanatic is one who can't change his mind and won't change the subject <span class='quote_author'> - Winston Churchill</span>";
-  quotes[3] = "An eye for an eye only ends up making the whole world blind <span class='quote_author'> - Ghandi</span>";
-  quotes[4] = "Intelligence is the ability to adapt to change. <span class='quote_author'> - Stephen Hawking</span>";
-  quotes[5] = "To improve is to change; to be perfect is to change often <span class='quote_author'> - Winston Churchill</span>";
-  quotes[6] = "To save one from a mistake is a gift of paradise. <span class='quote_author'> - Stilgar</span>";
-  quotes[7] = "Those who initiate change will have a better opportunity to manage the change that is inevitable... <span class='quote_author'> - William Pollard</span>";
-  quotes[8] = "Change is such hard work. <span class='quote_author'> - Billy Crystal</span>";
+  quotes[1] = "Often the difference between a good and great design is a matter of refining a few elements <small>Sun Tzu</small>";
+  quotes[2] = "A fanatic is one who can't change his mind and won't change the subject <small>Winston Churchill</small>";
+  quotes[3] = "An eye for an eye only ends up making the whole world blind <small>Ghandi</small>";
+  quotes[4] = "Intelligence is the ability to adapt to change. <small>Stephen Hawking</small>";
+  quotes[5] = "To improve is to change; to be perfect is to change often <small>Winston Churchill</small>";
+  quotes[6] = "To save one from a mistake is a gift of paradise. <small>Stilgar</small>";
+  quotes[7] = "Those who initiate change will have a better opportunity to manage the change that is inevitable... <small>William Pollard</small>";
+  quotes[8] = "Change is such hard work.<small>Billy Crystal</small>";
   
   //dont load the same one we just loaded :)
   while(position==rand){

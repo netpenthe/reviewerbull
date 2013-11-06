@@ -342,7 +342,7 @@
     <div class="paralaxMask"></div>
     <div class="paralaxText container">
       <i class="icon-megaphone "></i>
-      <blockquote class="bigTitle">Being a famous designer<br/>is like being a famous dentist<br/><small>NOREEN MORIOKA</small></blockquote>
+      <blockquote class="bigTitle" id="quotes">Being a famous designer<br/>is like being a famous dentist<br/><small>NOREEN MORIOKA</small></blockquote>
     </div>
   </div>
 </div>
@@ -913,7 +913,7 @@
   <div class="col-md-12 text-center">
   <%= form_tag("/front/contact", method: "post", :multipart => true) do %>
     <p class="white">
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "helper", true%> <label for='classification_helper'>I'm an expert, sign me up!</label>
+    <%= radio_button_tag 'classification', "helper", true%> <label for='classification_helper'>I'm an expert, sign me up!</label>
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> <label for='classification_general'>Contact</label>
     </p>
     <div id="fieldss">
