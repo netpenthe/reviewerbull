@@ -11,13 +11,17 @@ ActiveAdmin.register User do
           user.tasks.size unless user.tasks.blank?
         end
 
+        column "User Data" do |user|           
+          link_to user.info.size, admin_user_path(user) unless user.info.blank?
+        end
+
         actions :defaults=>false do |user|
           link_to "Edit", edit_admin_user_path(user)
         end
         
-        actions :defaults=>false do |user|
-          link_to "View", admin_user_path(user)
-        end
+        #actions :defaults=>false do |user|
+        #  link_to "View", admin_user_path(user)
+        #end
   end
 
 
