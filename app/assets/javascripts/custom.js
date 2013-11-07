@@ -665,12 +665,14 @@ if($('.previewTrigger').length){
 |--------------------------------------------------------------------------
 */
 // PAGE SLIDE
+/*
 $(".portfolioSheet").pageslide({
     direction: "left",
     modal: true,
     iframe: false,
     speed: "250"
 });
+*/
 
 
 /*

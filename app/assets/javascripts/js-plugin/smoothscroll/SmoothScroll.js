@@ -1,45 +1,117 @@
-// SmoothScroll v0.9.9
+
+// SmoothScroll v1.2.1
 // Licensed under the terms of the MIT license.
 
 // People involved
-// - Balazs Galambosi: maintainer (CHANGELOG.txt)
-// - Patrick Brunner (patrickb1991@gmail.com)
-// - Michael Herf: ssc_pulse Algorithm
+//  - Balazs Galambosi (maintainer)  
+//  - Patrick Brunner  (original idea)
+//  - Michael Herf     (Pulse Algorithm)
 
 // Scroll Variables (tweakable)
-var ssc_framerate = 150; // [Hz]
-var ssc_animtime  = 500; // [px]
-var ssc_stepsize  = 150; // [px]
+var defaultOptions = {
 
-// ssc_pulse (less tweakable)
-// ratio of "tail" to "acceleration"
-var ssc_pulseAlgorithm = true;
-var ssc_pulseScale     = 6;
-var ssc_pulseNormalize = 1;
+    // Scrolling Core
+    frameRate        : 150, // [Hz]
+    animationTime    : 400, // [px]
+    stepSize         : 120, // [px]
 
-// Keyboard Settings
-var ssc_keyboardsupport = true;
-var ssc_arrowscroll     = 50; // [px]
+    // Pulse (less tweakable)
+    // ratio of "tail" to "acceleration"
+    pulseAlgorithm   : true,
+    pulseScale       : 8,
+    pulseNormalize   : 1,
+
+    // Acceleration
+    accelerationDelta : 20,  // 20
+    accelerationMax   : 1,   // 1
+
+    // Keyboard Settings
+    keyboardSupport   : true,  // option
+    arrowScroll       : 50,     // [px]
+
+    // Other
+    touchpadSupport   : true,
+    fixedBackground   : true, 
+    excluded          : ""    
+};
+
+var options = defaultOptions;
+
 
 // Other Variables
-var ssc_frame = false;
-var ssc_direction = { x: 0, y: 0 };
-var ssc_initdone  = false;
-var ssc_fixedback = true;
-var ssc_root = document.documentElement;
-var ssc_activeElement;
+var isExcluded = false;
+var isFrame = false;
+var direction = { x: 0, y: 0 };
+var initDone  = false;
+var root = document.documentElement;
+var activeElement;
+var observer;
+var deltaBuffer = [ 120, 120, 120 ];
 
-var ssc_key = { left: 37, up: 38, right: 39, down: 40, spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36 };
+var key = { left: 37, up: 38, right: 39, down: 40, spacebar: 32, 
+            pageup: 33, pagedown: 34, end: 35, home: 36 };
+
+
+/***********************************************
+ * SETTINGS
+ ***********************************************/
+
+chrome.storage.sync.get(defaultOptions, function (syncedOptions) {
+
+    options = syncedOptions;
+
+    // it seems that sometimes settings come late
+    // and we need to test again for excluded pages
+    initTest();
+});
+
 
 /***********************************************
  * INITIALIZE
  ***********************************************/
 
 /**
- * Sets up scrolls array, determines if ssc_frames are involved.
+ * Tests if smooth scrolling is allowed. Shuts down everything if not.
  */
-function ssc_init() {
+function initTest() {
+
+    var disableKeyboard = false; 
+
+    // disable keys for google reader (spacebar conflict)
+    if (document.URL.indexOf("google.com/reader/view") > -1) {
+        disableKeyboard = true;
+    }
+
+    // disable everything if the page is blacklisted
+    if (options.excluded) {
+        var domains = options.excluded.split(/[,\n] ?/);
+        domains.push("mail.google.com"); // exclude Gmail for now
+        for (var i = domains.length; i--;) {
+            if (document.URL.indexOf(domains[i]) > -1) {
+                observer && observer.disconnect();
+                removeEvent("mousewheel", wheel);
+                disableKeyboard = true;
+                isExcluded = true;
+                break;
+            }
+        }
+    }
     
+    // disable keyboard support if anything above requested it
+    if (disableKeyboard) {
+        removeEvent("keydown", keydown);
+    }
+
+    if (options.keyboardSupport && !disableKeyboard) {
+        addEvent("keydown", keydown);
+    }
+}
+
+/**
+ * Sets up scrolls array, determines if frames are involved.
+ */
+function init() {
+  
     if (!document.body) return;
 
     var body = document.body;
@@ -47,15 +119,16 @@ function ssc_init() {
     var windowHeight = window.innerHeight; 
     var scrollHeight = body.scrollHeight;
     
-    // check compat mode for ssc_root element
-    ssc_root = (document.compatMode.indexOf('CSS') >= 0) ? html : body;
-    ssc_activeElement = body;
+    // check compat mode for root element
+    root = (document.compatMode.indexOf('CSS') >= 0) ? html : body;
+    activeElement = body;
     
-    ssc_initdone = true;
+    initTest();
+    initDone = true;
 
-    // Checks if this script is running in a ssc_frame
+    // Checks if this script is running in a frame
     if (top != self) {
-        ssc_frame = true;
+        isFrame = true;
     }
 
     /**
@@ -66,21 +139,54 @@ function ssc_init() {
     else if (scrollHeight > windowHeight &&
             (body.offsetHeight <= windowHeight || 
              html.offsetHeight <= windowHeight)) {
-        ssc_root.style.height = "auto";
-        if (ssc_root.offsetHeight <= windowHeight) {
-            var underlay = document.createElement("div");   
+
+        // DOMChange (throttle): fix height
+        var pending = false;
+        var refresh = function () {
+            if (!pending && html.scrollHeight != document.height) {
+                pending = true; // add a new pending action
+                setTimeout(function () {
+                    html.style.height = document.height + 'px';
+                    pending = false;
+                }, 500); // act rarely to stay fast
+            }
+        };
+        html.style.height = 'auto';
+        setTimeout(refresh, 10);
+
+        var config = {
+            attributes: true, 
+            childList: true, 
+            characterData: false 
+        };
+
+        observer = new MutationObserver(refresh);
+        observer.observe(body, config);
+
+        // clearfix
+        if (root.offsetHeight <= windowHeight) {
+            var underlay = document.createElement("div"); 	
             underlay.style.clear = "both";
             body.appendChild(underlay);
         }
     }
     
-    if (!ssc_fixedback) {
+    // gmail performance fix
+    if (document.URL.indexOf("mail.google.com") > -1) {
+        var s = document.createElement("style");
+        s.innerHTML = ".iu { visibility: hidden }";
+        (document.getElementsByTagName("head")[0] || html).appendChild(s);
+    }
+    // facebook better home timeline performance
+    // all the HTML resized images make rendering CPU intensive
+    else if (document.URL.indexOf("www.facebook.com") > -1) {
+        var home_stream = document.getElementById("home_stream");
+        home_stream && (home_stream.style.webkitTransform = "translateZ(0)");
+    } 
+    // disable fixed background
+    if (!options.fixedBackground && !isExcluded) {
         body.style.backgroundAttachment = "scroll";
         html.style.backgroundAttachment = "scroll";
-    }
-    
-    if (ssc_keyboardsupport) {
-        ssc_addEvent("keydown", ssc_keydown);
     }
 }
 
@@ -89,19 +195,34 @@ function ssc_init() {
  * SCROLLING 
  ************************************************/
  
-var ssc_que = [];
-var ssc_pending = false;
+var que = [];
+var pending = false;
+var lastScroll = +new Date;
 
 /**
  * Pushes scroll actions to the scrolling queue.
  */
-function ssc_scrollArray(elem, left, top, delay) {
+function scrollArray(elem, left, top, delay) {
     
     delay || (delay = 1000);
-    ssc_directionCheck(left, top);
+    directionCheck(left, top);
+
+    if (options.accelerationMax != 1) {
+        var now = +new Date;
+        var elapsed = now - lastScroll;
+        if (elapsed < options.accelerationDelta) {
+            var factor = (1 + (30 / elapsed)) / 2;
+            if (factor > 1) {
+                factor = Math.min(factor, options.accelerationMax);
+                left *= factor;
+                top  *= factor;
+            }
+        }
+        lastScroll = +new Date;
+    }          
     
     // push a scroll command
-    ssc_que.push({
+    que.push({
         x: left, 
         y: top, 
         lastX: (left < 0) ? 0.99 : -0.99,
@@ -109,29 +230,31 @@ function ssc_scrollArray(elem, left, top, delay) {
         start: +new Date
     });
         
-    // don't act if there's a ssc_pending queue
-    if (ssc_pending) {
+    // don't act if there's a pending queue
+    if (pending) {
         return;
-    }
-            
-    var step = function() {
+    }  
+
+    var scrollWindow = (elem === document.body);
+    
+    var step = function (time) {
         
         var now = +new Date;
         var scrollX = 0;
         var scrollY = 0; 
     
-        for (var i = 0; i < ssc_que.length; i++) {
+        for (var i = 0; i < que.length; i++) {
             
-            var item = ssc_que[i];
+            var item = que[i];
             var elapsed  = now - item.start;
-            var finished = (elapsed >= ssc_animtime);
+            var finished = (elapsed >= options.animationTime);
             
             // scroll position: [0, 1]
-            var position = (finished) ? 1 : elapsed / ssc_animtime;
+            var position = (finished) ? 1 : elapsed / options.animationTime;
             
             // easing [optional]
-            if (ssc_pulseAlgorithm) {
-                position = ssc_pulse(position);
+            if (options.pulseAlgorithm) {
+                position = pulse(position);
             }
             
             // only need the difference
@@ -148,47 +271,34 @@ function ssc_scrollArray(elem, left, top, delay) {
         
             // delete and step back if it's over
             if (finished) {
-                ssc_que.splice(i, 1); i--;
+                que.splice(i, 1); i--;
             }           
         }
 
-        // scroll left
-        if (left) {
-            var lastLeft = elem.scrollLeft;
-            elem.scrollLeft += scrollX;
-            
-            // scroll left failed (edge)
-            if (scrollX && elem.scrollLeft === lastLeft) {
-                left = 0;
-            }
-        }
-
-        // scroll top
-        if (top) {
-            var lastTop = elem.scrollTop;
-            elem.scrollTop += scrollY;
-            
-            // scroll top failed (edge)
-            if (scrollY && elem.scrollTop === lastTop) {
-                top = 0;
-            }            
+        // scroll left and top
+        if (scrollWindow) {
+            window.scrollBy(scrollX, scrollY);
+        } 
+        else {
+            if (scrollX) elem.scrollLeft += scrollX;
+            if (scrollY) elem.scrollTop  += scrollY;                    
         }
         
         // clean up if there's nothing left to do
         if (!left && !top) {
-            ssc_que = [];
+            que = [];
         }
         
-        if (ssc_que.length) { 
-            setTimeout(step, delay / ssc_framerate + 1);
+        if (que.length) { 
+            requestFrame(step, elem, (delay / options.frameRate + 1)); 
         } else { 
-            ssc_pending = false;
+            pending = false;
         }
-    }
+    };
     
     // start a new queue of actions
-    setTimeout(step, 0);
-    ssc_pending = true;
+    requestFrame(step, elem, 0);
+    pending = true;
 }
 
 
@@ -197,23 +307,23 @@ function ssc_scrollArray(elem, left, top, delay) {
  ***********************************************/
 
 /**
- * Mouse ssc_wheel handler.
+ * Mouse wheel handler.
  * @param {Object} event
  */
-function ssc_wheel(event) {
+function wheel(event) {
 
-    if (!ssc_initdone) {
+    if (!initDone) {
         init();
     }
     
     var target = event.target;
-    var overflowing = ssc_overflowingAncestor(target);
+    var overflowing = overflowingAncestor(target);
     
     // use default if there's no overflowing
     // element or default action is prevented    
     if (!overflowing || event.defaultPrevented ||
-        ssc_isNodeName(ssc_activeElement, "embed") ||
-       (ssc_isNodeName(target, "embed") && /\.pdf/i.test(target.src))) {
+        isNodeName(activeElement, "embed") ||
+       (isNodeName(target, "embed") && /\.pdf/i.test(target.src))) {
         return true;
     }
 
@@ -225,45 +335,52 @@ function ssc_wheel(event) {
         deltaY = event.wheelDelta || 0;
     }
 
+    // check if it's a touchpad scroll that should be ignored
+    if (!options.touchpadSupport && isTouchpad(deltaY)) {
+        return true;
+    }
+
     // scale by step size
     // delta is 120 most of the time
     // synaptics seems to send 1 sometimes
     if (Math.abs(deltaX) > 1.2) {
-        deltaX *= ssc_stepsize / 120;
+        deltaX *= options.stepSize / 120;
     }
     if (Math.abs(deltaY) > 1.2) {
-        deltaY *= ssc_stepsize / 120;
+        deltaY *= options.stepSize / 120;
     }
     
-    ssc_scrollArray(overflowing, -deltaX, -deltaY);
+    scrollArray(overflowing, -deltaX, -deltaY);
     event.preventDefault();
 }
 
 /**
- * ssc_keydown event handler.
+ * Keydown event handler.
  * @param {Object} event
  */
-function ssc_keydown(event) {
+function keydown(event) {
 
     var target   = event.target;
-    var modifier = event.ctrlKey || event.altKey || event.metaKey;
+    var modifier = event.ctrlKey || event.altKey || event.metaKey || 
+                  (event.shiftKey && event.keyCode !== key.spacebar);
     
     // do nothing if user is editing text
-    // or using a modifier ssc_key (except shift)
-    if ( /input|textarea|embed/i.test(target.nodeName) ||
+    // or using a modifier key (except shift)
+    // or in a dropdown
+    if ( /input|textarea|select|embed/i.test(target.nodeName) ||
          target.isContentEditable || 
          event.defaultPrevented   ||
          modifier ) {
       return true;
     }
     // spacebar should trigger button press
-    if (ssc_isNodeName(target, "button") &&
-        event.keyCode === ssc_key.spacebar) {
+    if (isNodeName(target, "button") &&
+        event.keyCode === key.spacebar) {
       return true;
     }
     
     var shift, x = 0, y = 0;
-    var elem = ssc_overflowingAncestor(ssc_activeElement);
+    var elem = overflowingAncestor(activeElement);
     var clientHeight = elem.clientHeight;
 
     if (elem == document.body) {
@@ -271,48 +388,48 @@ function ssc_keydown(event) {
     }
 
     switch (event.keyCode) {
-        case ssc_key.up:
-            y = -ssc_arrowscroll;
+        case key.up:
+            y = -options.arrowScroll;
             break;
-        case ssc_key.down:
-            y = ssc_arrowscroll;
+        case key.down:
+            y = options.arrowScroll;
             break;         
-        case ssc_key.spacebar: // (+ shift)
+        case key.spacebar: // (+ shift)
             shift = event.shiftKey ? 1 : -1;
             y = -shift * clientHeight * 0.9;
             break;
-        case ssc_key.pageup:
+        case key.pageup:
             y = -clientHeight * 0.9;
             break;
-        case ssc_key.pagedown:
+        case key.pagedown:
             y = clientHeight * 0.9;
             break;
-        case ssc_key.home:
+        case key.home:
             y = -elem.scrollTop;
             break;
-        case ssc_key.end:
+        case key.end:
             var damt = elem.scrollHeight - elem.scrollTop - clientHeight;
             y = (damt > 0) ? damt+10 : 0;
             break;
-        case ssc_key.left:
-            x = -ssc_arrowscroll;
+        case key.left:
+            x = -options.arrowScroll;
             break;
-        case ssc_key.right:
-            x = ssc_arrowscroll;
+        case key.right:
+            x = options.arrowScroll;
             break;            
         default:
-            return true; // a ssc_key we don't care about
+            return true; // a key we don't care about
     }
 
-    ssc_scrollArray(elem, x, y);
+    scrollArray(elem, x, y);
     event.preventDefault();
 }
 
 /**
- * ssc_mousedown event only for updating ssc_activeElement
+ * Mousedown event only for updating activeElement
  */
-function ssc_mousedown(event) {
-    ssc_activeElement = event.target;
+function mousedown(event) {
+    activeElement = event.target;
 }
 
 
@@ -320,39 +437,39 @@ function ssc_mousedown(event) {
  * OVERFLOW
  ***********************************************/
  
-var ssc_cache = {}; // cleared out every once in while
-setInterval(function(){ ssc_cache = {}; }, 10 * 1000);
+var cache = {}; // cleared out every once in while
+setInterval(function () { cache = {}; }, 10 * 1000);
 
-var ssc_uniqueID = (function() {
+var uniqueID = (function () {
     var i = 0;
     return function (el) {
-        return el.ssc_uniqueID || (el.ssc_uniqueID = i++);
+        return el.uniqueID || (el.uniqueID = i++);
     };
 })();
 
-function ssc_setCache(elems, overflowing) {
+function setCache(elems, overflowing) {
     for (var i = elems.length; i--;)
-        ssc_cache[ssc_uniqueID(elems[i])] = overflowing;
+        cache[uniqueID(elems[i])] = overflowing;
     return overflowing;
 }
 
-function ssc_overflowingAncestor(el) {
+function overflowingAncestor(el) {
     var elems = [];
-    var ssc_rootScrollHeight = ssc_root.scrollHeight;
+    var rootScrollHeight = root.scrollHeight;
     do {
-        var cached = ssc_cache[ssc_uniqueID(el)];
+        var cached = cache[uniqueID(el)];
         if (cached) {
-            return ssc_setCache(elems, cached);
+            return setCache(elems, cached);
         }
         elems.push(el);
-        if (ssc_rootScrollHeight === el.scrollHeight) {
-            if (!ssc_frame || ssc_root.clientHeight + 10 < ssc_rootScrollHeight) {
-                return ssc_setCache(elems, document.body); // scrolling ssc_root in WebKit
+        if (rootScrollHeight === el.scrollHeight) {
+            if (!isFrame || root.clientHeight + 10 < rootScrollHeight) {
+                return setCache(elems, document.body); // scrolling root in WebKit
             }
         } else if (el.clientHeight + 10 < el.scrollHeight) {
-            overflow = getComputedStyle(el, "").getPropertyValue("overflow");
+            overflow = getComputedStyle(el, "").getPropertyValue("overflow-y");
             if (overflow === "scroll" || overflow === "auto") {
-                return ssc_setCache(elems, el);
+                return setCache(elems, el);
             }
         }
     } while (el = el.parentNode);
@@ -363,43 +480,83 @@ function ssc_overflowingAncestor(el) {
  * HELPERS
  ***********************************************/
 
-function ssc_addEvent(type, fn, bubble) {
+function addEvent(type, fn, bubble) {
     window.addEventListener(type, fn, (bubble||false));
 }
 
-function ssc_removeEvent(type, fn, bubble) {
+function removeEvent(type, fn, bubble) {
     window.removeEventListener(type, fn, (bubble||false));  
 }
 
-function ssc_isNodeName(el, tag) {
-    return el.nodeName.toLowerCase() === tag.toLowerCase();
+function isNodeName(el, tag) {
+    return (el.nodeName||"").toLowerCase() === tag.toLowerCase();
 }
 
-function ssc_directionCheck(x, y) {
+function directionCheck(x, y) {
     x = (x > 0) ? 1 : -1;
     y = (y > 0) ? 1 : -1;
-    if (ssc_direction.x !== x || ssc_direction.y !== y) {
-        ssc_direction.x = x;
-        ssc_direction.y = y;
-        ssc_que = [];
+    if (direction.x !== x || direction.y !== y) {
+        direction.x = x;
+        direction.y = y;
+        que = [];
+        lastScroll = 0;
     }
 }
 
+var deltaBufferTimer;
+
+function isTouchpad(deltaY) {
+    if (!deltaY) return;
+    deltaY = Math.abs(deltaY)
+    deltaBuffer.push(deltaY);
+    deltaBuffer.shift();
+    clearTimeout(deltaBufferTimer);
+    deltaBufferTimer = setTimeout(function () {
+        chrome.storage.local.set({ deltaBuffer: deltaBuffer });
+    }, 1000);
+    var allEquals    = (deltaBuffer[0] == deltaBuffer[1] && 
+                        deltaBuffer[1] == deltaBuffer[2]);
+    var allDivisable = (isDivisible(deltaBuffer[0], 120) &&
+                        isDivisible(deltaBuffer[1], 120) &&
+                        isDivisible(deltaBuffer[2], 120));
+    return !(allEquals || allDivisable);
+} 
+
+function isDivisible(n, divisor) {
+    return (Math.floor(n / divisor) == n / divisor);
+}
+
+chrome.storage.local.get('deltaBuffer', function (stored) {
+    if (stored.deltaBuffer) {
+        deltaBuffer = stored.deltaBuffer;
+    }
+});
+
+var requestFrame = (function () {
+      return  window.requestAnimationFrame       || 
+              window.webkitRequestAnimationFrame || 
+              function (callback, element, delay) {
+                  window.setTimeout(callback, delay || (1000/60));
+              };
+})();
+
+var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;  
+
 
 /***********************************************
- * ssc_pulse
+ * PULSE
  ***********************************************/
  
 /**
- * Viscous fluid with a ssc_pulse for part and decay for the rest.
+ * Viscous fluid with a pulse for part and decay for the rest.
  * - Applies a fixed force over an interval (a damped acceleration), and
  * - Lets the exponential bleed away the velocity over a longer interval
  * - Michael Herf, http://stereopsis.com/stopping/
  */
-function ssc_pulse_(x) {
+function pulse_(x) {
     var val, start, expx;
     // test
-    x = x * ssc_pulseScale;
+    x = x * options.pulseScale;
     if (x < 1) { // acceleartion
         val = x - (1 - Math.exp(-x));
     } else {     // tail
@@ -410,22 +567,19 @@ function ssc_pulse_(x) {
         expx = 1 - Math.exp(-x);
         val = start + (expx * (1 - start));
     }
-    return val * ssc_pulseNormalize;
+    return val * options.pulseNormalize;
 }
 
-function ssc_pulse(x) {
+function pulse(x) {
     if (x >= 1) return 1;
     if (x <= 0) return 0;
 
-    if (ssc_pulseNormalize == 1) {
-        ssc_pulseNormalize /= ssc_pulse_(1);
+    if (options.pulseNormalize == 1) {
+        options.pulseNormalize /= pulse_(1);
     }
-    return ssc_pulse_(x);
+    return pulse_(x);
 }
 
-$.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase()); 
-if ( $.browser.chrome ) {
-    ssc_addEvent("mousedown", ssc_mousedown);
-    ssc_addEvent("mousewheel", ssc_wheel);
-    ssc_addEvent("load", ssc_init);
- }
+addEvent("mousedown", mousedown);
+addEvent("mousewheel", wheel);
+addEvent("load", init);

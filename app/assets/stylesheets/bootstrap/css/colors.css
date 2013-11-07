@@ -69,17 +69,16 @@ h2.subTitle:after, h1.noSubtitle:after{
 }
 #home {
 	/**background-image:url('/assets/main_bg/overhead_f.jpg');**/
-	background-image:url('/assets/main_bg/blue_shirt_f.jpg');
+	background-image:url('/assets/main_bg/brunette_f.jpg');
   background-repeat:no-repeat;
   height:481px;
-  background-position: center;
   /*background-color: #483727;*/
   background-color: #fff;
   background-size: cover;
 }
 
 #paralaxSlice1 {
-	background-image: url('/assets/altea/theme-pics/paralax-1.jpg');
+	background-image: url('/assets/main_bg/overhead_f.jpg');
 }
 #paralaxSlice2 {
 	background-image: url('/assets/altea/theme-pics/paralax-grey-2.jpg');
