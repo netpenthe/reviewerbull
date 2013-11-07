@@ -12,4 +12,12 @@ class User < ActiveRecord::Base
   has_many :data, :class_name=>"UserData", :order=>"id desc" 
   has_many :tasks
 
+
+  def info
+    ids = []
+    datum = UserData.find_by_sql ["select type,max(id) as id from user_data where user_id=? group by type",self.id]
+    ids = datum.map{|d| d.id }
+    return UserData.where(id: ids ).order("type ASC")
+  end
+
 end
