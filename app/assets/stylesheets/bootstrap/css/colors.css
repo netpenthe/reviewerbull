@@ -25,9 +25,9 @@
 ================================================== */
 
 /** tabs **/
-.panel-default>.panel-heading {background:#7DC24F; }
+.panel-default>.panel-heading {background:#5A9236; }
 .panel-default>.panel-heading:hover {background:#fff; }
-.panel-default>.panel-heading:hover a {color:#7DC24F; }
+.panel-default>.panel-heading:hover a {color:#5A9236; }
 .panel-title>a {color:#fff;}
 .panel-title>a:hover {text-decoration: none;}
 
@@ -53,7 +53,7 @@ h2 {
 }
 h2 i {color:#999}
 h2.subTitle:after, h1.noSubtitle:after{
-	background-color:#7DC24F;
+	background-color:#5A9236;
 }
 
 /*** parallax sections ***/
@@ -62,7 +62,7 @@ h2.subTitle:after, h1.noSubtitle:after{
 	color:#fff;
 }
 #home, #paralaxSlice1, #paralaxSlice2, #paralaxSlice3, #paralaxSlice4 {
-	background-color:#7DC24F;
+	background-color:#5A9236;
 }
 #home {
 	background-image:url('/assets/altea/theme-pics/paralax-sea-green-3.jpg');
@@ -101,26 +101,26 @@ h2.subTitle:after, h1.noSubtitle:after{
 ================================================== */
 
 a {
-	color:#7DC24F;
+	color:#5A9236;
 }
 a:hover, .scrollspyNav .active a {
-	color:#7DC24F;
+	color:#5A9236;
 }
 ul.iconsList li a {
 	color:#555
 }
 ul.iconsList li a:hover, ul.iconsList i {
-	color:#7DC24F
+	color:#5A9236
 }
 
 /*** buttons ***/
 .btn {
-	background:#7DC24F;
+	background:#5A9236;
 	color:#fff;
 	border:2px solid #fff;
 }
 .btn:hover {
-	color:#7DC24F;
+	color:#5A9236;
 	border-color:#eee;
 	text-shadow:none;
 	background:#fff
@@ -176,7 +176,7 @@ ul.iconsList li a:hover, ul.iconsList i {
 	color:#444;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	background: #7DC24F;
+	background: #5A9236;
 	/*color:#fff;*/
   color: #fff;
 }
@@ -201,7 +201,7 @@ p.credits {
 	color:#555;
 }
 p.credits a {
-	color:#7DC24F;
+	color:#5A9236;
 }
 
 /* END FOOTER 
@@ -228,7 +228,7 @@ p.credits a {
 	color:#FFFFFF;
 }
 .flexslider .flex-direction-nav a {
-	background-color:#7DC24F;
+	background-color:#5A9236;
 }
 
 .flexslider .flex-control-paging li a:hover, #sliderWrapper .flex-control-paging li a.flex-active{
@@ -244,7 +244,7 @@ p.credits a {
 }
 .flexslider h1 {
 	color:#fff;
-	background-color:#7DC24F;
+	background-color:#5A9236;
 }
 .flexslider h2 {
 	color:#fff;
@@ -276,7 +276,7 @@ nav#filter a {
 	color:#555;
 }
 nav#filter a:hover, nav#filter a.current {
-	background-color: #7DC24F;
+	background-color: #5A9236;
 	color:#fff;
 }
 li.filterTitle {
@@ -285,7 +285,7 @@ li.filterTitle {
 section#projectDescription {
 	background-color:#F8F8F8
 }
-.mask{background-color: #7DC24F;}
+.mask{background-color: #5A9236;}
 /* END PORTFOLIO
 ================================================== */
 
@@ -330,7 +330,7 @@ section#projectDescription {
 	color:#fff!important;
 }
 .pricingBloc.focusPlan h3 {
-	background-color:#7DC24F;
+	background-color:#5A9236;
 	padding:1.25em;
 	color:#fff!important;
 }
@@ -366,7 +366,7 @@ border:none}
 
 /*** Feature box **/
 
-.boxFeature i{color:#7DC24F;} 
+.boxFeature i{color:#5A9236;} 
 
 /*** slices ***/
 .slice{
@@ -391,11 +391,11 @@ border:none}
 	color:#444;
 }
 .color1 a.btn{color:#fff;}
-.color1 a.btn:hover{color:#7DC24F;}
+.color1 a.btn:hover{color:#5A9236;}
 
 /*color4*/
 .color4, .slice.color4, .bulle.color4, .ctaBox.color4{
-	background-color:#7DC24F;
+	background-color:#5A9236;
 	color:#fff;
 }
 
@@ -404,10 +404,10 @@ border:none}
 }
 
 /*** icons ***/
-.iconRounded {border:2px solid #7DC24F;color:#7DC24F;background-color:#fff;}
-.iconRounded:hover, .color1 .iconRounded:hover{background-color:#7DC24F;color:#fff;}
-.color1 .iconRounded {color:#7DC24F;}
-.color4 .iconRounded {background-color:#FFF;color:#7DC24F;}
+.iconRounded {border:2px solid #5A9236;color:#5A9236;background-color:#fff;}
+.iconRounded:hover, .color1 .iconRounded:hover{background-color:#5A9236;color:#fff;}
+.color1 .iconRounded {color:#5A9236;}
+.color4 .iconRounded {background-color:#FFF;color:#5A9236;}
 
 /* END NEKO CSS FRAMEWORK
 ================================================== */

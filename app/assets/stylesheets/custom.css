@@ -32,7 +32,6 @@
 }
   .button:hover {
     background-color:#429e9d;
-    color: #fff;
     text-decoration:none;
   }
   .button:active {
@@ -79,7 +78,8 @@
 .howitworks_text {
   padding-top:15px;
   font-style:italic;
-  color: #999;
+  /*color: #999;*/
+  color: #fff;
   text-align:center;
 }
 
@@ -128,27 +128,27 @@ width: 350px;
 padding-top: 10px
 }
 #contact {
-  width:100%;
+width: 100%;
+background-color:#5A9236;
+/*
   background-color: #7DC24F;
-/*
-  background: -webkit-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
-  background: -o-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
-  background: -ms-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
-  background-color:##7DC24F;
+background: -webkit-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
+background: -o-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
+background: -ms-radial-gradient(center,ellipse cover,rgba(255,255,255,0.5) 0,rgba(255,255,255,0) 70%);
+background-color: #78B153;
 */
-  padding-bottom:50px;
-  margin-bottom:0px;
-  padding-top:35px;
-  color:#fff;
-  text-align: center;
-  border-top: 1px solid #cdcdcd;
+padding-bottom: 50px;
+margin-bottom: 0px;
+padding-top: 35px;
+color: #fff;
+text-align: center;
+border-top: 1px solid #cdcdcd;
 /*
-  -moz-border-radius-bottomleft: 20px;
-  -moz-border-radius-bottomright: 20px;
-  -webkit-border-radius: 0px;
-  -webkit-border-bottom-left-radius: 20px;
-  -webkit-border-bottom-right-radius: 20px;
-  -o-border-radius: 0px;
+-moz-border-radius-bottomleft: 20px;
+-moz-border-radius-bottomright: 20px;
+-webkit-border-radius: 0px;
+-webkit-border-bottom-left-radius: 20px;
+-webkit-border-bottom-right-radius: 20px;
 */
 }	
 
@@ -283,3 +283,34 @@ hr.light_grey {
 label {
   font-weight: normal;
 }
+.btn {
+  border-radius: 0px;
+}
+
+#use {
+  background-color: #5A9236;
+}
+
+#use h1 {
+  color: #fff;
+}
+
+.btn-large{
+  font-size: 22px;
+}
+btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #5A9236;
+  text-decoration: none;
+}
+
+.btn:active,
+.btn.active {
+  background-image: none;
+

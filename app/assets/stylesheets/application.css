@@ -297,14 +297,12 @@ hr.light_grey {
   color:#fff;
   text-align: center;
   border-top: 1px solid #cdcdcd;
-/*
   -moz-border-radius-bottomleft: 20px;
   -moz-border-radius-bottomright: 20px;
   -webkit-border-radius: 0px;
   -webkit-border-bottom-left-radius: 20px;
   -webkit-border-bottom-right-radius: 20px;
   -o-border-radius: 0px;
-*/
 }	
 
 #why_and_how, #how_it_works {
@@ -836,7 +834,6 @@ height:420px;
 }
   .button:hover {
     background-color:#429e9d;
-    color: #fff;
   }
   .button:active {
     background-color:#286968;

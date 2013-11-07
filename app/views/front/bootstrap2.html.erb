@@ -58,12 +58,12 @@
       <div class="row">
         <div class="col-md-8">
           <h1>
-            <strong>Input Farm</strong> makes your website better, faster.
+            <strong style='letter-spacing:2px'>Input Farm</strong> makes your website better, faster.
           </h1>
         </div>
         <div class="col-md-4">
           <a class="btn btn-lg smoothScroll" title="" href="#use">
-            <i class="icon-flash"></i> Use Input Farm now
+            <i class="fa fa-star fa-lg"></i> Use Input Farm now
           </a>
         </div>
       </div>
@@ -108,240 +108,81 @@
     </div>
   </div>
   </section>
-
-  <!--
-  <section class="slice" id="news">
-  <div class="container imgHover">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1>What is this</h1>
-        <h2 class="subTitle">Here, there and everywhere... what we've been doing</h2>
-      </div>
-
-      <article class="col-sm-4">
-
-      <section class="imgWrapper"> 
-      <img src="/assets/altea/news/news1.jpg" class="img-responsive" alt="Ashleye template image news" /> 
-      </section>
-
-      <div class="mediaHover">
-        <div class="mask"></div>
-        <div class="iconLinks"> 
-
-          <a href="images/news/news1.jpg" class="image-link" title="Zoom" ><i class="icon-search iconRounded iconBig"></i><span>zoom</span></a> 
-        </div>
-      </div>
-      <section class="newsText color4">
-      <h3>New hair cut today</h3>
-      <h4 class="date">September 12</h4>
-      <p>The Duchess took her choice, and was gone in a moment. 'Let's go on with the game,' the Queen said to Alice; and Alice was  too much frightened to say a word, but slowly followed her back to the  croquet-ground.</p>
-      <a href="https://wrapbootstrap.com/theme/ashley-one-page-parallax-bootstrap-3-WB0R11207" class="btn btn-sm"><i class="icon-right-open-mini"></i>read more</a>
-      </section>
-
-      </article>
-
-
-      <article class="col-sm-4">
-      <section class="imgWrapper"> 
-      <img src="/assets/altea/news/news2.jpg" class="img-responsive" alt="snowflake template image news" /> 
-      </section>
-      <div class="mediaHover">
-        <div class="mask"></div>
-        <div class="iconLinks"> 
-          <a href="images/news/news2.jpg" class="image-link" title="Zoom" ><i class="icon-search iconRounded iconBig"></i><span>zoom</span></a> 
-        </div>
-      </div>
-      <section class="newsText color4">
-      <h3>We are a family</h3>
-      <h4 class="date">November 24</h4>
-      <p>The Duchess took her choice, and was gone in a moment. 'Let's go on with the game,' the Queen said to Alice; and Alice was  too much frightened to say a word, but slowly followed her back to the  croquet-ground.</p>
-      <a href="https://wrapbootstrap.com/theme/ashley-one-page-parallax-bootstrap-3-WB0R11207" class="btn btn-sm"><i class="icon-right-open-mini "></i>read more</a>
-      </section>
-      </article>
-
-
-      <article class="col-sm-4">
-      <section class="imgWrapper"> 
-      <img src="/assets/altea/news/news3.jpg" class="img-responsive" alt="snowflake template image news" /> 
-      </section>
-      <div class="mediaHover">
-        <div class="mask"></div>
-        <div class="iconLinks"> 
-          <a href="images/news/news3.jpg" class="image-link" title="Zoom" ><i class="icon-search iconRounded iconBig"></i><span>zoom</span></a> 
-        </div>
-      </div>
-      <section class="newsText color4">
-      <h3>Call me if you can</h3>
-      <h4 class="date">November 24</h4>
-      <p>The Duchess took her choice, and was gone in a moment. 'Let's go on with the game,' the Queen said to Alice; and Alice was  too much frightened to say a word, but slowly followed her back to the  croquet-ground.</p>
-      <a href="https://wrapbootstrap.com/theme/ashley-one-page-parallax-bootstrap-3-WB0R11207" class="btn btn-sm"><i class="icon-right-open-mini"></i>read more</a>
-      </section>
-      </article>
-
-
-    </div>
-  </div>
-  </section>
-  -->
-  <!-- news -->
   <!-- services -->
+
   <section class="slice color1" id="use">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
         <h1>Use Input Farm today</h1>
-        <h2 class="subTitle">No risk - if you don't like it, your money back!</h2>
+        <h2 class="subTitle" style="color:#ddd">No risk - money back guarantee if you're unhappy!</h2>
       </div>
     </div>
-    <div class="row">
-      <div class='steps'>
-        <div class='preview' >
-          <div class='xarrow_box'>
-            <div class="site_design">
-              <%= text_field_tag :email, "Email",{:class=>"field "} %>
-            </div>
-            <br />
-            <div id='site_url' class="site_design">
-              <%= text_field_tag :url, "Site URL",{:class=>"field"} %>
-              <br />
-              <!--<p class='hand' style='font-size:0.8em' onclick="$('#site_url').hide();$('#site_upload_image').fadeIn()">[or upload jpg/png file instead]</p>-->
-            </div>
 
-            <div id='site_upload_image' class='site_design' style="display:none">
-              <%= file_field_tag :upload, multiple: true,name: "upload[]", class: "field", style: "padding-top:10px;height:30px" %>
-              <br />
-              <!-- <p class='hand' style='font-size:0.8em' onclick="$('#site_upload_image').hide();$('#site_url').fadeIn()">[or enter a URL instead]</p>-->
-            </div>
-          </div>
-          <div class='howitworks_text'>Give us some details</div>
+    <div class="row">
+      <div class='col-md-4'>
+        <div class="site_design">
+          <%= text_field_tag :email, "Email",{:class=>"field "} %>
+        </div>
+        <br />
+        <div id='site_url' class="site_design">
+          <%= text_field_tag :url, "Site URL",{:class=>"field"} %>
+          <br />
+          <!--<p class='hand' style='font-size:0.8em' onclick="$('#site_url').hide();$('#site_upload_image').fadeIn()">[or upload jpg/png file instead]</p>-->
+        </div>
+
+        <div id='site_upload_image' class='site_design' style="display:none">
+          <%= file_field_tag :upload, multiple: true,name: "upload[]", class: "field", style: "padding-top:10px;height:30px" %>
+          <br />
+          <!-- <p class='hand' style='font-size:0.8em' onclick="$('#site_upload_image').hide();$('#site_url').fadeIn()">[or enter a URL instead]</p>-->
         </div>
       </div>
-      <div class='steps' > 
-        <div class='preview'>
-          <div class='xarrow_box' style='text-align:center'>
-            <div id='found_reviewer_wrapper' style='display:none'>
-              <%=image_tag "circle_expert1.jpg", :size=>'100x103',:style=>'float:left;padding-left:29px',:id=>'selected_expert_image'%>
-              <div style='padding-top:30px'>
-                <p style='margin:0;padding:0;color:#575757;font-size:16px' id='selected_expert_name'> <strong>Your expert:</strong>James McNaught</p>
-                <div style='padding:20px 0 0 20px;float:left'>
-                  <a href="#find_reviewer" id="change_reviewer_button" style='color:#429e9d'> Choose different expert...</a>
-                </div>
-              </div>
-            </div>
-            <div id='find_reviewer_wrapper'>
-              <a href="#find_reviewer" id="find_reviewer_button" class="button" style='color:#fff' >FIND EXPERT REVIEWER</a>
-            </div>
 
-            <!--<span style='width:80px;float:left;color:#ddf8c6'>
-              Select<br /> Expert
-            </span>
-            <div class='experts bwWrapper personPopupTrigger' rel="james_mcnaught,a17bee64-8593-436e-a2f8-599a626370df" id='expert1'>
-              <%=image_tag "circle_expert1.jpg", :size=>'100x103'%> 
-            </div> 
-            <div class='experts bwWrapper personPopupTrigger' rel="stephen_grace,a17bee64-8593-436e-a2f8-599a626370df" id='expert2'>
-              <%=image_tag "circle_expert2.jpg", :size=>'100x100'%> 
-            </div> 
-            <div class='experts bwWrapper personPopupTrigger' rel="robin_mather,a17bee64-8593-436e-a2f8-599a626370df" id='expert3'>
-              <%=image_tag "circle_expert3.jpg", :size=>'100x103'%> 
-            </div> 
-            <div style='clear:both'></div>
-            <br />
-
-            <span style='width:80px; float:left;color:#ddf8c6'>
-              Feedback <br /> format 
-            </span>
-            <div class='format'>
-              <%=image_tag "microphone.png", :size=>'35x35'%> 
-              <br />
-              Audio 
-            </div> 
-            <div class='format'>
-              <%=image_tag "clipboard.png", :size=>'35x35'%>   
-              <br />
-              Image
-            </div> 
-            <div class='format'>
-              <%=image_tag "camera.png", :size=>'35x35'%> 
-              <br />
-              Video
-            </div> 
-            -->
-          </div> 
+      <div class='col-md-4'>
+        <div id='found_reviewer_wrapper' style='display:none'>
+          <%=image_tag "circle_expert1.jpg", :size=>'100x103',:style=>'float:left;',:id=>'selected_expert_image'%>
+          <div style='padding-top:30px'>
+            <p style='margin:0;padding:0;color:#575757;font-size:16px' id='selected_expert_name'> <strong>Your expert:</strong>James McNaught</p>
+            <div style='padding:20px 0 0 20px;float:left'>
+              <a href="#find_reviewer" id="change_reviewer_button" style='color:#429e9d'> Choose different expert...</a>
+            </div>
+          </div>
         </div>
-        <div style='clear:both'></div>
+        <div id='find_reviewer_wrapper'>
+          <a href="#find_reviewer" id="find_reviewer_button" class="btn btn-large"  >
+            <i class="fa fa-search fa-lg"></i> FIND EXPERT REVIEWER</a>
+        </div>
+      </div> 
+
+      <div class='col-md-4'> 
+        <div id='submit_wrapper'>
+          <a href="#submit_form" class="btn btn-large" onclick='getDetails();' rel="prettyPhoto" >
+            <i class="fa fa-chevron-circle-right fa-lg"></i>SUBMIT</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class='col-md-4'>
+        <div class='howitworks_text'>Give us some details</div>
+      </div>
+      <div class='col-md-4'>
         <div class='howitworks_text'>Choose your expert designer </div>
       </div>
-      <div class='steps' style='margin-left:10px'> 
-        <div class='preview'>
-          <div id='submit_wrapper'>
-            <a href="#submit_form" class="button" onclick='getDetails();' rel="prettyPhoto" style='color:#fff'>SUBMIT</a>
-          </div>
-        </div>
-        <div style='clear:both'></div>
+      <div class='col-md-4'>
         <div class='howitworks_text'>Receive feedback fast!</div>
       </div>
     </div>
-
-
-    <!--
-    <div class="col-sm-6">
-      <div class="row boxFeature">
-        <div class="col-xs-3">
-          <i class="icon-heart iconBig"></i>
-        </div>
-        <div class="col-xs-9">
-          <h2>Clean design</h2>
-          <p>Elegant layouts that help you organize your content in the best way</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="row boxFeature">
-        <div class="col-xs-3">
-          <i class="icon-plane-outline  iconBig"></i>
-        </div>
-        <div class="col-xs-9">
-          <h2>HTML5 & CSS3</h2>
-          <p>Built with modern technologies like HTML5 and CSS3, SEO optimised</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="row boxFeature">
-        <div class="col-xs-3">
-          <i class="icon-resize-full-outline iconBig"></i>
-        </div>
-        <div class="col-xs-9">
-          <h2>Responsive design</h2>
-          <p>Compatible with various desktop, tablet, and mobile devices.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="row boxFeature">
-        <div class="col-xs-3">
-          <i class="icon-edit iconBig"></i>
-        </div>
-        <div class="col-xs-9">
-          <h2>Easy Customization</h2>
-          <p>Clear code and documentation, base on Bootstrap 3</p>
-        </div>
-      </div>
-    </div>
-    -->
   </div>
 </div>
-</section>
-<!-- services --> 
 
+
+</section>
 
 <div id="paralaxSlice1" data-stellar-background-ratio="0.5">
   <div class="maskParent">
     <div class="paralaxMask"></div>
     <div class="paralaxText container">
-      <i class="icon-megaphone "></i>
       <blockquote class="bigTitle" id="quotes">Being a famous designer<br/>is like being a famous dentist<br/><small>NOREEN MORIOKA</small></blockquote>
     </div>
   </div>
@@ -700,7 +541,7 @@
   </div>
   </section>
 
-<!--
+  <!--
   <div id="paralaxSlice3" data-stellar-background-ratio="0.5">
     <div class="maskParent">
       <div class="paralaxMask"></div>
@@ -710,7 +551,7 @@
       </div>
     </div>
   </div>
--->
+  -->
   <section class="slice" id="team">
   <div class="container">
     <div class="row">
@@ -891,12 +732,12 @@
     <div class="col-sm-12">
       <h1 class="title" style='color:#fff'>Contact us</h1>
     </div>
-<% if false %>
-    <div class="col-sm-12">
-      <div id="mapWrapper" class="mb30"></div>
-    </div>
-<% end %>
-<!--
+    <% if false %>
+      <div class="col-sm-12">
+        <div id="mapWrapper" class="mb30"></div>
+      </div>
+    <% end %>
+    <!--
     <div class="col-sm-4">
       <h4>Address:</h4>
       <address>
@@ -909,64 +750,68 @@
         615.987.1234<br/>
       </address>
     </div>
--->
-  <div class="col-md-12 text-center">
-  <%= form_tag("/front/contact", method: "post", :multipart => true) do %>
-    <p class="white">
-    <%= radio_button_tag 'classification', "helper", true%> <label for='classification_helper'>I'm an expert, sign me up!</label>
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> <label for='classification_general'>Contact</label>
-    </p>
-    <div id="fieldss">
-      <div class="row_fluid">
-        <p><%= text_field_tag :name, "Name",{:class=>"field "}%></p>
-        <p><%= text_field_tag :contact_email, "Email",{:class=>"field "} %></p>
-        <input type='hidden' id='expert_name' value=""></input>
-        </div>
-      </div>
-      <div class="row_fluid">
-        <div style='margin: 0 auto;padding-top:10px'>
-          <div style='display:inline-block;padding:15px'>
-            <%= text_area_tag :expert_message, "A link to your portfolio and anything else we need to know",{:class=>"field area area-mragin classification_helper_field contact_form_field"} %>
-            <%# text_area_tag :message, "Other things we need to know",{:class=>"field area area-mragin classification_helpee_field contact_form_field"} %>
-            <%= text_area_tag :contact_message, "Message",{:class=>"field area area-mragin classification_general_field classification_general_field contact_form_field",:style=>'display:none'} %>
+    -->
+    <div class="col-md-12 text-center">
+      <%= form_tag("/front/contact", method: "post", :multipart => true) do %>
+        <p class="white">
+        <%= radio_button_tag 'classification', "helper", true%> <label for='classification_helper'>I'm an expert, sign me up!</label>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= radio_button_tag 'classification', "general"%> <label for='classification_general'>Contact</label>
+        </p>
+        <div id="fieldss">
+          <div class="row_fluid">
+            <p><%= text_field_tag :name, "Name",{:class=>"field "}%></p>
+            <p><%= text_field_tag :contact_email, "Email",{:class=>"field "} %></p>
+            <input type='hidden' id='expert_name' value=""></input>
           </div>
-          <p><%= submit_tag "I'M AN EXPERT", :id=>"submit_button", :class=>'button'%></p>
+        </div>
+        <div class="row_fluid">
+          <div style='margin: 0 auto;padding-top:10px'>
+            <div style='display:inline-block;padding:15px'>
+              <%= text_area_tag :expert_message, "A link to your portfolio and anything else we need to know",{:class=>"field area area-mragin classification_helper_field contact_form_field"} %>
+              <%# text_area_tag :message, "Other things we need to know",{:class=>"field area area-mragin classification_helpee_field contact_form_field"} %>
+              <%= text_area_tag :contact_message, "Message",{:class=>"field area area-mragin classification_general_field classification_general_field contact_form_field",:style=>'display:none'} %>
+            </div>
+            <p>
+            <button type="submit" class="btn btn-lg">
+              <i class="fa fa-chevron-circle-right fa-lg"></i>SEND MESSAGE</i> 
+          </button>
+          </p>
         </div>
       </div>
     </div>
   <% end %>
-  </div>
+</div>
 
 
 <!--
-    <form method="post" action="js-plugin/neko-contact-ajax-plugin/php/form-handler.php" id="contactfrm" role="form">
-      <div class="col-sm-4"> 
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" name="name" id="name" placeholder="Enter name"  title="Please enter your name (at least 2 characters)"/>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address"/>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone</label>
-          <input name="phone" class="form-control required digits" type="tel" id="phone" size="30" value="" placeholder="Enter email phone" title="Please enter a valid phone number (at least 10 characters)">
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="form-group">
-          <label for="comments">Comments</label>
-          <textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message." title="Please enter your message (at least 10 characters)"></textarea>
-        </div>
-      </div>                        
-      <div class="col-md-8 col-md-offset-4">
-        <div class="result"></div>
-        <button name="submit" type="submit" class="btn btn-lg" id="submit"> Submit</button>
-      </div>
-    </form>
--->
+<form method="post" action="js-plugin/neko-contact-ajax-plugin/php/form-handler.php" id="contactfrm" role="form">
+  <div class="col-sm-4"> 
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" name="name" id="name" placeholder="Enter name"  title="Please enter your name (at least 2 characters)"/>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address"/>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input name="phone" class="form-control required digits" type="tel" id="phone" size="30" value="" placeholder="Enter email phone" title="Please enter a valid phone number (at least 10 characters)">
+    </div>
   </div>
+  <div class="col-sm-4">
+    <div class="form-group">
+      <label for="comments">Comments</label>
+      <textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message." title="Please enter your message (at least 10 characters)"></textarea>
+    </div>
+  </div>                        
+  <div class="col-md-8 col-md-offset-4">
+    <div class="result"></div>
+    <button name="submit" type="submit" class="btn btn-lg" id="submit"> Submit</button>
+  </div>
+</form>
+-->
+</div>
 </div>
 </section>
 
@@ -1009,13 +854,13 @@
     </div>
     <div class="col-sm-6">
       <ul class="socialNetwork pull-right">
-<!--
+        <li><a href="https://twitter.com/inputfarm" class="tips" title="" data-original-title="Input Farm on Twitter" target="_blank"><i class="fa fa-twitter fa-lg iconRounded"></i></a></li>
+        <!--
         <li><a href="#" class="tips" title="" data-original-title="follow me on Facebook"><i class="icon-facebook-1 iconRounded"></i></a></li>
-        <li><a href="https://twitter.com/LIttleNeko1" class="tips" title="" data-original-title="follow me on Twitter" target="_blank"><i class="icon-twitter-bird iconRounded"></i></a></li>
         <li><a href="#" class="tips" title="" data-original-title="follow me on Google+"><i class="icon-gplus-1 iconRounded"></i></a></li>
         <li><a href="#" class="tips" title="" data-original-title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
         <li><a href="#" class="tips" title="" data-original-title="follow me on Dribble"><i class="icon-dribbble iconRounded"></i></a></li>
--->
+        -->
       </ul>     
     </div>
   </div>
@@ -1025,103 +870,112 @@
           </div>
           <!-- global wrapper -->
 
-<div id='find_reviewer' style='display:none;height:450px'>
-  <div style='height:450px'>
-    <div class='expert_header'>
-      <div class='expert_name' style='float:left;width:90px;padding:10px'>
-        <%=image_tag "circle_expert1_gray.jpg", :size=>'70x71', :id=>'ep_image'%>
-      </div>
-      <div class='expert_name' style='float:left;width:160px;padding-top:20px;'>
-        <p style='font-size:18px;color:#fff;padding:0;margin:0' id='ep_name'>James McNaught</p>
-        <br />
-        <p style='padding:0;margin:0;font-size:11px;color:#fff' id='ep_city'>Adelaide, Australia</p>
-      </div>
-      <div class='divider'></div>
-      <div class='expert_details' style='float:left;padding:20px;padding-left:30px;font-size:12px;line-height:16px;' id='ep_profile'>
-        4 reviews <br />
-        32 hr avg. response time <br />
-        www.jamesmcnaught.co.uk
-      </div>
-      <div class='expert_details' style='float:left;text-align:right;padding:20px;padding-left:120px;font-size:12px;line-height:16px;padding-top:30px;padding-right:43px'>
-        <%= submit_tag "SELECT THIS EXPERT", :id=>"submit_button", :class=>'button', :onclick=>'selected_expert=view_expert;selectExpert();$.prettyPhoto.close()'%>
-      </div>
-      <div class='expert_details' style='float:right;text-align:right;font-size:10px;position:absolute;right:24px;top:5px;letter-spacing:3px;'>
-        [ <a href='#' onclick='return changeExpert(-1)'>PREV</a> | <a href='#' onclick='return changeExpert(1)'>NEXT</a> ] 
-      </div>
-    </div>
-    <div style="clear:both"></div>
-    <div class='expert_body'>
-      <div class='expert_body_left'>
-        <p class='expert_subtitle' style='margin:0;color:#6e6e6e'>About </p>
-        <hr class='light_grey'>
-        <p id='ep_about'>
-        I'm a graphic design graduate with international experience, industry recognition, and a borderline unhealthy interest in all things typographic. That said, my love of solid kerning, leading and alignment doesn't mean I don't get my hands dirty with the creative side of things. 
-        </p>
-        <p class='expert_subtitle' style='margin:0'>Work </p>
-        <hr class='light_grey'>
-        <p id='ep_portfolio' style='margin:0;padding:0'>
-        </p>
-      </div>
-      <div class='expert_body_right'>
-        <p class='expert_subtitle' style='margin:0'>Feedback </p>
-        <hr class='light_grey'>
-        <div id='ep_feedbacks' style='height:230px;overflow-y:auto'>
-          <div class='ep_feedback'>
-            <!--            <div style='float:right'>
-              "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."
+          <div id='find_reviewer' style='display:none;height:450px'>
+            <div style='height:450px'>
+              <div class='expert_header'>
+                <div class='expert_name' style='float:left;width:90px;padding:10px'>
+                  <%=image_tag "circle_expert1_gray.jpg", :size=>'70x71', :id=>'ep_image'%>
+                </div>
+                <div class='expert_name' style='float:left;width:160px;padding-top:20px;'>
+                  <p style='font-size:18px;color:#fff;padding:0;margin:0' id='ep_name'>James McNaught</p>
+                  <br />
+                  <p style='padding:0;margin:0;font-size:11px;color:#fff' id='ep_city'>Adelaide, Australia</p>
+                </div>
+                <div class='divider'></div>
+                <div class='expert_details' style='float:left;padding:20px;padding-left:30px;font-size:12px;line-height:16px;' id='ep_profile'>
+                  4 reviews <br />
+                  32 hr avg. response time <br />
+                  www.jamesmcnaught.co.uk
+                </div>
+                <div class='expert_details' style='float:left;text-align:right;padding:20px;padding-left:120px;font-size:12px;line-height:16px;padding-top:30px;padding-right:43px'>
+                  <%= submit_tag "SELECT THIS EXPERT", :id=>"submit_button", :class=>'button', :onclick=>'selected_expert=view_expert;selectExpert();$.prettyPhoto.close()'%>
+                </div>
+                <div class='expert_details' style='float:right;text-align:right;font-size:10px;position:absolute;right:24px;top:5px;letter-spacing:3px;'>
+                  [ <a href='#' onclick='return changeExpert(-1)'>PREV</a> | <a href='#' onclick='return changeExpert(1)'>NEXT</a> ] 
+                </div>
+              </div>
+              <div style="clear:both"></div>
+              <div class='expert_body'>
+                <div class='expert_body_left'>
+                  <p class='expert_subtitle' style='margin:0;color:#6e6e6e'>About </p>
+                  <hr class='light_grey'>
+                  <p id='ep_about'>
+                  I'm a graphic design graduate with international experience, industry recognition, and a borderline unhealthy interest in all things typographic. That said, my love of solid kerning, leading and alignment doesn't mean I don't get my hands dirty with the creative side of things. 
+                  </p>
+                  <p class='expert_subtitle' style='margin:0'>Work </p>
+                  <hr class='light_grey'>
+                  <p id='ep_portfolio' style='margin:0;padding:0'>
+                  </p>
+                </div>
+                <div class='expert_body_right'>
+                  <p class='expert_subtitle' style='margin:0'>Feedback </p>
+                  <hr class='light_grey'>
+                  <div id='ep_feedbacks' style='height:230px;overflow-y:auto'>
+                    <div class='ep_feedback'>
+                      <!--            <div style='float:right'>
+                        "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."
+                      </div>
+                      <div style='float:right'>
+                        - John Hall of <em>Sport-o-mate</em>
+                      </div>
+                      -->
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div style='float:right'>
-              - John Hall of <em>Sport-o-mate</em>
+          </div>
+          <div id='submit_form' style='display:none;height:340px'>
+            <div style='height:330px' id='form_wrapper'>
+              <div id='submit_howitworks'> 
+                Your request will be sent to your choosen expert designer.
+                <br /><br />
+                They have 24 hours to accept and another 48 hours to complete it.
+              </div>
+              <div style='padding:10px'>
+
+                <%=form_tag "/task/create", :id=>'save-task'%>
+                <%=hidden_field_tag :sf_site%>
+                <%=hidden_field_tag :sf_email%>
+
+                <div class='sf'><span class='sf_label'>Your site</span> <span id='sf_site_span'></span></div>
+                <div class='sf'><span class='sf_label'>Your email address</span> <span id='sf_email_span'></span></div>
+                <div class='sf'><span class='sf_label'>Your expert</span> <span id='sf_expert'></span> </div>
+                <div class='sf' style='position:relative;display:inline-block;padding-bottom:20px'><span class='sf_label'>Notes to reviewer</span> 
+                  <span id='sf_notes_span' style='position:absolute;top:0;left:215px'> <textarea id='sf_notes' cols='30' rows=2 style='width:220px'></textarea></span> 
+                </div>
+                <br>
+                <div class='sf' style='background-color:#FFFDBC;border:solid 1px #E7FFBC'><span class='sf_label'>Price</span><strong>$75</strong></div>
+                <div style='text-align:center' id='submit-task-wrapper'><br><br><a href="#b" id='submit-task' class='button' onclick="$('#save-task').submit();"> Get review! </a></div>
+              </form>
+
+
+              <div id='paypal' class='sf' style='display:none;'>
+                <div style='float:left'>
+                  <p>Thanks now time to pay :)</p>
+                </div>
+                <!--https://developer.paypal.com/webapps/developer/docs/classic/paypal-payments-standard/integration-guide/Appx_websitestandard_htmlvariables/#id08A6HF080O3-->
+                <div style='float:left'>
+                  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="info@inputfarm.com">
+                    <input type="hidden" name="lc" value="AU">
+                    <input type="hidden" name="amount" value="75.00">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="button_subtype" value="services">
+                    <input type="hidden" name="no_note" value="0">
+                    <input type="hidden" name="cn" value="Add special instructions to the seller:">
+                    <input type="hidden" name="no_shipping" value="2">
+                    <input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynowCC_LG.gif:NonHosted">
+                    <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
+                    <input type="hidden" id="paypal_item_number" name="item_number" value="">
+                    <input type="hidden" name="item_name" value="Input Farm Consultation">
+                  </form>
+                </div>
+              </div>
             </div>
-            -->
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-<div id='submit_form' style='display:none;height:340px'>
-  <div style='height:330px' id='form_wrapper'>
-    <div id='submit_howitworks'> 
-      Your request will be sent to your choosen expert designer.
-      <br /><br />
-      They have 24 hours to accept and another 48 hours to complete it.
-    </div>
-    <div style='padding:10px'>
 
-      <%=form_tag "/task/create", :id=>'save-task'%>
-      <%=hidden_field_tag :sf_site%>
-      <%=hidden_field_tag :sf_email%>
-
-      <div class='sf'><span class='sf_label'>Your site</span> <span id='sf_site_span'></span></div>
-      <div class='sf'><span class='sf_label'>Your email address</span> <span id='sf_email_span'></span></div>
-      <div class='sf'><span class='sf_label'>Your expert</span> <span id='sf_expert'></span> </div>
-      <div class='sf' style='position:relative;display:inline-block;padding-bottom:20px'><span class='sf_label'>Notes to reviewer</span> 
-        <span id='sf_notes_span' style='position:absolute;top:0;left:215px'> <textarea id='sf_notes' cols='30' rows=2 style='width:220px'></textarea></span> 
-      </div>
-      <br>
-      <div class='sf' style='background-color:#FFFDBC;border:solid 1px #E7FFBC'><span class='sf_label'>Price</span><strong>$75</strong></div>
-      <div style='text-align:center' id='submit-task-wrapper'><br><br><a href="#b" id='submit-task' class='button' onclick="$('#save-task').submit();"> Get review! </a></div>
-    </form>
-
-
-    <div id='paypal' class='sf' style='display:none;'>
-      <div style='float:left'>
-        <p>Thanks now time to pay :)</p>
-      </div>
-      <!--https://developer.paypal.com/webapps/developer/docs/classic/paypal-payments-standard/integration-guide/Appx_websitestandard_htmlvariables/#id08A6HF080O3-->
-      <div style='float:left'>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-          <input type="hidden" name="cmd" value="_xclick">
-          <input type="hidden" name="business" value="info@inputfarm.com">
-          <input type="hidden" name="lc" value="AU">
-          <input type="hidden" name="amount" value="75.00">
-          <input type="hidden" name="currency_code" value="USD">
-          <input type="hidden" name="button_subtype" value="services">
-          <input type="hidden" name="no_note" value="0">
-          <input type="hidden" name="cn" value="Add special instructions to the seller:">
-          <input type="hidden" name="no_shipping" value="2">
-          <input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynowCC_LG.gif:NonHosted">
-          <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
-          <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
-          <input type="hidden" id="paypal_item_number" name="item_number" value="">

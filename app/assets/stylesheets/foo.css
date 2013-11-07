@@ -8,7 +8,6 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require custom
  *= require_self
  * require_tree .
  *= require prettyphoto-rails
@@ -19,8 +18,11 @@
  *= require js-plugin/pageSlide/jquery.pageslide
  *= require js-plugin/owl.carousel/owl-carousel/owl.carousel
  *= require js-plugin/owl.carousel/owl-carousel/owl.theme
- *= require font-icons/custom-icons/css/custom-icons
- *= require font-icons/custom-icons/css/custom-icons-ie7
+
+ * NOW USING FONT AWESOME
+ * require font-icons/custom-icons/css/custom-icons
+ * require font-icons/custom-icons/css/custom-icons-ie7
  *= require bootstrap/css/layout
  *= require bootstrap/css/colors
+ *= require custom
  */
