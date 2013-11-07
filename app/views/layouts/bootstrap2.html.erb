@@ -50,6 +50,13 @@
  
   </head>
   <body data-spy="scroll" data-target="#scrollTarget" data-offset="150">
+        <% if flash[:notice].present? %>
+  <div class="container">
+    <div class="row">
+          <p id='flash_notice' class='flash_notice'> <%=flash[:notice]%></p>
+</div></div>
+        <% end %>
+ 
   <!-- onload="document.body.style.opacity='1'">-->
      <%=yield%> 
 

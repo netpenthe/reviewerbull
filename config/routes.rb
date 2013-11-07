@@ -16,7 +16,7 @@ Dwarfmongoose::Application.routes.draw do
 
   match '/expert_profiles_js' => 'front#expert_profiles_js', :as=>:expert_profiles_js
 
-  root :to => 'front#index'	
+  root :to => 'front#bootstrap2'	
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users

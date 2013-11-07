@@ -221,8 +221,10 @@ hr.light_grey {
   margin: 0;
 }
 .flash_notice {
-  color: hotpink;
-  font-weight:bold;
+text-align: center;
+background-color: hotpink;
+color: #222;
+padding: 5px;
 }
 
 .expert_details a {
