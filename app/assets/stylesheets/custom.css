@@ -10,16 +10,14 @@
 
 .button {
   text-decoration: none;
-  background-color:#55b5b4;
+  background-color:#5A9236;
   color:#fff;
   font-size:14px;
   padding:10px 22px;
 /*  border-radius:2px;*/
-  border:1px solid #286968;
-  text-shadow:0px 1px 1px rgba(0, 0, 0, 0.4);
+  border:2px solid #fff;
   /*box-shadow:0px 1px 1px rgba(0, 0, 0, 0.2);*/
   font-family: 'Roboto';
-  font-weight:800;
   text-transform: uppercase;
   cursor:hand;
   cursor:pointer;
@@ -31,11 +29,13 @@
   transition: all 0.1s ease-in-out;
 }
   .button:hover {
-    background-color:#429e9d;
+    background-color:#fff;
+    color:#5A9236;
+  border:2px solid #5a9236;
     text-decoration:none;
   }
   .button:active {
-    background-color:#286968;
+    background-color:#fff;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 
@@ -154,7 +154,7 @@ border-top: 1px solid #cdcdcd;
 
 
 .expert_header {
-  background-color: #ababab;
+  background-color: #5A9236;
   height:100px;
   color: #fff;
 }
