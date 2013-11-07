@@ -314,3 +314,14 @@ btn:focus {
 .btn.active {
   background-image: none;
 }
+
+.bigTitle {
+  background: rgba(0,0,0,0.3)
+}
+
+#flexHome h1 {
+  color: #636363;
+}
+#flexHome h2 {
+  color: #858585;
+}
