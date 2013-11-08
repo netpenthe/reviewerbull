@@ -46,4 +46,12 @@ ActiveAdmin.register User do
         end 
    end
 
+    form do |f|
+      f.inputs "User" do
+        f.input :email, :input_html => { :readonly => true } 
+        f.input :name
+      end
+      f.actions
+    end
+
 end
