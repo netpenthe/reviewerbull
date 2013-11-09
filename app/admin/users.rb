@@ -50,6 +50,7 @@ ActiveAdmin.register User do
       f.inputs "User" do
         f.input :email, :input_html => { :readonly => true } 
         f.input :name
+	f.input :created_at, :as=>:text, :input_html => { :readonly => true, :rows=>1 }
       end
       f.actions
     end
