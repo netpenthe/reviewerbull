@@ -873,10 +873,11 @@
                 <div class='expert_name' style='float:left;width:90px;padding:10px'>
                   <%=image_tag "circle_expert1_gray.jpg", :size=>'70x71', :id=>'ep_image'%>
                 </div>
-                <div class='expert_name' style='float:left;width:160px;padding-top:20px;'>
+                <div class='expert_name' style='float:left;width:200px;padding-top:20px;'>
                   <p style='font-size:18px;color:#fff;padding:0;margin:0' id='ep_name'>James McNaught</p>
                   <br />
-                  <p style='padding:0;margin:0;font-size:11px;color:#fff' id='ep_city'>Adelaide, Australia</p>
+                  <p style='padding-bottom:5px;margin:0;font-size:12px;color:#fff' id='ep_specialty'>Adelaide, Australia</p>
+                  <p style='padding:0;margin:0;font-size:12px;color:#fff' id='ep_city'>Adelaide, Australia</p>
                 </div>
                 <div class='divider'></div>
                 <div class='expert_details' style='float:left;padding:20px;padding-left:30px;font-size:12px;line-height:16px;' id='ep_profile'>
@@ -884,7 +885,7 @@
                   32 hr avg. response time <br />
                   www.jamesmcnaught.co.uk
                 </div>
-                <div class='expert_details' style='float:left;text-align:right;padding:20px;padding-left:120px;font-size:12px;line-height:16px;padding-top:30px;padding-right:43px'>
+                <div class='expert_details' style='float:left;text-align:right;padding:20px;padding-left:90px;font-size:12px;line-height:16px;padding-top:30px;padding-right:43px'>
                   <%= submit_tag "SELECT THIS EXPERT", :id=>"submit_button", :class=>'button', :onclick=>'selected_expert=view_expert;selectExpert();$.prettyPhoto.close()'%>
                 </div>
                 <div class='expert_details' style='float:right;text-align:right;font-size:10px;position:absolute;right:24px;top:5px;letter-spacing:3px;'>
@@ -907,7 +908,7 @@
                 <div class='expert_body_right'>
                   <p class='expert_subtitle' style='margin:0'>Feedback </p>
                   <hr class='light_grey'>
-                  <div id='ep_feedbacks' style='height:230px;overflow-y:auto'>
+                  <div id='ep_feedbacks'>
                     <div class='ep_feedback'>
                       <!--            <div style='float:right'>
                         "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."
@@ -918,12 +919,14 @@
                       -->
                     </div>
                   </div>
+                  <hr class='light_grey'>
+                  <div id='ep_work_statement'> </div>
                 </div>
               </div>
             </div>
           </div>
-          <div id='submit_form' style='display:none;height:340px'>
-            <div style='height:330px' id='form_wrapper'>
+          <div id='submit_form' style='display:none;height:440px'>
+            <div style='height:430px' id='form_wrapper'>
               <div id='submit_howitworks'> 
                 Your request will be sent to your choosen expert designer.
                 <br /><br />
@@ -938,8 +941,8 @@
                 <div class='sf'><span class='sf_label'>Your site</span> <span id='sf_site_span'></span></div>
                 <div class='sf'><span class='sf_label'>Your email address</span> <span id='sf_email_span'></span></div>
                 <div class='sf'><span class='sf_label'>Your expert</span> <span id='sf_expert'></span> </div>
-                <div class='sf' style='position:relative;display:inline-block;padding-bottom:20px'><span class='sf_label'>Notes to reviewer</span> 
-                  <span id='sf_notes_span' style='position:absolute;top:0;left:215px'> <textarea id='sf_notes' cols='30' rows=2 style='width:220px'></textarea></span> 
+                <div class='sf' style='display:inline-block;padding-bottom:20px'><span class='sf_label'>Notes to reviewer</span> 
+                  <span id='sf_notes_span' style='top:0;left:215px'> <textarea id='sf_notes' cols='40' rows=8 style='font-size:14px;width:220px' placeholder="E.g. This website is aimed at B2B customers. Please comment on the colors used."></textarea></span> 
                 </div>
                 <br>
                 <div class='sf' style='background-color:#FFFDBC;border:solid 1px #E7FFBC'><span class='sf_label'>Price</span><strong>$75</strong></div>
@@ -949,7 +952,7 @@
 
               <div id='paypal' class='sf' style='display:none;'>
                 <div style='float:left'>
-                  <p>Thanks now time to pay :)</p>
+                  <p>Please pay by credit card or PayPal:</p>
                 </div>
                 <!--https://developer.paypal.com/webapps/developer/docs/classic/paypal-payments-standard/integration-guide/Appx_websitestandard_htmlvariables/#id08A6HF080O3-->
                 <div style='float:left'>

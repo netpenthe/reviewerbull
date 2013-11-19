@@ -186,7 +186,7 @@ width:200px;
 
 .divider{
     position:absolute;
-    left:270px;
+    left:310px;
     top:10px;
     height:80px;
     border-left:1px solid #efefef;
@@ -203,6 +203,16 @@ width:200px;
 .ep_portfolio_image {
   border: 2px solid #b4b4b4;
 }
+
+#ep_feedbacks {
+  height: 224px;
+  overflow-y: auto;
+}
+#ep_work_statement {
+  height: 34px;
+  overflow: hidden;
+}
+
 .submit_titles {
   color: #393c3d;
 }

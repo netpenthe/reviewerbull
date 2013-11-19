@@ -1,156 +1,7 @@
-//= require prettyphoto-rails
-//= require jquery.fileupload/vendor/jquery.ui.widget
-//= require jquery.fileupload/jquery.iframe-transport
-//= require jquery.fileupload/jquery.fileupload
-//= require jquery.fileupload/jquery.fileupload-process
-//= require jquery.fileupload/jquery.fileupload-image
-//= require jquery.fileupload/jquery.fileupload-validate
-//= require jquery.fileupload/jquery.fileupload-ui
-//= require jquery.BlackAndWhite
-
-/*
-   $('#classification_general').click(function(){
-   $('#contact').css('height','440px');
-   fields = " \
-   <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
-   <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
-   <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
-   <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /><br /></p>";
-
-   $('#fieldss').html(fields);
-   $(function(){
-   $(':input').focus(function(){
-   if (!this.clicked) {
-   $(this).attr('value', '');
-   $(this).val('');    
-   this.clicked = true;
-   }
-   }); 
-   });
-   });
-
-   $('#classification_helpee').click(function(){
-   $('#contact').css('height','740px');
-   fields = " \
-   <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
-   <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
-   <p><input class='field' id='url' name='url' type='text' value='Site URL'></p> \
-   <p><input id='upload' multiple='multiple' name='upload[]' type='file'></p> \
-   <p><textarea class='field area' id='fivethings' name='fivethings'>Five main things to focus on</textarea></p> \
-   <p><textarea class='field area' id='message' name='message'>Other things we need to know</textarea></p> \
-   <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /><br /></p>";
-
-   $('#fieldss').html(fields);
-
-   $(function(){
-   $(':input').focus(function(){
-   if (!this.clicked) {
-   $(this).attr('value', '');
-   $(this).val('');    
-   this.clicked = true;
-   }
-   }); 
-   });
-   });
-
-   $('#classification_helper').click(function(){
-   $('#contact').css('height','520px');
-
-   fields = " \
-   <p><input class='field' id='name' name='name' type='text' value='Name' /></p> \
-   <p><input class='field' id='email' name='email' type='text' value='Email' /></p> \
-   <p><input class='field' id='url' name='url' type='text' value='Portfolio URL'></p> \
-   <p><textarea class='field area' id='message' name='message'>Message</textarea></p> \
-   <p><input name='commit' src='assets/submit.png' style='padding-left:280px' type='image' value='' /><br /></p>";
-
-   $('#fieldss').html(fields);
-
-   $(function(){
-   $(':input').focus(function(){
-   if (!this.clicked) {
-   $(this).attr('value', '');
-   $(this).val('');    
-   this.clicked = true;
-   }
-   }); 
-   });
-   });
-   */
 $('#classification_general, #classification_helpee, #classification_helper').click(function() {
     $('.contact_form_field').hide();
     $('.'+$(this).attr("id")+'_field').show().fadeOut().fadeIn();
-    switch ($(this).attr("id")) 
-    {
-    case "classification_general":
-    $('#submit_button').val("Send Message");
-    break; 
-    case "classification_helpee":
-    $('#submit_button').val("Get Reviewed");
-    break; 
-    case "classification_helper":
-    $('#submit_button').val("I'm an Expert");
-    break; 
-    }
-    });
-
-$('#expert_left').click(function() {
-
-    left = "<div id='profile'> \
-    <h2>MATTHEW B</h2> \
-    It has been placed here solely to demonstrate the look and feel of finished, typeset text. \
-    Only for show. He who searches for meaning here will be sorely disappointed.  \
-    </div> \
-    \
-    <div id='clients'> \
-    <h3 class='title'>CLIENTS</h3> \
-    news.com.au<br> \
-    digg.com \
-    </div>\
-    \
-    <div id='specialties'>\
-    <h3 class='title'>SPECIALTIES</h3>\
-    UX design\
-    Colours<br>\
-    Computers<br>\
-    </div>\
-    \
-    <div style='clear:both'></div>\
-    ";
-
-$('#right_expert').html(left);
-
-return false;
 });
-
-
-$('#expert_right').click(function() {
-
-    right = "<div id='profile'> \
-    <h2>Boomer</h2> \
-    This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. \
-    Only for show. He who searches for meaning here will be sorely disappointed.  \
-    </div> \
-    \
-    <div id='clients'> \
-    <h3 class='title'>CLIENTS</h3> \
-    theage.com.au<br> \
-    ebay.com \
-    </div>\
-    \
-    <div id='specialties'>\
-    <h3 class='title'>SPECIALTIES</h3>\
-    UX design\
-    Colours<br>\
-    Computers<br>\
-    </div>\
-    \
-    <div style='clear:both'></div>";
-
-$('#right_expert').html(right);
-
-return false;
-}); 
-
 
 function resize_bg() {
   var height = $(window).height() - 70;
@@ -165,10 +16,6 @@ function resize_bg() {
     $('#big_image_div').css('background-size', '100% auto');
   }
     
-  // $('.usebutton').css('left', -1*width*0.75*0.5); 
-  //$('.usebutton').css('top', height*0.75); 
-  //$('.usebutton').css('left', 515/1200 * 1200 * -1 + 260)
-
   // the text + button is about 300px
   var topTxtPadding = $('#big_image_div').height();
   if (topTxtPadding < 600) {
@@ -194,11 +41,13 @@ $('.field').focus(function(){
 }); 
 
 /* control the image rotation..*/
+/*
 var images = [{'img':'blue_shirt.jpg','txt':'#fff'}, {'img':'brunette.jpg','txt':'#222'}, {'img':'overhead.jpg','txt':'#efefef'}, {'img':'green_chairs.jpg','txt':'#333'} ];
 function preload(sources)
 {
   jQuery.each(sources, function(i,source) { jQuery.get("/assets/main_bg/"+source['img']); });
 }
+*/
 var idx = 0;
 function nextImage() {
   idx = (idx == (images.length -1)) ? 0 : idx + 1; 
@@ -392,14 +241,16 @@ function showExpert(num) {
   var ep = expert_profiles[num];
   $('#pp_full_res #ep_name, #ep_name').html(ep.name);
   $('#pp_full_res #ep_city, #ep_city').html(ep.city);
-  $('#pp_full_res #ep_profile, #ep_profile').html(ep.num_of_reviews + " reviews<br />" + ep.response_time + " avg. response time<br /><a href='http://" + ep.main_url +"' target='_blank' class='dark_green_hover'>http://"+ep.main_url+"</a>");
+  $('#pp_full_res #ep_specialty, #ep_specialty').html(ep.specialty);
+  $('#pp_full_res #ep_profile, #ep_profile').html(ep.num_of_reviews + " reviews<br />" + ep.response_time + " hr avg. response time<br /><a href='http://" + ep.main_url +"' target='_blank' class='dark_green_hover'>http://"+ep.main_url+"</a>");
+  $('#pp_full_res #ep_work_statement, #ep_work_statement').html(ep.work_statement);
   $('#pp_full_res #ep_about, #ep_about').html(ep.about);
-  $('#pp_full_res #ep_image, #ep_image').attr("src", "/assets/experts/"+ep.id+"/"+ep.id+".jpg");
+  $('#pp_full_res #ep_image, #ep_image').attr("src", "/assets/experts/"+ep.id+"/"+ep.id+".jpg#"+Math.random());
 
   $('#pp_full_res #ep_feedbacks, #ep_feedbacks').empty();
   for (var i=0; i < ep.feedbacks.length; i++) { 
     var fb = ep.feedbacks[i];
-    var e = $("<div class='ep_feedback'><div style='float:right'>"+fb.txt+"</div><div style='float:right'>- "+fb.from+" of <em>"+fb.site+"</em><br /><br></div><br /><br /></div>");
+    var e = $("<div class='ep_feedback'><div style='float:right;width:100%'>"+fb.txt+"</div><div style='float:right'>- "+fb.from+" of <em>"+fb.site+"</em><br /><br></div><br /><br /></div>");
     e.appendTo($('#pp_full_res #ep_feedbacks, #ep_feedbacks'));
   }
 
@@ -525,7 +376,7 @@ $('#expert3').click(function(){
     $('#expert_name').val("Robin Mather");
 });
 
-function ExpertProfile(id, name, city, num_of_reviews, main_url, about, response_time, portfolio1, portfolio2, portfolio3 ) {
+function ExpertProfile(id, name, city, num_of_reviews, main_url, about, response_time, work_statement, specialty) {
     this.id = id;
     this.name = name;
     this.city = city;
@@ -533,6 +384,8 @@ function ExpertProfile(id, name, city, num_of_reviews, main_url, about, response
     this.main_url = main_url;
     this.about = about;
     this.response_time = response_time;
+    this.work_statement =  work_statement || "";
+    this.specialty = specialty || "";
     this.portfolios = [];
     this.feedbacks = [];  
     this.foo = function() { // one function per User instance, can access 'name' variable
@@ -561,6 +414,8 @@ setTimeout(function(){randy = rotate(randy);},500);
 setInterval(function(){randy = rotate(randy);},20000);
 
 
+
+/* Fix the rotating text in the top header when window size changes*/
 $(document).ready(function() {
     fixFlexsliderHeight();
 });
@@ -586,3 +441,4 @@ function fixFlexsliderHeight() {
         $(this).find('ul.slides').css({'height' : sliderHeight});
     });
 }
+/*END  Fix the rotating text in the top header */

@@ -64,32 +64,50 @@
     <%= javascript_tag do %>
       //expert_profiles = '<%#= raw ExpertProfiles.to_json %>';
       var expert_profiles = [];
-      expert_profiles.push(new ExpertProfile(1,"James McNaught", "London, UK", 1, "www.jamesmcnaught.co.uk", "I'm a graphic design graduate with international experience, industry recognition, and a borderline unhealthy interest in all things typographic. That said, my love of solid kerning, leading and alignment doesn't mean I don't get my hands dirty with the creative side of things.", 32.3));
-      var ep = expert_profiles[0];
-      ep.feedbacks.push( new Feedback('Matt McKinlay','inputfarm.com', "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
-      ep.portfolios.push( new Portfolio('www.jamesmcnaught.co.uk', '/assets/logos/homepage_108x79.jpg', 'goog','tes') ); 
-      ep.portfolios.push( new Portfolio('www.behance.net/thinkingwithtype', '/assets/logos/behance_108x79.jpg', 'behance','tes') ); 
 
-
-      expert_profiles.push(new ExpertProfile(2,"Tom Watkins", "Lincoln, United Kingdom", 1, "www.tomanders.com", "I'm an innovative, creative designer at the forefront of digital trends. Working with companies around the world I've built up a wealth of valuable experience & design knowledge waiting to be shared.", 33.3));
-      ep = expert_profiles[1];
+      expert_profiles.push(new ExpertProfile(1,"Tom Watkins", "Lincoln, United Kingdom", 3, "www.tomanders.com", "I'm an innovative, creative designer at the forefront of digital trends. Working with companies around the world I've built up a wealth of valuable experience & design knowledge waiting to be shared.", 33.3, "Tom has nearly 5000 followers on behance and has sold thousands of design products on Creative Market","Web design, photography, branding"));
+      ep = expert_profiles[0];
       ep.feedbacks.push( new Feedback('David N','[hidden]', "Tom's feedback respected our current design and gave us a great idea on how we could use elements and fonts of our logo to create a more consistent look. I have spent countless hours looking at my site trying to improve it to the point where I couldn't tell good from bad. The fresh perspective certainly helped."));
+      ep.feedbacks.push( new Feedback('Christian','[hidden]',"Very interesting ideas that made some aspects clearer about my previous design choices and why they were not that good!"));
       ep.portfolios.push( new Portfolio('www.behance.net/tomanders', '/assets/logos/behance_108x79.jpg', 'Behance','tes') ); 
       ep.portfolios.push( new Portfolio('dribbble.com/TomAnders', '/assets/logos/dribbble_108x79.jpg', 'Dribbble','tes') ); 
       ep.portfolios.push( new Portfolio('www.creativemarket.com/tomanders', '/assets/logos/creative_market_108x79.jpg', 'Creative Market','tes') ); 
 
 
-      expert_profiles.push(new ExpertProfile(3,"Stephen Grace", "Adelaide, Australia", 1, "www.nephets.com", "Stephen is a self taught graphic and web designer with a strong interest in typography.", 32.3));
-      ep = expert_profiles[2];
+      expert_profiles.push(new ExpertProfile(2,"Jacopo Severitano", "Berlin, Germany", 2, "www.behance.net/rendez-vous", "I'm a freelance designer in Berlin specializing in corporate branding and graphic design. I'm constantly working on personal projects focusing on innovative typography and illustrations. I have worked for a variety of clients from corporate strategy agencies to techno labels.", 39.3, "Jacopo has deep branding and design experience. He has over 5000 followers on behance","Web design, typography, branding"));
+      ep = expert_profiles[1];
+      ep.feedbacks.push( new Feedback('David','[hidden]',"Great work.. ideas were even better than expected!"));
+      ep.portfolios.push( new Portfolio('www.behance.net/rendez-vous', '/assets/logos/behance_108x79.jpg', 'Behance','tes') ); 
+ 
+
+      expert_profiles.push(new ExpertProfile(3,"James McNaught", "London, UK", 2, "www.jamesmcnaught.co.uk", "I'm a graphic design graduate with international experience, industry recognition, and a borderline unhealthy interest in all things typographic. That said, my love of solid kerning, leading and alignment doesn't mean I don't get my hands dirty with the creative side of things.", 32.3, "James has had work featured on behance's <em>Branding</em> site","Print, branding"));
+      var ep = expert_profiles[2];
+      ep.feedbacks.push( new Feedback('Matt McKinlay','inputfarm.com', "Jim gave us great feedback coming up with a couple of new ideas and confirming a few things we had thought about but weren't sure whether to go ahead with."));
+      ep.portfolios.push( new Portfolio('www.jamesmcnaught.co.uk', '/assets/logos/homepage_108x79.jpg', 'goog','tes') ); 
+      ep.portfolios.push( new Portfolio('www.behance.net/thinkingwithtype', '/assets/logos/behance_108x79.jpg', 'behance','tes') ); 
+
+
+      expert_profiles.push(new ExpertProfile(4,"Stephen Grace", "Adelaide, Australia", 2, "www.nephets.com", "Stephen is a self taught graphic and web designer with a strong interest in typography.", 32.3, "","Typography, web design"));
+      ep = expert_profiles[3];
       ep.feedbacks.push( new Feedback('Andrew N','[hidden]', "Stephen is a thoughtful designer who gave us really targeted feedback. He identified some simple issues with the layout, button colour choice and our photo header. His feedback was clear, interesting and appealed to our overall direction.  We implemented almost all of his suggestions, and plan to use him for review again."));
       ep.portfolios.push( new Portfolio('www.nephets.com', '/assets/logos/homepage_108x79.jpg', 'goog','tes') ); 
       ep.portfolios.push( new Portfolio('dribbble.com/nephets', '/assets/logos/dribbble_108x79.jpg', 'dribbble','tes') ); 
      
-      expert_profiles.push(new ExpertProfile(4,"Robin Mather", "Adelaide, Australia", 3, "www.robinmather.com", "I'm an enthusiastic designer with a strong history in designing and managing engaging user experiences across a diverse range of industries in Australia and Europe. Clients include Elsevier, Lucas Arts, Warner Brothers, Sony, and Microsoft. ", 33.3));
-      ep = expert_profiles[3];
+      expert_profiles.push(new ExpertProfile(5,"Robin Mather", "Adelaide, Australia", 5, "www.robinmather.com", "I'm an enthusiastic designer with a strong history in designing and managing engaging user experiences across a diverse range of industries in Australia and Europe. Clients include Elsevier, Lucas Arts, Warner Brothers, Sony, and Microsoft. ", 33.3, "Robin's previous clients include Lucas Arts, Warner Brothers, Sony and Microsoft.","UX, web design"));
+      ep = expert_profiles[4];
       ep.feedbacks.push( new Feedback('James Reid','webtemplate.com.au', "Robin came up with a bunch of great suggestions for our site. We plan to implement most of them as soon as we can."));
       ep.portfolios.push( new Portfolio('www.robinmather.com', '/assets/logos/homepage_108x79.jpg', 'homepage','tes') ); 
 
+      expert_profiles.push(new ExpertProfile(6, "Freja Hedvall", "Stockholm, Sweden", 2, "www.frejahedvall.com", "Freja is a freelance graphic designer based in Stockholm. She loves illustration, surfing, photography, running, dark chocolate and travelling!", 28.3,"Freja's projects have attracted over 10,000 views on the Behance portfolio site","Illustration, branding"));
+      ep = expert_profiles[5]; 
+      ep.feedbacks.push( new Feedback('Jon S','www.inputfarm.com', "Freja's review of the Input Farm website was great, some new ideas with very detailed and clear suggestions."));
+      ep.portfolios.push( new Portfolio('www.frejahedvall.com', '/assets/logos/homepage_108x79.jpg', 'homepage','tes') ); 
+      ep.portfolios.push( new Portfolio('www.behance.net/frejahedvall', '/assets/logos/behance_108x79.jpg', 'behance','tes') ); 
+
+
+     // other feedback - "good work.. much better than expected!" - designer: jacopo, from client david from [hidden]
+    // for faisal on site thesnoozle.com (who we aren't having as an expert) : "Very useful, I had been wondering if I should change a couple of things and the Input Farm report confirmed it."
+    // for faisal "The suggestions I got were all right on point and our website looks better after implementing them. "
     <% end %>
  
      <!-- End Document 
